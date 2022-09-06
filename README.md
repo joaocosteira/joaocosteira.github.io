@@ -1,9 +1,10 @@
 # Github Pages
 This repository contains the source code of my static website.
 # Tecnologies
-This is a simple static website, there are plans to expand it into a full blown web app. List of the tecnologies currently in use:
+This is a simple static website. There are plans to expand it into a full blown web app but in the meantime, these are the tecnologies currently being in use:
 - Html
 - Tailwindcss
+
 # Domains
 This website is available at <del>https://joaocosteira.github.io</del>, now is accessible at [costeira.xyz](https://costeira.xyz/)
 
@@ -36,7 +37,7 @@ This website is available at <del>https://joaocosteira.github.io</del>, now is a
 - [Another Portfolio](https://github.com/joaocosteira/homepage-tailwind)
 - [Iphone Clone](https://github.com/joaocosteira/ios-tailwind)
 - [Super Cool Squares](https://github.com/joaocosteira/tailwind-squares)
-
+- [Shadow box](https://blog.openreplay.com/shadom-dom-the-ultimate-guide)
 - Forms:
     * [Simple Form](https://github.com/joaocosteira/tailwind-form)
     * [Coolest Form Ever](https://github.com/joaocosteira/super-cool-form)
