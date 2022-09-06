@@ -21,11 +21,14 @@
             <div class="hidden md:inline-flex mr-5 md:space-x-11 mt-5">
                 <li class="list-none"><a href="#home">Home</a></li>
                 <li class="list-none"><a href="#about">About</a></li>
+                <li class="list-none"><a href="#whatever">Whatever</a></li>
                 <li class="list-none"><a href="#touch">Get In Touch</a></li>
             </div>
         </nav>
     </header>
-
+    <div class="fixed bottom-2 right-4 mx-auto bg-white">
+        <p><a href="#home">Top</a></p>
+    </div>
     <div class="flex h-[calc(100vh-50px)] w-screen bg-red-500 overflow-hidden">
 
         <div class="flex items-end mx-auto mb-7">
@@ -40,7 +43,7 @@
     <div id="about" class="flex h-screen w-screen bg-blue-500">
 
         <div class="flex items-end mx-auto mb-7">
-            <a  href="#touch">
+            <a  href="#whatever">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 lg:w-10 lg:h-10 animate-bounce">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5" />
                   </svg>
@@ -48,9 +51,18 @@
         </div>        
     </div>
 
-    <div id="touch" class="flex h-screen w-screen bg-green-500">
+    <div id="whatever" class="flex h-screen w-screen bg-green-500">
+        <div class="flex items-end mx-auto mb-7">
+            <a  href="#touch">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 lg:w-10 lg:h-10 animate-bounce">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5" />
+                  </svg>
+            </a>        
+        </div>
+    </div>
 
-          
+
+    <div id="touch" class="flex h-screen w-screen bg-red-500">
     </div>
 </body>
 </html>
