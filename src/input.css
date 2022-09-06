@@ -20,4 +20,123 @@
         border-image-slice: 32;
         border-image-repeat: round;
     }
+
+    .d-4 {
+        --c:5px;  /* the cube perspective */
+        
+        --g:calc(var(--c)*0.707); /* 0.707 = cos(45deg) = sin(45deg) */
+        
+        
+        border: solid transparent;
+        border-width:0 0 var(--c) var(--c) ;
+        background:
+          linear-gradient(-45deg,transparent var(--g),rgba(255,255,255,0.6) 0) left   /var(--c) 100%,
+          linear-gradient(135deg,transparent var(--g),rgba(255,255,255,0.3) 0) bottom /100% var(--c);
+        background-repeat:no-repeat;
+        background-origin:border-box;
+        transition:0.3s,background-color 0.3s 0.3s,color 0.3s 0.3s;
+        transform:translate(calc(var(--c)/-1),calc(var(--c)/1));
+        clip-path: 
+          polygon(var(--c) 0%, var(--c) 0%, 
+          100% 0%, 
+          100% calc(100% - var(--c)),100% calc(100% - var(--c)),
+          var(--c) calc(100% - var(--c)),
+          var(--c) calc(100% - var(--c)));
+      }
+      .d-4:hover {
+        transition:0.3s 0.3s,background-color 0.3s,color 0.3s;
+        background-color:blue;
+        color:#fff;
+        transform:translate(0,0);
+        clip-path: 
+          polygon(0% var(--c), var(--c) 0%, 
+          100% 0%, 
+          100% calc(100% - var(--c)), calc(100% - var(--c)) 100%, 
+          0% 100%,0% 100%);
+      }
+
+      .d-3 {
+        --c:5px;  /* the cube perspective */
+        
+        --g:calc(var(--c)*0.707); /* 0.707 = cos(45deg) = sin(45deg) */
+        
+        border: solid transparent;
+        border-width:0 var(--c) var(--c) 0;
+        background:
+          linear-gradient(  45deg,transparent var(--g),rgba(255,255,255,0.6) 0) right  /var(--c) 100%,
+          linear-gradient(-135deg,transparent var(--g),rgba(255,255,255,0.3) 0) bottom /100% var(--c);
+        background-repeat:no-repeat;
+        background-origin:border-box;
+        transition:0.3s,background-color 0.3s 0.3s,color 0.3s 0.3s;
+        transform:translate(calc(var(--c)/1),calc(var(--c)/1));
+        clip-path: 
+          polygon(calc(100% - var(--c)) 0%, calc(100% - var(--c)) 0%, 
+          0% 0%, 
+          0% calc(100% - var(--c)),0% calc(100% - var(--c)),
+          calc(100% - var(--c)) calc(100% - var(--c)),
+          calc(100% - var(--c)) calc(100% - var(--c)));
+      }
+      .d-3:hover {
+        transition:0.3s 0.3s,background-color 0.3s,color 0.3s;
+        background-color:blue;
+        color:#fff;
+        transform:translate(0,0);
+        clip-path: 
+          polygon(100% var(--c), calc(100% - var(--c)) 0%, 
+          0% 0%, 
+          0% calc(100% - var(--c)), var(--c) 100%, 
+          100% 100%,
+          100% 100%);
+      }
+
+
+      .inverted-5 {
+        background:
+          linear-gradient(#000, 40%, #fff 0 60%, #000  0) left/var(--_p,0%) no-repeat,
+          linear-gradient(#0000 40%, #000 0 60%, #0000 0) left/var(--_p,0%) no-repeat,
+          #000;
+        -webkit-background-clip: text, padding-box, text;
+                background-clip: text, padding-box, text;
+        transition: 0.8s
+      }
+      .inverted-5:hover {
+        --_p: 100%;
+      }
+
+
+      .inverted-7 {
+        background:
+          linear-gradient(-45deg, #000  40%, #fff 0 60%, #000  0) right/300% 100% no-repeat,
+          linear-gradient(-45deg, #0000 40%, #000 0 60%, #0000 0) right/300% 100% no-repeat;
+        -webkit-background-clip: text, padding-box;
+        background-clip: text, padding-box;
+        transition: 0.8s
+      }
+      .inverted-7:hover {
+        background-position: left;
+      }
+
+
+      .fancy-5 {
+        background:
+          radial-gradient(farthest-side, transparent calc(100% - 150px), black 0) 
+          center /var(--d, 600px) var(--d, 600px) no-repeat;
+        transition: 0.5s;
+      }
+      .fancy-5:hover {
+        --d: 300px;
+        color: #fff
+      }
+
+
+      .thick-6 {
+        background:
+          linear-gradient(#000 0 0) 
+          left /100% var(--d, 0%) no-repeat;
+        transition: 0.5s;
+      }
+      .thick-6:hover {
+        --d: 100%;
+        color: #fff;
+      }
 }
