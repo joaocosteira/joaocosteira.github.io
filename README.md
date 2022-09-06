@@ -45,3 +45,29 @@ This website is available at <del>https://joaocosteira.github.io</del>, now is a
 
 
 
+## To Do List:
+- Fazer agora aquele git que tem a coisa da distorção das imagens em quadrados
+- Fazer uma versão deste projeto com next.js e fazer host no vercel
+    * Eventually fazer mudança da domain e fico com **costeira.xyz** para o vercel e **joaocosteira.github.com** para uma versão + estática
+- Fazer aquele iphone com o form de submit => que envia pro meu email o pedido
+- Fazer uma descrição sobre mim:
+    * Tenho o curso de eng info
+    * Tenho mestrado
+    * Estudei nas areas de web dev, cripto/seguranca, metudos formais, natural lang
+- Fazer uma zona com demos de projetos
+    * Meter o da tese => Coisa para o download da MS Thesis
+    * Meter o do spickles
+    * Fazer algo com aqueles grafos dos projetos com o jj(grafo dos maias etc)
+    * Falar do que tenho andado a fazer em Web development
+        - FullStack course
+        - Clone de aplicações
+- Fazer uma zona de artigos que vou escrever
+- Fazer a coisa com o player de musica
+- Fazer uma coisa com os quadrados a dizer linguagens de programação
+- Fazer uma coisa com os quadrados para socials
+    * Fazer um quadrado que diz em Grande CV => download do CV
+    * LinkedIn
+    * Instagram
+    * Etc...
+- Zona pra galaria de fotos
+
