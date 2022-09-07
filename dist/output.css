@@ -682,6 +682,10 @@ video {
   margin-top: 100px;
 }
 
+.mt-\[200px\] {
+  margin-top: 200px;
+}
+
 .flex {
   display: flex;
 }
@@ -712,6 +716,22 @@ video {
 
 .h-24 {
   height: 6rem;
+}
+
+.h-\[100px\] {
+  height: 100px;
+}
+
+.h-\[calc\(100vh-100px\)\] {
+  height: calc(100vh - 100px);
+}
+
+.h-\[70px\] {
+  height: 70px;
+}
+
+.h-\[calc\(100vh-70px\)\] {
+  height: calc(100vh - 70px);
 }
 
 .w-screen {
@@ -837,6 +857,11 @@ video {
 .bg-green-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(34 197 94 / var(--tw-bg-opacity));
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .object-contain {
