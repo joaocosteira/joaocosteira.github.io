@@ -41,9 +41,35 @@ A ideia é que vou percorrer toda a diretoria **dweb** que tenho no meu computad
     ![Website 10.2](/readme_imgs/10.2.png)  
     ![Website 10.3](/readme_imgs/10.3.png)  
 
+    * **/Users/joaocosteira/Documents/dwebs2022/css_stuff/LinesToLayout-main**  Really Cool Transition Effect
+    ![Website 11.1](/readme_imgs/11.1.png)
+    ![Website 11.2](/readme_imgs/11.2.png)  
+
+    * **/Users/joaocosteira/Documents/dwebs2022/css_stuff/MakeWayGridEffect-main** Ao Clicar, a grid kinda explode
+    ![Website 12.1](/readme_imgs/12.1.png)
+    ![Website 12.2](/readme_imgs/12.2.png) 
 
 
+    * **/Users/joaocosteira/Documents/dwebs2022/css_stuff/MusicPlayer-master** Music Player, literally gold.
+    ![Website 13.1](/readme_imgs/13.1.png)
+    ![Website 13.2](/readme_imgs/13.2.png) 
+    ![Website 13.3](/readme_imgs/13.3.png) 
 
+    * **/Users/joaocosteira/Documents/dwebs2022/css_stuff/OnScrollLetterAnimations-main** Efeito em letras com o scroll
+    ![Website 14.1](/readme_imgs/14.1.gif)
+
+    * **/Users/joaocosteira/Documents/dwebs2022/css_stuff/SidebarTransitions-master** A ton of sidebars
+    ![Website 15.1](/readme_imgs/15.1.png)
+    ![Website 15.2](/readme_imgs/15.2.png)
+
+    * **/Users/joaocosteira/Documents/dwebs2022/css_stuff/TextRepetitionEffect-main** Text repetition scroll effect
+    ![Website 16.1](/readme_imgs/16.1.gif) 
+
+    * **/Users/joaocosteira/Documents/dwebs2022/css_stuff/Theodore-main** Cool transition effect
+    ![Website 17.1](/readme_imgs/17.1.gif) 
+
+    * **/Users/joaocosteira/Documents/dwebs2022/css_stuff/ThumbHoverSVGFilter-main** Cool Hover effect
+    ![Website 18.1](/readme_imgs/18.1.gif) 
 # Domains
 This website is available at <del>https://joaocosteira.github.io</del>, now is accessible at [costeira.xyz](https://costeira.xyz/)
 
