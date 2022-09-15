@@ -209,3 +209,9 @@ This website is available at <del>https://joaocosteira.github.io</del>, now is a
     * Etc...
 - Zona pra galaria de fotos
 
+
+# Most Important:
+-  [Css Best Practices](https://www.toptal.com/css/tips-and-practices)
+-  [internetingishard](https://www.internetingishard.com/)
+-  [web.dev](https://web.dev/learn/)
+-  [Practical Typography](https://practicaltypography.com/index.html)
