@@ -5,6 +5,45 @@ This is a simple static website. There are plans to expand it into a full blown 
 - Html
 - Tailwindcss
 
+
+# My Shit Inspo:
+A ideia é que vou percorrer toda a diretoria **dweb** que tenho no meu computador e apanhar as melhores dicas que consiga encontrar. Depois a ideia é juntar tudo e fazer um website Bonito.
+- **/Users/joaocosteira/Documents/dwebs2022/build-portfolio** , onde tenho aquele portefolio simples, fundo preto com um men com cabelo afro. è responsive e pode ser usado como inspo.
+![Website 0](/readme_imgs/0.png)
+- **/Users/joaocosteira/Documents/dwebs2022/css_stuff** , dir onde tenho toneladas de projetos, aqueles todos **fancy e brutalist**:
+    * **/Users/joaocosteira/Documents/dwebs2022/css_stuff/ColumnScroll-main** , Basicamente página com 3 colunas de imagens, que fazem scroll em direções opostas, e ao fazer hover sobre uma imagem, a imagem é esticada de propósito.
+    ![Website 1](/readme_imgs/1.png)
+    * **/Users/joaocosteira/Documents/dwebs2022/css_stuff/ContentLayoutTransition-main** , basicamente uma galaria de imagens, mas na página principal temos uma stack
+    ![Website 2](/readme_imgs/2.png)
+    * **/Users/joaocosteira/Documents/dwebs2022/css_stuff/CoverPageTransition-main** , website simples, mas tem uma transiçao fantastica de um elem para a sua página:
+    ![Website 3.1](/readme_imgs/3.1.png)
+    ![Website 3.2](/readme_imgs/3.2.png)
+    * **/Users/joaocosteira/Documents/dwebs2022/css_stuff/ExpandingRoundedMenu-main** , really cool como a navbar expande
+    ![Website 4.1](/readme_imgs/4.1.png)
+    ![Website 4.2](/readme_imgs/4.2.png)    
+    * **/Users/joaocosteira/Documents/dwebs2022/css_stuff/FullscreenScroll-main** , imagem fullscreen, que faz scroll pra baixo, e ao clicar na página aparece uma imagem.
+    ![Website 5.1](/readme_imgs/5.1.png)    
+
+    * **/Users/joaocosteira/Documents/dwebs2022/css_stuff/GlitchPerspective-main** , glitch website, problem: they hide the package.json.
+    ![Website 6.1](/readme_imgs/6.1.png)    
+    * **/Users/joaocosteira/Documents/dwebs2022/css_stuff/ImageToContent-main**  , efeito super cool com o scroll, efeito sobre o texto.
+    ![Website 7.1](/readme_imgs/7.1.png)    
+    * **/Users/joaocosteira/Documents/dwebs2022/css_stuff/ImageToGridTransition-main** really cool transition entre páginas
+    ![Website 8.1](/readme_imgs/8.1.png)
+    ![Website 8.2](/readme_imgs/8.2.png)  
+    * **/Users/joaocosteira/Documents/dwebs2022/css_stuff/IntroTrailEffect-main**  Um que tem 3 páginas de efeitos:
+    ![Website 9.1](/readme_imgs/9.1.png)
+    ![Website 9.2](/readme_imgs/9.2.png)  
+    ![Website 9.3](/readme_imgs/9.3.png)  
+
+    *  **/Users/joaocosteira/Documents/dwebs2022/css_stuff/LetterShuffleMenu-main** Insane sidebar transition:
+    ![Website 10.1](/readme_imgs/10.1.png)
+    ![Website 10.2](/readme_imgs/10.2.png)  
+    ![Website 10.3](/readme_imgs/10.3.png)  
+
+
+
+
 # Domains
 This website is available at <del>https://joaocosteira.github.io</del>, now is accessible at [costeira.xyz](https://costeira.xyz/)
 
@@ -34,6 +73,11 @@ This website is available at <del>https://joaocosteira.github.io</del>, now is a
     * [Demo website](https://tympanus.net/Development/Animocons/)
 - [Animate svg icons](https://tympanus.net/Development/AnimatedSVGIcons/)
 - [Fantastic hover Effect](https://tympanus.net/Tutorials/ShapeHoverEffectSVG/)
+
+- **Mega Importante**
+    * [Scaling Typography](https://24ways.org/2019/a-modern-typographic-scale/)
+    * [Typography In 10 Minutes](https://practicaltypography.com/typography-in-ten-minutes.html)
+    
 
 ### On My git:
 - [Cool css Shapes (honeycomb pizza etc)](https://github.com/joaocosteira/css-shapes)
