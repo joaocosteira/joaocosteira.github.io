@@ -30,6 +30,21 @@ h1{
 }
 
 
+.sidemenu{
+    background-color: #000;
+    z-index: -1;
+    width: 20%;
+    height: 100vh;
+    display: none;
+}
+
+.open{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 .block {
     display: block;
 }
@@ -74,6 +89,7 @@ h1{
   
   .open .hamburger-top {
     transform: rotate(45deg) translateY(6px) translate(6px);
+    background: #fff;
   }
   
   .open .hamburger-middle {
@@ -82,4 +98,5 @@ h1{
   
   .open .hamburger-bottom {
     transform: rotate(-45deg) translateY(6px) translate(-6px);
+    background: #fff;
   }
