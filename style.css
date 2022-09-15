@@ -1,0 +1,30 @@
+body {
+    font-family: "Source Serif VF", "Source Serif", sans;
+    font-weight: 300;
+    overflow-x: hidden;
+    font-feature-settings: "kern" 1, "liga" 1;
+    font-optical-sizing: auto;
+    margin: 0;
+
+    /* background-image: linear-gradient(180deg, #fff,#bbb); */
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+h1{
+    font-size: 60pt;
+    font-weight: 300;
+}
+
+.homepage{
+    height: 100vh;
+    max-width: 75%;
+    margin: 0  auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
