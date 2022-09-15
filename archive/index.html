@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/imgs/dog.png">
+    <link href="dist/output.css" rel="stylesheet">
+    <title>Costeira</title>
+
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+    </style>
+    
+</head>
+<body id="home" class="bg-red-500">
+
+    <header class="sticky h-[70px] top-0 z-50 bg-transparent">
+        <nav class="flex justify-center md:justify-between items-center max-w-[75%] mx-auto">
+
+            <a href="#home">
+            <div class="hidden md:inline-flex items-center group">
+                <img src="/imgs/face.png" alt="face icon" class="h-20 w-20 object-contain -rotate-6"/>
+                <p class="mt-5">
+                        Costeira
+                        <span class="hidden group-hover:inline">.</span>
+                    </p>
+                </div> 
+            </a>
+
+            <div class="flex mr-5 md:space-x-11 mt-5">
+                <li class="thick-6 list-none mx-2 sm:mx-5"><a class="px-2 py-1" href="#home">Home</a></li>
+                <li class="thick-6 list-none mx-2 sm:mx-5"><a class="px-2 py-1" href="#about">About</a></li>
+                <li class="thick-6 list-none mx-2 sm:mx-5"><a class="px-2 py-1" href="#whatever">Whatever</a></li>
+                <li class="thick-6 list-none mx-2 sm:mx-5"><a class="px-2 py-1" href="#touch"><span class="hidden md:inline">Get In </span>Touch</a></li>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="hidden md:inline fixed bottom-4 right-6 mx-auto">
+        <p class="d-3 px-4"><a href="#home">Top</a></p>
+    </div>
+    <div class="flex flex-col h-[calc(100vh-70px)] w-screen bg-red-500">
+
+        <div class="max-w-[75%] mx-auto mt-[200px]">
+
+            <p  class="my-auto mx-auto text-white">This website is clearly under construction... Please give me a minute to put this thing together...</p>
+        </div>
+        <div class="mt-auto mx-auto mb-7">
+            <a  href="#about">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 lg:w-10 lg:h-10 animate-bounce">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5" />
+                  </svg>
+            </a>
+        </div>
+    </div>
+
+    <div id="about" class="flex flex-col h-screen w-screen bg-blue-500">
+
+        <div class="max-w-[75%] mx-auto">
+
+            <figure class="md:flex mt-[200px] bg-slate-100 rounded-xl p-8 md:p-0 dark:bg-slate-800">
+                <img class="w-24 h-24 md:w-48 md:h-auto md:rounded-none rounded-full mx-auto" src="/imgs/costeira_profile.jpeg" alt="" width="384" height="512">
+                <div class="pt-6 md:p-8 text-center md:text-left space-y-4">
+                <blockquote>
+                    <p class="text-lg font-medium">
+                    “Et ut mollit aliqua nulla veniam Lorem do incididunt veniam. Quis nisi tempor sunt enim dolore. Lorem magna exercitation et deserunt nulla nostrud sit est.”
+                    </p>
+                </blockquote>
+                <figcaption class="font-medium">
+                    <div class="text-sky-500 dark:text-sky-400">
+                    João Costeira
+                    </div>
+                    <div class="text-slate-700 dark:text-slate-500">
+                    Software Engineer
+                    </div>
+                </figcaption>
+                </div>
+              </figure>
+        </div>
+
+
+        <div class="mt-auto mx-auto mb-7">
+            <a  href="#whatever">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 lg:w-10 lg:h-10 animate-bounce">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5" />
+                  </svg>
+            </a>
+        </div>        
+    </div>
+
+    <div id="whatever" class="flex h-screen w-screen bg-green-500">
+        <div class="flex items-end mx-auto mb-7">
+            <a  href="#touch">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 lg:w-10 lg:h-10 animate-bounce">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5" />
+                  </svg>
+            </a>        
+        </div>
+    </div>
+
+
+    <div id="touch" class="flex h-screen w-screen bg-red-500">
+    </div>
+</body>
+</html>
