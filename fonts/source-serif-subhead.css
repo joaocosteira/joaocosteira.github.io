@@ -4,8 +4,7 @@
     font-display: swap;
     font-style: normal;
     font-stretch: normal;
-    src: url('./WOFF2/TTF/SourceSerif4Subhead-ExtraLight.ttf.woff2') format('woff2'),
-         url('./WOFF/OTF/SourceSerif4Subhead-ExtraLight.otf.woff') format('woff'),
+    src: url('./WOFF/OTF/SourceSerif4Subhead-ExtraLight.otf.woff') format('woff'),
          url('./OTF/SourceSerif4Subhead-ExtraLight.otf') format('opentype'),
          url('./TTF/SourceSerif4Subhead-ExtraLight.ttf') format('truetype');
 }
@@ -16,8 +15,7 @@
     font-display: swap;
     font-style: italic;
     font-stretch: normal;
-    src: url('./WOFF2/TTF/SourceSerif4Subhead-ExtraLightIt.ttf.woff2') format('woff2'),
-         url('./WOFF/OTF/SourceSerif4Subhead-ExtraLightIt.otf.woff') format('woff'),
+    src: url('./WOFF/OTF/SourceSerif4Subhead-ExtraLightIt.otf.woff') format('woff'),
          url('./OTF/SourceSerif4Subhead-ExtraLightIt.otf') format('opentype'),
          url('./TTF/SourceSerif4Subhead-ExtraLightIt.ttf') format('truetype');
 }
@@ -28,8 +26,7 @@
     font-display: swap;
     font-style: normal;
     font-stretch: normal;
-    src: url('./WOFF2/TTF/SourceSerif4Subhead-Light.ttf.woff2') format('woff2'),
-         url('./WOFF/OTF/SourceSerif4Subhead-Light.otf.woff') format('woff'),
+    src: url('./WOFF/OTF/SourceSerif4Subhead-Light.otf.woff') format('woff'),
          url('./OTF/SourceSerif4Subhead-Light.otf') format('opentype'),
          url('./TTF/SourceSerif4Subhead-Light.ttf') format('truetype');
 }
@@ -40,8 +37,7 @@
     font-display: swap;
     font-style: italic;
     font-stretch: normal;
-    src: url('./WOFF2/TTF/SourceSerif4Subhead-LightIt.ttf.woff2') format('woff2'),
-         url('./WOFF/OTF/SourceSerif4Subhead-LightIt.otf.woff') format('woff'),
+    src: url('./WOFF/OTF/SourceSerif4Subhead-LightIt.otf.woff') format('woff'),
          url('./OTF/SourceSerif4Subhead-LightIt.otf') format('opentype'),
          url('./TTF/SourceSerif4Subhead-LightIt.ttf') format('truetype');
 }
@@ -52,8 +48,7 @@
     font-display: swap;
     font-style: normal;
     font-stretch: normal;
-    src: url('./WOFF2/TTF/SourceSerif4Subhead-Regular.ttf.woff2') format('woff2'),
-         url('./WOFF/OTF/SourceSerif4Subhead-Regular.otf.woff') format('woff'),
+    src: url('./WOFF/OTF/SourceSerif4Subhead-Regular.otf.woff') format('woff'),
          url('./OTF/SourceSerif4Subhead-Regular.otf') format('opentype'),
          url('./TTF/SourceSerif4Subhead-Regular.ttf') format('truetype');
 }
@@ -64,8 +59,7 @@
     font-display: swap;
     font-style: italic;
     font-stretch: normal;
-    src: url('./WOFF2/TTF/SourceSerif4Subhead-It.ttf.woff2') format('woff2'),
-         url('./WOFF/OTF/SourceSerif4Subhead-It.otf.woff') format('woff'),
+    src: url('./WOFF/OTF/SourceSerif4Subhead-It.otf.woff') format('woff'),
          url('./OTF/SourceSerif4Subhead-It.otf') format('opentype'),
          url('./TTF/SourceSerif4Subhead-It.ttf') format('truetype');
 }
@@ -76,8 +70,7 @@
     font-display: swap;
     font-style: normal;
     font-stretch: normal;
-    src: url('./WOFF2/TTF/SourceSerif4Subhead-Semibold.ttf.woff2') format('woff2'),
-         url('./WOFF/OTF/SourceSerif4Subhead-Semibold.otf.woff') format('woff'),
+    src: url('./WOFF/OTF/SourceSerif4Subhead-Semibold.otf.woff') format('woff'),
          url('./OTF/SourceSerif4Subhead-Semibold.otf') format('opentype'),
          url('./TTF/SourceSerif4Subhead-Semibold.ttf') format('truetype');
 }
@@ -88,8 +81,7 @@
     font-display: swap;
     font-style: italic;
     font-stretch: normal;
-    src: url('./WOFF2/TTF/SourceSerif4Subhead-SemiboldIt.ttf.woff2') format('woff2'),
-         url('./WOFF/OTF/SourceSerif4Subhead-SemiboldIt.otf.woff') format('woff'),
+    src: url('./WOFF/OTF/SourceSerif4Subhead-SemiboldIt.otf.woff') format('woff'),
          url('./OTF/SourceSerif4Subhead-SemiboldIt.otf') format('opentype'),
          url('./TTF/SourceSerif4Subhead-SemiboldIt.ttf') format('truetype');
 }
@@ -100,8 +92,7 @@
     font-display: swap;
     font-style: normal;
     font-stretch: normal;
-    src: url('./WOFF2/TTF/SourceSerif4Subhead-Bold.ttf.woff2') format('woff2'),
-         url('./WOFF/OTF/SourceSerif4Subhead-Bold.otf.woff') format('woff'),
+    src: url('./WOFF/OTF/SourceSerif4Subhead-Bold.otf.woff') format('woff'),
          url('./OTF/SourceSerif4Subhead-Bold.otf') format('opentype'),
          url('./TTF/SourceSerif4Subhead-Bold.ttf') format('truetype');
 }
@@ -112,8 +103,7 @@
     font-display: swap;
     font-style: italic;
     font-stretch: normal;
-    src: url('./WOFF2/TTF/SourceSerif4Subhead-BoldIt.ttf.woff2') format('woff2'),
-         url('./WOFF/OTF/SourceSerif4Subhead-BoldIt.otf.woff') format('woff'),
+    src: url('./WOFF/OTF/SourceSerif4Subhead-BoldIt.otf.woff') format('woff'),
          url('./OTF/SourceSerif4Subhead-BoldIt.otf') format('opentype'),
          url('./TTF/SourceSerif4Subhead-BoldIt.ttf') format('truetype');
 }
@@ -124,8 +114,7 @@
     font-display: swap;
     font-style: normal;
     font-stretch: normal;
-    src: url('./WOFF2/TTF/SourceSerif4Subhead-Black.ttf.woff2') format('woff2'),
-         url('./WOFF/OTF/SourceSerif4Subhead-Black.otf.woff') format('woff'),
+    src: url('./WOFF/OTF/SourceSerif4Subhead-Black.otf.woff') format('woff'),
          url('./OTF/SourceSerif4Subhead-Black.otf') format('opentype'),
          url('./TTF/SourceSerif4Subhead-Black.ttf') format('truetype');
 }
@@ -136,8 +125,7 @@
     font-display: swap;
     font-style: italic;
     font-stretch: normal;
-    src: url('./WOFF2/TTF/SourceSerif4Subhead-BlackIt.ttf.woff2') format('woff2'),
-         url('./WOFF/OTF/SourceSerif4Subhead-BlackIt.otf.woff') format('woff'),
+    src: url('./WOFF/OTF/SourceSerif4Subhead-BlackIt.otf.woff') format('woff'),
          url('./OTF/SourceSerif4Subhead-BlackIt.otf') format('opentype'),
          url('./TTF/SourceSerif4Subhead-BlackIt.ttf') format('truetype');
 }
