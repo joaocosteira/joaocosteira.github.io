@@ -70,6 +70,69 @@ A ideia é que vou percorrer toda a diretoria **dweb** que tenho no meu computad
 
     * **/Users/joaocosteira/Documents/dwebs2022/css_stuff/ThumbHoverSVGFilter-main** Cool Hover effect
     ![Website 18.1](/readme_imgs/18.1.gif) 
+
+- Cenas do Scrimba (Grid):
+    * **/Users/joaocosteira/Documents/dwebs2022/css-grid/named-lines.html** onde usamos uma grid pro template base de um website.
+    ![Website 19.1](/readme_imgs/19.1.png)
+    * **/Users/joaocosteira/Documents/dwebs2022/css-grid/image-grid.html** onde usamos uma grid dense de imagens
+    ![Website 19.2](/readme_imgs/19.2.png)
+    * **/Users/joaocosteira/Documents/dwebs2022/css-grid/article.html** grid usada pra fazer aquele website com o output de um markdown, onde basicamente metemos tudo dentro da coluna 2 e depois para imagens e assim podemos fazer span 1/-1 pra ficar full screen e tal
+    ![Website 19.3](/readme_imgs/19.3.png)
+
+-  **/Users/joaocosteira/Documents/dwebs2022/floating-labels**  Onde temos aquele form todo cute.
+    ![Website 20](/readme_imgs/20.png)
+
+-  **/Users/joaocosteira/Documents/dwebs2022/headless-shop**  Simple & clean website store.
+    ![Website 21](/readme_imgs/21.png)
+
+-  **/Users/joaocosteira/Documents/dwebs2022/homepage-tailwind**  Simple personal website with tailwind.
+    ![Website 22](/readme_imgs/22.png)
+
+- **Da diretoria [INTERNETING IS HARD](https://www.internetingishard.com/)**
+    * Em **/Users/joaocosteira/Documents/dwebs2022/internetingishard/part9_advanced_positioning** temos o seguinte header:
+    ![Website 22](/readme_imgs/22.gif) 
+    ![Website 23](/readme_imgs/23.gif) 
+    * Em **/Users/joaocosteira/Documents/dwebs2022/internetingishard/part11_responsive_images** temos aquela pagina simples e responsive:
+    ![Website 24](/readme_imgs/24.png) 
+
+    * **MEGA IMPORTANTE** em **/Users/joaocosteira/Documents/dwebs2022/internetingishard/part12_semantic_html** tenho aquela coisa da **semantic tags**
+
+    * e no **/Users/joaocosteira/Documents/dwebs2022/internetingishard/part14_fonts** temos coisas sobre **fonts**
+- **/Users/joaocosteira/Documents/dwebs2022/ios_tailwind**
+    ![Website 25](/readme_imgs/25.png)
+- **Aquele resume built com papa react** => **/Users/joaocosteira/Documents/dwebs2022/resume-papa-react**
+    ![Website 26](/readme_imgs/26.gif)
+
+- **Font** => **//Users/joaocosteira/Documents/dwebs2022/source-serif-release**
+    ![Website 27](/readme_imgs/27.gif)   
+
+- Do **/Users/joaocosteira/Documents/dwebs2022/study_css**:
+    * Scroll Snap:
+        ![Website 28](/readme_imgs/28.gif) 
+    * E o vizinho [**SCROLL SPEED**](https://css-tricks.com/almanac/properties/s/scroll-behavior/)
+    * Scroll Hamburgur:
+        ![Website 29](/readme_imgs/29.gif) 
+- Tailwind responsive Grid **/Users/joaocosteira/Documents/dwebs2022/tailwind_grid_responsive**
+    ![Website 30](/readme_imgs/30.gif) 
+-  TAilwind responsive => **/Users/joaocosteira/Documents/dwebs2022/tailwind-destinations**
+    ![Website 31](/readme_imgs/31.gif) 
+-  TAilwind responsive => **/Users/joaocosteira/Documents/dwebs2022/Tailwind-Crash-Course**
+    ![Website 32](/readme_imgs/32.gif)   
+
+-  Another Form => **/Users/joaocosteira/Documents/dwebs2022/tailwind-forms**
+    ![Website 33](/readme_imgs/33.png)  
+
+-  Floats and other tailwind basics => **/Users/joaocosteira/Documents/dwebs2022/tailwindcss-documentation**
+    ![Website 34](/readme_imgs/34.gif)             
+
+
+- **WEB.DEV** => Daquele Site da Google
+    * **/Users/joaocosteira/Documents/dwebs2022/web.dev/learn_responsive_design/02_media_queries**
+    ![Website 35](/readme_imgs/35.gif) 
+    * **/Users/joaocosteira/Documents/dwebs2022/web.dev/l/06_typography/** Tem coisas de:
+        - Typography
+        - A coisa do clamping
+        - Line Height
 # Domains
 This website is available at <del>https://joaocosteira.github.io</del>, now is accessible at [costeira.xyz](https://costeira.xyz/)
 
