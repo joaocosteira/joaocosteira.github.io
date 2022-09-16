@@ -215,3 +215,21 @@ This website is available at <del>https://joaocosteira.github.io</del>, now is a
 -  [internetingishard](https://www.internetingishard.com/)
 -  [web.dev](https://web.dev/learn/)
 -  [Practical Typography](https://practicaltypography.com/index.html)
+
+
+
+# Important To Do List:
+- Provavelmente usar a assinatura "Costeira" no header, ver se consigo sacar do finder ou algo desse genero, eu sei que tenho
+- Fazer o menu Clicavel em voltar pra casa a casa quando está fora do texto
+- Fazer o back home (To the Top) fazer algo fixed praí a (200vh - um bocado) => assim só aparece no segundo ecrã
+- Provavelmente fazer toda a aplicação com uma grid (como aquele exemplo do markdown export). (assim posso depois ter secções que o ecrã divide em 2 ou 3)
+- Ver a cena da typography e typography dinâmica
+- Ver a historia do semantic html
+- a div page ter 100vw-vh
+- cada page fazer span de 1/-1 da grid
+- Cenas desse genero.
+-  Estilisticamente usar quadrados para tudo
+- Tas a ver aquele exemplo super cool do filter svg??? usar algo desse genero sobre imagens. O website vai ser totalmente black & white, so em hover ou algo desse género é que as imagens expandem e ficam a cores.
+### Logo ideia: 
+voltar a estudar aquele da interneting is hard, principalmente os das areas de typography, semantic, grid, flex etc,
+e vou armazenando aqui dicas. Depois vou construindo o website de forma estruturada e com cabeça :)

@@ -33,7 +33,8 @@ h1{
 .sidemenu{
     background-color: hsla(0, 0%, 0%, 0.726);
     z-index: -1;
-    width: 20%; /*100vw;*/
+    /* Na versão small, o sidemenu vai até 100% */
+    width: 100vw;
     height: 100vh;
     display: none;
 }
