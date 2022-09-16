@@ -233,3 +233,114 @@ This website is available at <del>https://joaocosteira.github.io</del>, now is a
 ### Logo ideia: 
 voltar a estudar aquele da interneting is hard, principalmente os das areas de typography, semantic, grid, flex etc,
 e vou armazenando aqui dicas. Depois vou construindo o website de forma estruturada e com cabeça :)
+
+
+# Dicas de HTML && CSS
+
+## Reset Default Styling:
+```css
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+```
+
+## Emphasized/Strong vs Italic/bold:
+A ideia é a seguinte: o tradicional **`<i>`** para **italico** e **`<b>`** para **bold**, de certa maneira quebra aquela ideia de existir uma separação entre a apresentação e a semantica da pagina. Por isso devemos em alternativa usar **`<em>`** para emphasize aka italico e **`<strong>`** pra bold.
+
+
+## Different types of images:
+- **JPG**
+    * JPG images are designed for handling large color palettes without exorbitantly increasing file size, but on the other hand, JPGs don’t allow for transparent pixels
+    * JPGs are good for photos
+- **PNG**
+    * PNGs are great for anything that’s not a photo or animated.
+    * PNG file of the same quality (as perceived the human eye) would generally be bigger than an equivalent JPG file
+    * they do deal with opacity just fine, and they don’t have color palette limitations.
+    * This makes them an excellent fit for icons, technical diagrams, logos, etc.
+- **GIF**
+    * GIFs are the go-to option for simple animations, but the trade off is that they’re somewhat limited in terms of color palette
+- **SVG**
+    * SVG is a vector-based graphics format, meaning it can scale up or down to any dimension without loss of quality. This property makes SVG images a wonderful tool for responsive design. 
+
+## Positioning:
+-  Em inline elements, a margin só afeta horizontalmente, se estiver a usar a tag strong, horizontalmente consigo aumentar o espaço à volta da palavra, mas verticalmente isso não occore, pensa que é igonorado. Mas em **padding inline** isso já **funciona**,
+- Truque para evitar margin vertical collaptions: adiciona uma div vazia no meio:
+```html
+<div style='padding-top: 1px'></div>
+```
+
+- Float:
+```css
+float: right;  /* Right-aligned */
+float: none;   /* Revert to default flow */
+```
+- Float Align:
+![Float Align](/readme_imgs/float_align.png)
+
+- simply sticks itself below the last element that wasn’t floated. Logo temos de ter cuidado a meter um conjunto de floats, podem ficar kinda em cima dos outros.
+-  Para resolver esse problema temos a propriedade **clear**, que basicamente diz a um elem pra ir pra baixo dos floats
+
+- Imagina que temos uma dir com 2 elems, ambos floating. Com isto a dir fica basicamente vazia, sem altura, para contar a altura dos que estão a fazer float, podemos usar o **overflow:hidden**
+
+
+- Flex:
+    * Imagina que temos uma navbar com 3 elementos e queremos meter um à esq e dois à dir. Uma opção é embrulhar os da direita numa div e na navbar em si meter justify-content : space-between. Outra opção que poupa essa div extra é meter os no 1º elem  que vai ficar à direita (o + à esq da direita), meter **margin-left:auto** , desta forma vamos empurrar o elems todos pra direita, dando o mesmo efeito com menus uma div.
+    ![left auto](/readme_imgs/nav.png)
+
+- Relative:
+    * Ao meter um elem relative ao inicio nada acontece. Mas agora modemos em relação ao proprio elemento fazer shifts, em relaçao a ele mesmo:
+    * Ex:
+    ```css
+    .item-relative{
+        position: relative;
+        top:30px;
+        left: 30px;
+    }
+    ```
+    ![relative](/readme_imgs/relative.png)
+
+- O absolute é aqule que sai do flow standard da página, o lugar dele deixa de estar ocupado, e metemos num sitio qualquer.
+Exemplo sem ter nenhum relative acima:
+![absolute](/readme_imgs/absolute.png)
+- Static positioning é a position standard de um elemento
+
+- A diferença:
+![diferenca](/readme_imgs/positions.gif)
+
+## Typography:
+- Usar os caracteres corretos: 
+    * &lt; - **`&lt;`**
+    * &gt; - **`&gt;`**
+    * &amp; - **`&amp;`**
+    * &ldquo; - **`&ldquo;`**
+    * &rdquo; - **`&rdquo;`**
+    * &lsquo; - **`&lsquo;`**
+    * &rsquo; - **`&rsquo;`**
+
+- Units:
+    * **em** unit is very useful for defining sizes relative to some base font
+```css
+body {
+  font-size: 18px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Helvetica", "Arial", sans-serif;
+}
+
+h1 {
+  font-size: 2em; /* 18px * 2 = 36px*/
+}
+
+h2 {
+  font-size: 1.6em; /* 18px * 1.6 = 28.8px*/
+}
+```
+
+
+
+## Color Inspo
+- Top left: #905055
+- That turquoise: #145A5C
