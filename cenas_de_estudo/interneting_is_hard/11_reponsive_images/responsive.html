@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+    <link rel="stylesheet" href="styles.css">
+    <title>Responsive Design</title>
+</head>
+<body>
+
+    <!--  
+
+      Temos definido uma página que envolve tudo
+      Vamos definir isto como flex e flex wrap.
+      Desta forma dentro dos filhos conseguimos definir que
+      os elementos podem ser definidos como Grid.
+
+
+    -->
+    <div class='page'>
+
+
+        <div class='section menu'></div>
+
+        <div class='section header'>
+          <div class='photo'>
+            <picture>
+              <source media='(min-width: 401px)'
+                      srcset='images/photo-big.jpg'/>
+              <source media='(max-width: 400px)'
+                      srcset='images/photo-tall.jpg'/>
+              <img src='images/photo-small.jpg'/>
+            </picture>
+          </div>
+        </div>
+        
+
+        <div class='section content'>
+          <!-- <img class='illustration' src='images/illustration-big.png' style="max-width: 500px;"/> -->
+          <div class='illustration'>
+            <img src='illustration-small.png'
+                 srcset='images/illustration-small.png 1x,
+                         images/illustration-big.png 2x'
+                 style='max-width: 500px;'/>
+          </div>
+        </div>
+
+        <div class='section sign-up'>
+          <img src='images/sign-up.svg'/>
+        </div>
+
+        <div class='section feature-1'>
+          <img src='images/feature.svg'/>
+        </div>
+
+        <div class='section feature-2'>
+          <img src='images/feature.svg'/>
+        </div>
+
+        <div class='section feature-3'>
+          <img src='images/feature.svg'/>
+        </div>
+
+      </div>
+</body>
+</html>
