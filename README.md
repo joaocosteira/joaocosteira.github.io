@@ -130,6 +130,9 @@ A ideia é que vou percorrer toda a diretoria **dweb** que tenho no meu computad
 - [Info Ball Effect](/cenas_de_estudo/ball/index.html)
     ![ball](/readme_imgs/ball.gif) 
 
+- [Info Ball Effect](/cenas_de_estudo/animate_text/)
+    ![ball](/readme_imgs/animate_text.gif) 
+
 - **WEB.DEV** => Daquele Site da Google
     * **/Users/joaocosteira/Documents/dwebs2022/web.dev/learn_responsive_design/02_media_queries**
     ![Website 35](/readme_imgs/35.gif) 
