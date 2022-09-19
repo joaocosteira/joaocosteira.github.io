@@ -125,6 +125,10 @@ A ideia é que vou percorrer toda a diretoria **dweb** que tenho no meu computad
 -  Floats and other tailwind basics => **/Users/joaocosteira/Documents/dwebs2022/tailwindcss-documentation**
     ![Website 34](/readme_imgs/34.gif)             
 
+- [Slidding Door Effect](/cenas_de_estudo/sliding_door/index.html)
+    ![slidding door](/readme_imgs/slidding_door.gif) 
+- [Info Ball Effect](/cenas_de_estudo/ball/index.html)
+    ![ball](/readme_imgs/ball.gif) 
 
 - **WEB.DEV** => Daquele Site da Google
     * **/Users/joaocosteira/Documents/dwebs2022/web.dev/learn_responsive_design/02_media_queries**
@@ -777,11 +781,29 @@ h2 {
 }
 ```
 
-
-
+## Performance boost:
+- Lazy loading de imagens:
+```html
+<img loading="lazy" src="..." alt="...">
+```
+-  Imagens que saõ vistas logo na página sem fazer scroll, nao devem ser lazy.
+- Truque: se a imagem tiver o atributo width/height, assim o browser já sabe o espaço delas e assim nao temos jumps se o user fizer alto scroll, e depois o texto vai descer pois a imagem finalmente deu load.
+```html
+<style>
+    /*para dar fix e poder fazer resize das imagens, nao os valores */
+    img{
+        max-width: 100%;
+        height: auto;
+    }
+</style>
+<img width="945" height="1233" loading="lazy" src="..." alt="...">
+```
 ## Color Inspo
 - Top left: #905055
 - That turquoise: #145A5C
 - Gray #282C37
 - Darker Gray #191B22
 
+
+# Importante,
+Na dir **/Users/joaocosteira/Documents/dwebs2022/css_yt/tailwind-animation-background** , tenho já novas cenas com animações no tailwind e cenas desse genero
