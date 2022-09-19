@@ -1,0 +1,186 @@
+/*  Reset Standard Styling */ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: "Source Serif VF", "Source Serif", sans;
+    font-size: 18px;
+    font-weight: 300;
+    overflow-x: hidden;
+    font-feature-settings: "kern" 1, "liga" 1;
+    font-optical-sizing: auto;
+    margin: 0;
+}
+
+/*  Legacy Support for Semantic HTML    */
+section, article, aside, footer, header, nav {
+    display: block;
+}
+
+/*  Typography  */
+h1{
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+
+.hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/*  Header */
+.hero h1{
+    font-size: 60pt;
+}
+
+
+.navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+}
+
+
+.carrousel{
+    background-color: transparent;
+    width: 50px;
+    height: calc(100vh/3);
+    position: fixed;
+    left: 50px;
+    top: calc(100vh/3);
+    display: flex;
+    flex-direction: column;
+}
+
+
+.carrousel a{
+    display: block;
+    justify-content: center;
+    margin: auto;
+    height: .55rem;
+    width: .55rem;
+    background-color: rgba(84, 86, 95, 0.509);
+    border-radius: 50%;
+    z-index: 999;
+}
+
+/*  For Now Flex Versio  */
+.page {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main {
+    height:  100vh;
+    width:  100%;
+
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+
+  }
+
+section {
+    height:  100vh;
+    width:  100%;
+    scroll-snap-align: start;
+}
+
+
+/*  Separating Elements in Columns */
+.left{
+    width: 60%;
+    background-color: #905055 ;
+    color: white;
+    z-index: -3;
+}
+
+
+.right{
+    width:  40%;
+    background-color: #55575f8e;
+    color: white;
+
+}
+
+
+.hamburger {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    transition: all 0.25s;
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    margin: 1rem;
+}
+
+
+.hamburger-top,
+  .hamburger-middle,
+  .hamburger-bottom {
+  position: absolute; /* Inicialmente era relative*/
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background: #000;
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+
+
+.hamburger-middle {
+    transform: translateY(7px);
+  }
+  
+.hamburger-bottom {
+    transform: translateY(14px);
+}
+  
+.open {
+    transform: rotate(90deg);
+    transform: translateY(0px);
+  }
+  
+  .open .hamburger-top {
+    transform: rotate(45deg) translateY(6px) translate(6px);
+    background: #fff;
+  }
+  
+  .open .hamburger-middle {
+    display: none;
+  }
+  
+  .open .hamburger-bottom {
+    transform: rotate(-45deg) translateY(6px) translate(-6px);
+    background: #fff;
+  }
+
+
+  .sidemenu{
+    background-color: hsla(0, 0%, 0%, 0.726);
+    z-index: -1;
+    /* Na versão small, o sidemenu vai até 100% */
+    width: 100vw;
+    height: 100vh;
+    display: none;
+}
+
+.open{
+    display: block;
+    position: absolute;
+    top: auto;
+    left: 0;
+}  
