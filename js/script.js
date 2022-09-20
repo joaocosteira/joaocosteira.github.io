@@ -27,6 +27,15 @@ window.addEventListener('wheel', () => {
 
 
 
+document.querySelectorAll(".carrousel-circle").forEach( ball =>{
+
+    ball.addEventListener('click',() =>{
+        document.querySelectorAll(".carrousel-selected").forEach(c => c.classList.remove("carrousel-selected"));
+        ball.classList.add("carrousel-selected");
+    });
+    
+});
+
 
 
 
