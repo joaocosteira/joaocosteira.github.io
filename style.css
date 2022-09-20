@@ -5,6 +5,7 @@
   box-sizing: border-box;
 }
 
+
 html {
   scroll-behavior: smooth;
 }
@@ -51,6 +52,7 @@ h1{
   top: 0;
   left: 0;
   background-color: transparent;
+  z-index: 2;
 }
 
 
@@ -74,7 +76,7 @@ h1{
   width: .55rem;
   background-color: rgba(84, 86, 95, 0.509);
   border-radius: 50%;
-  z-index: 999;
+  /* z-index: 999; */
 }
 
 .carrousel a.selected{
@@ -82,8 +84,9 @@ h1{
   box-shadow: 0 0 30px rgba(39, 40, 46, 0.866);
 }
 
+
 /*  For Now Flex Versio  */
-.page {
+.page, .xadrez {
   display: flex;
   flex-wrap: wrap;
 }
@@ -98,16 +101,20 @@ main {
 }
 
 section {
-  height:  100vh;
+  /*height:  100vh;*/
   width:  100%;
   scroll-snap-align: start;
 }
 
+.full-page{
+  height: 100vh;
+}
 
 /*  Separating Elements in Columns */
 .left{
   position: relative;
   width: 60%;
+  height: 100vh;
   background-color: #905055 ;
   color: white;
   z-index: -3;
@@ -116,6 +123,7 @@ section {
 
 .right{
   width:  40%;
+  height: 100vh;
   background-color: #55575f8e;
   color: white;
   z-index: -3;
@@ -126,7 +134,7 @@ section {
   position: absolute;
   width: 40%;
   height: calc( 2/3 * 100vh);
-  z-index: 999;
+  /* z-index: 999; */
   top: calc(1/5 * 100vh);
   right: 0;
   background-color: black;
@@ -148,14 +156,14 @@ section {
 .hamburger-top,
 .hamburger-middle,
 .hamburger-bottom {
-position: absolute; /* Inicialmente era relative*/
-top: 0;
-left: 0;
-width: 24px;
-height: 2px;
-background: #000;
-transform: rotate(0);
-transition: all 0.5s;
+  position: absolute; /* Inicialmente era relative*/
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background: #000;
+  transform: rotate(0);
+  transition: all 0.5s;
 }
 
 
@@ -170,6 +178,7 @@ transition: all 0.5s;
 .open {
   transform: rotate(90deg);
   transform: translateY(0px);
+  /* z-index: 91; */
 }
 
 .open .hamburger-top {
@@ -189,7 +198,8 @@ transition: all 0.5s;
 
 .sidemenu{
   background-color: hsla(0, 0%, 0%, 0.726);
-  z-index: -1;
+  /*z-index: -1;*/
+  /* z-index: 1; */
   /* Na versão small, o sidemenu vai até 100% */
   width: 100vw;
   height: 100vh;
@@ -197,8 +207,25 @@ transition: all 0.5s;
 }
 
 .open{
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
   position: absolute;
   top: auto;
   left: 0;
 }  
+
+.sidemenu a{
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 300;
+  /* z-index: 1; */
+}
+
+.sidemenu a:hover{
+  cursor: pointer;
+  font-weight: bolder;
+  text-decoration: underline;
+}

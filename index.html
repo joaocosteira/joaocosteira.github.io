@@ -30,7 +30,8 @@
                 * small: hamburguer left/ signature center
                 * large: signature left/ links right
             
-            - Font Bold 
+            - Font Bold ao estar selecionado -> Logo em Js temos de fazer a funcao que tanto atualiza as bolas das hamburguers 
+              como tb do currently selected elem da navbar
     -->
     <nav class="navbar">
         <button id="menu-btn" class="hamburger">
@@ -41,8 +42,21 @@
     </nav>
 
 
-    <div id="sidemenu" class="sidemenu"></div>
+    <!--
+        Idem Aqui, os valores que estão aqui têm de dar match com os valores da navbar global,
+        e Ficava bonito ao selecionar automaticamente qual deles estão selecionados.
+    -->
+    <div id="sidemenu" class="sidemenu">
 
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Whatever</a>
+        <a href="#">Work</a>
+        <a href="#">Get In Touch</a>
+        
+    </div>
+
+    <!--    Carrousel => Bolas laterais que indica onde estamos na página, full page carousel -->
     <div class="carrousel">
         <a class="selected" href="#"></a>
         <a href="#"></a>
@@ -51,43 +65,47 @@
         <a href="#"></a>
     </div>
 
-    <!--    Sections Carrousel -->
+    <!-- flex wrap-->
     <main class="page">
         
 
-        <section class="hero">
-            <h1>João Costeira</h1>
-            <p>Software Engineer From Braga Portugal</p>
+        <!--    Hero    -->
+        <section class="hero full-page">
+                <h1>João Costeira</h1>
+                <p>Software Engineer From Braga Portugal</p>
         </section>
         
-        <section>
+        <!--    About   -->
+        <section class="full-page">
             <p>About</p>
         </section>
 
-        <section>
+
+        <section class="full-page">
             <p>Whatever</p>
         </section>
 
-        <section>
-            <p>Get In Touch</p>
+
+
+        <!--    Double Screen xadrez -->
+        <section class="xadrez">
+            <div class="right" style="background-color: black; color: white;">
+                <p>Right</p>
+            </div>        
+            <div class="left" style="background-color: white; color:black;">
+                <p>Left</p>
+            </div>
+            <div class="right" style="background-color: white; color:black;">
+                <p>Right</p>
+            </div>
+            <div class="left" style="background-color: black; color: white;">
+                <p>Left</p>
+            </div>
         </section>
 
 
-        <section class="right" style="background-color: black; color: white;">
-            <p>Right</p>
-        </section>        
-        <section class="left" style="background-color: white; color:black;">
-            <p>Left</p>
-        </section>
-        <section class="right" style="background-color: white; color:black;">
-            <p>Right</p>
-        </section>
-        <section class="left" style="background-color: black; color: white;">
-            <p>Left</p>
-        </section>
 
-
-
+        <!--    Some Kind of Footer and Stuff -->
         <section class="left">
             <p>Left</p>
             <div class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique enim corrupti porro rem. Voluptate consequuntur in nam totam magni omnis voluptates ipsum, corrupti laudantium architecto, fuga nisi. Explicabo, architecto dolorem!</div>
