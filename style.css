@@ -41,6 +41,7 @@ h1{
 /*  Header */
 .hero h1{
   font-size: 60pt;
+  text-align: center;
 }
 
 
@@ -105,6 +106,7 @@ section {
 
 /*  Separating Elements in Columns */
 .left{
+  position: relative;
   width: 60%;
   background-color: #905055 ;
   color: white;
@@ -118,6 +120,16 @@ section {
   color: white;
   z-index: -3;
 
+}
+
+.center{
+  position: absolute;
+  width: 40%;
+  height: calc( 2/3 * 100vh);
+  z-index: 999;
+  top: calc(1/5 * 100vh);
+  right: 0;
+  background-color: black;
 }
 
 

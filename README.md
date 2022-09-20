@@ -807,6 +807,22 @@ h2 {
 - Gray #282C37
 - Darker Gray #191B22
 - Lipstick Red #9F1F19
+- Deep Red #7C0A02
+- Another red #860111
+- Soft burgundy #CB4154
+- weird burgundy #B94E48
+- More red #800000
+- Really dark red #65000B
+- Deep Green #1C352D
+- Light green #8FBC8F
+- Soft Purple #B784A7
+- Rick Brown #3C1414
+- some palet:
+    * #F4F0EC
+    * #C71585
+    * #560319
+    * #E30B5D
+- [Website that you press the space bar and gives you random pallets](https://xsgames.co/colorss/)
 
 
 # Importante,

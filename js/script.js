@@ -18,3 +18,6 @@ sidemenu.addEventListener('click', () => {
     //nav.classList.toggle('hidden')
     sidemenu.classList.toggle('open'); */
 });
+
+
+// Tratar da historia dos botoes:
