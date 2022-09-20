@@ -79,7 +79,7 @@ h1{
   /* z-index: 999; */
 }
 
-.carrousel a.selected{
+.carrousel a.carrousel-selected{
   background-color: rgba(15, 14, 14, 0.866);
   box-shadow: 0 0 30px rgba(39, 40, 46, 0.866);
 }
