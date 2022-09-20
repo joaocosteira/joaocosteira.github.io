@@ -224,7 +224,9 @@ section {
   /* z-index: 1; */
 }
 
-.sidemenu a:hover{
+
+
+.sidemenu a.sidemenu-selected , .sidemenu a:hover{
   cursor: pointer;
   font-weight: bolder;
   text-decoration: underline;
