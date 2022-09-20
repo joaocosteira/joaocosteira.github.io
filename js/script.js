@@ -84,3 +84,9 @@ document.querySelectorAll('.mainmenu-a').forEach( (anchor, anchorIndex) => {
         updateSidemenuByIndex(anchorIndex);
     });
 });
+
+document.getElementById('signature').addEventListener('click',()=>{
+    setCarouselBallByIndex(0);
+    updateSidemenuByIndex(0);
+    updateMainNavByIndex(0);
+})

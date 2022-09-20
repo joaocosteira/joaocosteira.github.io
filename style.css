@@ -264,9 +264,13 @@ a.mainmenu-selected, .mainmenu-a:hover{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+
 }
 
 .not-found-page a{
   color: black;
+}
+
+.not-found-page p{
+  margin-top: 1rem;
 }
