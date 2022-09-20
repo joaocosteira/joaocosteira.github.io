@@ -806,6 +806,7 @@ h2 {
 - That turquoise: #145A5C
 - Gray #282C37
 - Darker Gray #191B22
+- Lipstick Red #9F1F19
 
 
 # Importante,

@@ -76,6 +76,11 @@ h1{
   z-index: 999;
 }
 
+.carrousel a.selected{
+  background-color: rgba(15, 14, 14, 0.866);
+  box-shadow: 0 0 30px rgba(39, 40, 46, 0.866);
+}
+
 /*  For Now Flex Versio  */
 .page {
   display: flex;
@@ -111,6 +116,7 @@ section {
   width:  40%;
   background-color: #55575f8e;
   color: white;
+  z-index: -3;
 
 }
 
