@@ -29,6 +29,7 @@ function changeSelectedCarousel() {
 
     setCarouselBallByIndex(selectedIndex);  // Update selected Ball
     updateSidemenuByIndex(selectedIndex);   // Update Selected Section on the menu
+    updateMainNavByIndex(selectedIndex);
 
 }
 
@@ -46,6 +47,7 @@ document.querySelectorAll(".carrousel-circle").forEach( (ball, ballIdx) =>{
         document.querySelectorAll(".carrousel-selected").forEach(c => c.classList.remove("carrousel-selected"));
         ball.classList.add("carrousel-selected");
         updateSidemenuByIndex(ballIdx);
+        updateMainNavByIndex(ballIdx);
     });
 
 });
@@ -64,5 +66,21 @@ document.querySelectorAll('.sidemenu-a').forEach( (anchor, anchorIndex) => {
         anchor.classList.add("sidemenu-selected");
         toggleSideMenu();
         setCarouselBallByIndex(anchorIndex);
+        updateMainNavByIndex(anchorIndex);
+    });
+});
+
+
+function updateMainNavByIndex(index){
+    document.querySelectorAll(".mainmenu-selected").forEach(c => c.classList.remove("mainmenu-selected"));
+    document.querySelectorAll(".mainmenu-a")[index].classList.add("mainmenu-selected");
+}
+
+document.querySelectorAll('.mainmenu-a').forEach( (anchor, anchorIndex) => {
+    anchor.addEventListener('click',() =>{
+        document.querySelectorAll(".mainmenu-selected").forEach(c => c.classList.remove("mainmenu-selected"));
+        anchor.classList.add("mainmenu-selected");
+        setCarouselBallByIndex(anchorIndex);
+        updateSidemenuByIndex(anchorIndex);
     });
 });

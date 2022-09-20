@@ -29,17 +29,30 @@
             - Responsive:
                 * small: hamburguer left/ signature center
                 * large: signature left/ links right
-            
-            - Font Bold ao estar selecionado -> Logo em Js temos de fazer a funcao que tanto atualiza as bolas das hamburguers 
-              como tb do currently selected elem da navbar
     -->
-    <nav class="navbar">
-        <button id="menu-btn" class="hamburger">
-            <span class="hamburger-top"></span>
-            <span class="hamburger-middle"></span>
-            <span class="hamburger-bottom"></span>
-        </button>
-    </nav>
+
+    <header>
+        <nav class="navbar">
+    
+            <!--    Hamburguer-->
+            <button id="menu-btn" class="hamburger">
+                <span class="hamburger-top"></span>
+                <span class="hamburger-middle"></span>
+                <span class="hamburger-bottom"></span>
+            </button>
+    
+            <!--    Costeira Logo-->
+            <img class="signature" src="imgs/signature.png" alt="Costeira Signature">
+            <!--    Costeira Links -->
+            <ul class="nav-links">
+                <li><a class="mainmenu-a mainmenu-selected" href='#home'>Home</a></li>
+                <li><a class="mainmenu-a" href='#about'>About</a></li>
+                <li><a class="mainmenu-a" href='#whatever'>whatever</a></li>
+                <li><a class="mainmenu-a" href='#work'>Work</a></li>
+                <li><a class="mainmenu-a" href='#touch'>Touch</a></li>
+            </ul>
+        </nav>
+    </header>
 
 
     <!--

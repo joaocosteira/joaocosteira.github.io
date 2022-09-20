@@ -45,6 +45,10 @@ h1{
   text-align: center;
 }
 
+.signature{
+  width: 10rem;
+  margin: .5rem 0 0 50px;
+}
 
 .navbar {
   width: 100%;
@@ -53,8 +57,23 @@ h1{
   left: 0;
   background-color: transparent;
   z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
+.nav-links{
+  display: flex;
+}
+.nav-links li{
+  list-style: none;
+}
+
+.nav-links a{
+  text-decoration: none;
+  color: black;
+  padding: 0 1rem;
+}
 
 .carrousel{
   background-color: transparent;
@@ -224,7 +243,9 @@ section {
   /* z-index: 1; */
 }
 
-
+a.mainmenu-selected, .mainmenu-a:hover{
+  text-decoration: underline;
+}
 
 .sidemenu a.sidemenu-selected , .sidemenu a:hover{
   cursor: pointer;
