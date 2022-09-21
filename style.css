@@ -50,7 +50,8 @@ h1{
 }
 /*Mesmo A Imagem*/
 .signature{
-  width: 10rem;
+  width: 9rem;
+  margin-left: 2rem;
   /* margin: .5rem 0 0 50px; */
   /*margin: .5rem auto 0 auto;*/
 
@@ -80,11 +81,15 @@ h1{
   text-decoration: none;
   color: black;
   padding: 0 1rem;
+
+}
+
+.nav-links  a.sidemenu-a:last-of-type{
+  background-color: aqua;
 }
 
 .carrousel{
   display: none;
-  top: calc( 100vh * 0.39);
   /* display: flex;
   flex-direction: column; */
   background-color: transparent;
@@ -92,7 +97,7 @@ h1{
   height: calc(100vh/3);
   position: fixed;
   left: 2rem;
-  /* top: calc(100vh/3); */
+  top: calc(100vh/3);
 }
 
 
@@ -279,4 +284,32 @@ a.mainmenu-selected, .mainmenu-a:hover{
 
 .not-found-page p{
   margin-top: 1rem;
+}
+
+
+/* Media Queries: */
+@media only screen and (min-width: 961px) {
+
+  /*  Hide Burguer: */
+  .hamburger{
+    display: none;
+  }
+
+  #signature{
+    display: block;
+  }
+
+  .navbar {
+    top: .5rem;
+  }
+
+  .carrousel{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-links{
+    display: flex;
+  }
+
 }
