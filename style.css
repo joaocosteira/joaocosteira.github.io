@@ -50,7 +50,7 @@ h1{
 }
 /*Mesmo A Imagem*/
 .signature{
-  width: 9rem;
+  height: 3rem;
   margin-left: 2rem;
   /* margin: .5rem 0 0 50px; */
   /*margin: .5rem auto 0 auto;*/
@@ -60,7 +60,7 @@ h1{
 .navbar {
   width: 100%;
   position: fixed;
-  top: 3rem;
+  top: 4rem;
   left: 1rem;
   background-color: transparent;
   z-index: 2;
@@ -84,9 +84,6 @@ h1{
 
 }
 
-.nav-links  a.sidemenu-a:last-of-type{
-  background-color: aqua;
-}
 
 .carrousel{
   display: none;
@@ -182,7 +179,7 @@ section {
   position: absolute;
   background-color: transparent;
   border: none;
-  margin: 1rem;
+  margin: 0rem;
 }
 
 
@@ -228,6 +225,16 @@ section {
   background: #fff;
 }
 
+
+.sidemenu-inner{
+
+  height: 70vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
 
 .sidemenu{
   background-color: hsla(0, 0%, 0%, 0.726);
