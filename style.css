@@ -51,7 +51,8 @@ h1{
 /*Mesmo A Imagem*/
 .signature{
   height: 3rem;
-  margin-left: 2rem;
+  margin: .5rem 0 0 2rem;
+  /* margin-left: 2rem; */
   /* margin: .5rem 0 0 50px; */
   /*margin: .5rem auto 0 auto;*/
 
@@ -60,7 +61,7 @@ h1{
 .navbar {
   width: 100%;
   position: fixed;
-  top: 4rem;
+  top: 2rem;
   left: 1rem;
   background-color: transparent;
   z-index: 2;
@@ -83,6 +84,11 @@ h1{
   padding: 0 1rem;
 
 }
+
+.nav-links li:last-child {
+  margin-right: 2rem;
+}
+
 
 
 .carrousel{
@@ -307,7 +313,8 @@ a.mainmenu-selected, .mainmenu-a:hover{
   }
 
   .navbar {
-    top: .5rem;
+    top:0;
+    left: 0;
   }
 
   .carrousel{
