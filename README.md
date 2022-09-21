@@ -133,6 +133,11 @@ A ideia é que vou percorrer toda a diretoria **dweb** que tenho no meu computad
 - [Info Ball Effect](/cenas_de_estudo/animate_text/)
     ![ball](/readme_imgs/animate_text.gif) 
 
+- [line animation](/cenas_de_estudo/svg_line_animation)
+    ![line](/readme_imgs/line.gif)    
+- https://css-tricks.com/svg-line-animation-works/
+- https://css-tricks.com/a-trick-that-makes-drawing-svg-lines-way-easier/ 
+
 - **WEB.DEV** => Daquele Site da Google
     * **/Users/joaocosteira/Documents/dwebs2022/web.dev/learn_responsive_design/02_media_queries**
     ![Website 35](/readme_imgs/35.gif) 
@@ -827,3 +832,5 @@ h2 {
 
 # Importante,
 Na dir **/Users/joaocosteira/Documents/dwebs2022/css_yt/tailwind-animation-background** , tenho já novas cenas com animações no tailwind e cenas desse genero
+
+

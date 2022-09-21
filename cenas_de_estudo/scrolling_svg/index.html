@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <div class="line-container and the xmlns tag">
+        <!--    Removed the width & height  -->
+        <svg viewBox="0 0 106 979" fill="none" preserveAspectRatio="xMidYMax meet">
+            <path d="M21 1C54.5 129.5 21 110.5 21 180.5C21 236.5 40.3333 323.833 50 360.5V547M50 547H56M50 547L40 554.5M56 547C57.2 545.8 64.5 544.833 68 544.5H76.5H82.5L81.5 551V557.5L79.5 566L76.5 575L72 581.5M56 547C56 546.2 45.3333 551.667 40 554.5M72 581.5L65.5 585.5L50 592.5L37.5 594H28M72 581.5L69.5 580L61 571.5L56 567L50 562L46 557.5L40 554.5M25.5 614L19.5 609L13.5 604L9 599.5L5 594H16.5H27H28M25.5 614L28 604V594M25.5 614L42.5 643L54 674L42.5 724.5L82 765V880M28 594V583.5M28 582.5L31.1818 572.5M37.5 560.5L31.5 571.5L31.1818 572.5M37.5 560.5L40 554.5M37.5 560.5L31.1818 572.5M82 880L82.5 885L83.5 889.5L93 891.5L97 895L100 900L102.5 905.5L101 911.5L97 915L93 917.5V967L92 970.5L90 973L86 975H79L65.5 976L49 975L44 974L43.58 970.5M82 880L77.5 882H75L72.5 883.5L70 886.5L69 890.5L67.5 919.5L60.5 921.5L58 924.5L52 928L49 938.5L45.5 947.5L42.5 961.5L43.58 970.5M43.58 970.5L41.5 973L37 974L31.5 973L26 969.5L24 965.5L23 958L24 951L27 947.5L30.5 943L33.5 938.5L35 934.5L35.5 928.5L35 924.5L33 920.5L29.5 915L27 910.5L25 908.5" stroke="#9F1F19" stroke-width="5"/>
+        </svg> 
+    </div>
+
+    <section class="one">
+        <h1 class="scroll" data-rate=".4" data-direction="vertical">Ocena Stuff</h1>
+    </section>
+
+
+    <section class="two">
+        <h1 class="scroll" data-rate=".2" data-direction="vertical">Omg Scroll</h1>
+        <p>big Watermark</p>
+    </section>
+
+
+
+    <script>
+
+        // Drawing the Line:
+
+        let path = document.querySelector('path');
+        let pathLength = path.getTotalLength();
+
+        path.style.strokeDasharray = pathLength + ' ' + pathLength;
+
+        path.style.strokeDashoffset = pathLength;
+
+
+        window.addEventListener('scroll',() => {
+            var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+            var drawLength = pathLength * scrollPercentage;
+            path.style.strokeDashoffset = pathLength - drawLength;
+
+
+
+            // Text Paralex Effect:
+            const target = document.querySelectorAll('.scroll');
+
+            var index=0, length = target.length;
+
+            for(index; index < length; index++){
+                var pos = window.pageYOffset * target[index].dataset.rate;
+
+                if(target[index].dataset.direction === 'vertical'){
+                    target[index].style.transform = `translate3d(0px,${pos}px, 0px`;
+                }else{
+                    var posX = window.pageYOffset * target[index].dataset.ratex;
+                    var posY = window.pageYOffset * target[index].dataset.ratey;
+
+                    target[index].style.transform = `translate3d(${posX}px,${posY}px, 0px`;
+                }
+            }
+        })
+
+    </script>
+</body>
+</html>

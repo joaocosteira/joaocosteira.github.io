@@ -45,6 +45,10 @@ h1{
   text-align: center;
 }
 
+#signature{
+  display: none;
+}
+/*Mesmo A Imagem*/
 .signature{
   width: 10rem;
   /* margin: .5rem 0 0 50px; */
@@ -55,17 +59,17 @@ h1{
 .navbar {
   width: 100%;
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 3rem;
+  left: 1rem;
   background-color: transparent;
   z-index: 2;
   display: flex;
-  /* justify-content: space-between; */
   align-items: center;
 }
 
 .nav-links{
-  display: flex;
+  display: none;
+  /* display: flex; */
    margin-left: auto;
 }
 .nav-links li{
@@ -80,11 +84,12 @@ h1{
 
 .carrousel{
   background-color: transparent;
-  width: 50px;
-  height: calc(100vh/3);
+  width: 2rem;
+  height: calc(100vh/4);
   position: fixed;
-  left: 50px;
-  top: calc(100vh/3);
+  left: 0;
+  /* top: calc(100vh/3); */
+  top: calc( 100vh * 0.39);
   display: flex;
   flex-direction: column;
 }

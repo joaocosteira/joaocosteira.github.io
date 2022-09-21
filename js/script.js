@@ -45,6 +45,7 @@ function changeSelectedCarousel() {
 
 }
 
+
 changeSelectedCarousel();
 window.addEventListener('wheel', () => {
     changeSelectedCarousel();
