@@ -153,7 +153,7 @@ section {
 /*  Separating Elements in Columns */
 .left{
   position: relative;
-  width: 50%;
+  width: 60%;
   height: 100vh;
   background-color: #905055 ;
   color: white;
@@ -162,7 +162,7 @@ section {
 
 
 .right{
-  width:  50%;
+  width:  40%;
   height: 100vh;
   background-color: #55575f8e;
   color: white;
