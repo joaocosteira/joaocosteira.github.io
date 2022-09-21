@@ -1,8 +1,5 @@
-//hamburguer Menu
-const btn = document.getElementById('menu-btn');
-//sidemenu panel
-const sidemenu = document.getElementById('sidemenu');
-
+const btn = document.getElementById('menu-btn');     //hamburguer Menu
+const sidemenu = document.getElementById('sidemenu');//sidemenu panel
 
 
 //Open and close Sidemenu
@@ -13,80 +10,64 @@ function toggleSideMenu(){
 btn.addEventListener('click',toggleSideMenu);
 
 
-
-
-function setCarouselBallByIndex(index){
-    document.querySelectorAll(".carrousel-selected").forEach(c => c.classList.remove("carrousel-selected"));
-    document.querySelectorAll(".carrousel-circle")[index].classList.add("carrousel-selected");
+/**
+ * Update Selected Carousel Ball, Navbar & Sidemenu Anchors.
+ */
+function updateSelectedByIndex(index,mainClass,selectedClass){
+    document.querySelectorAll(`.${selectedClass}`).forEach(c => c.classList.remove(selectedClass));
+    document.querySelectorAll(`.${mainClass}`)[index].classList.add(selectedClass);
 }
+const setCarouselBallByIndex = (index) => updateSelectedByIndex(index,"carrousel-circle","carrousel-selected")
+const updateSidemenuByIndex  = (index) => updateSelectedByIndex(index,"sidemenu-a","sidemenu-selected")
+const updateMainNavByIndex   = (index) => updateSelectedByIndex(index,"mainmenu-a","mainmenu-selected")
 
+/**
+ * Go Home By Clicking The Signature Icon
+ */
+document.getElementById('signature').addEventListener('click',()=>{
+    setCarouselBallByIndex(0);
+    updateSidemenuByIndex(0);
+    updateMainNavByIndex(0);
+})
 
+/**  
+ * Page Scroll Event Listner
+ */
 function changeSelectedCarousel() {
     const sections = [...document.querySelectorAll('section')].sort((a, b) => {
         return Math.abs(a.getBoundingClientRect().top) - Math.abs(b.getBoundingClientRect().top);
     });
     const selectedIndex = [...document.querySelectorAll('section')].indexOf(sections[0]);
 
-    setCarouselBallByIndex(selectedIndex);  // Update selected Ball
-    updateSidemenuByIndex(selectedIndex);   // Update Selected Section on the menu
-    updateMainNavByIndex(selectedIndex);
+    setCarouselBallByIndex(selectedIndex);  // Update Carousel
+    updateSidemenuByIndex(selectedIndex);   // Update Sidemenu
+    updateMainNavByIndex(selectedIndex);    // Update Navbar
 
 }
 
-//Scroll Listening
 changeSelectedCarousel();
 window.addEventListener('wheel', () => {
     changeSelectedCarousel();
 }, false)
 
+/** 
+ * Click Event Listeners on Carousel Balls, Sidebar & Navbar Links:
+ * - When an element is clicked: updates itself & tells the others to do the same
+*/
+function addClickEvent(mainClass,selectedClass, updateFunctions){
 
+    document.querySelectorAll(`.${mainClass}`).forEach( (elem, elemIdx) =>{
 
-document.querySelectorAll(".carrousel-circle").forEach( (ball, ballIdx) =>{
-
-    ball.addEventListener('click',() =>{
-        document.querySelectorAll(".carrousel-selected").forEach(c => c.classList.remove("carrousel-selected"));
-        ball.classList.add("carrousel-selected");
-        updateSidemenuByIndex(ballIdx);
-        updateMainNavByIndex(ballIdx);
+        elem.addEventListener('click',() =>{
+            document.querySelectorAll(`.${selectedClass}`).forEach(c => c.classList.remove(selectedClass));
+            elem.classList.add(selectedClass);
+            updateFunctions.forEach( f => f(elemIdx));
+        });
+    
     });
 
-});
-
-
-
-function updateSidemenuByIndex(index){
-    document.querySelectorAll(".sidemenu-selected").forEach(c => c.classList.remove("sidemenu-selected"));
-    document.querySelectorAll(".sidemenu-a")[index].classList.add("sidemenu-selected");
 }
 
-
-document.querySelectorAll('.sidemenu-a').forEach( (anchor, anchorIndex) => {
-    anchor.addEventListener('click',() =>{
-        document.querySelectorAll(".sidemenu-selected").forEach(c => c.classList.remove("sidemenu-selected"));
-        anchor.classList.add("sidemenu-selected");
-        toggleSideMenu();
-        setCarouselBallByIndex(anchorIndex);
-        updateMainNavByIndex(anchorIndex);
-    });
-});
-
-
-function updateMainNavByIndex(index){
-    document.querySelectorAll(".mainmenu-selected").forEach(c => c.classList.remove("mainmenu-selected"));
-    document.querySelectorAll(".mainmenu-a")[index].classList.add("mainmenu-selected");
-}
-
-document.querySelectorAll('.mainmenu-a').forEach( (anchor, anchorIndex) => {
-    anchor.addEventListener('click',() =>{
-        document.querySelectorAll(".mainmenu-selected").forEach(c => c.classList.remove("mainmenu-selected"));
-        anchor.classList.add("mainmenu-selected");
-        setCarouselBallByIndex(anchorIndex);
-        updateSidemenuByIndex(anchorIndex);
-    });
-});
-
-document.getElementById('signature').addEventListener('click',()=>{
-    setCarouselBallByIndex(0);
-    updateSidemenuByIndex(0);
-    updateMainNavByIndex(0);
-})
+addClickEvent("carrousel-circle","carrousel-selected",[updateSidemenuByIndex,updateMainNavByIndex]);
+addClickEvent("sidemenu-a","sidemenu-selected",[toggleSideMenu,setCarouselBallByIndex,updateMainNavByIndex]);
+addClickEvent("mainmenu-a","mainmenu-selected",[setCarouselBallByIndex,updateSidemenuByIndex]);
