@@ -834,3 +834,5 @@ h2 {
 Na dir **/Users/joaocosteira/Documents/dwebs2022/css_yt/tailwind-animation-background** , tenho já novas cenas com animações no tailwind e cenas desse genero
 
 
+# Important Next Stages:
+- As animaçoes de cards com hovers e tal em em **/cenas_de_estudo/ccs_card_mobile**
