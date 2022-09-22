@@ -46,16 +46,17 @@ h1{
 }
 
 #signature{
-  display: block;
-  margin-left: -3.5rem;
-  margin-top: -1rem;
-}
+  display: none;
+  /* margin-left: -3.5rem;
+  margin-top: -1rem; */
+} 
 
 /*Mesmo A Imagem*/
 .signature{
-  height: 2rem;
-  margin: .5rem 0 0 2rem;
-  /* margin-left: 2rem; */
+  height: 3rem;
+  margin-top: .5rem;
+  /*margin: .5rem 0 0 2rem;*/
+  margin-left: 2rem;
   /* margin: .5rem 0 0 50px; */
   /*margin: .5rem auto 0 auto;*/
 
@@ -70,7 +71,7 @@ h1{
   z-index: 2;
   display: flex;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
 }
 
 .nav-links{
@@ -183,8 +184,8 @@ section {
 
 .hamburger {
   cursor: pointer;
-  /* width: 24px; */
-  width: 100%;
+  width: 24px;
+  /* width: 100%; */
   height: 24px;
   transition: all 0.25s;
   position: absolute;
@@ -315,11 +316,12 @@ a.mainmenu-selected, .mainmenu-a:hover{
 
   #signature{
     display: block;
-    margin: 0;
+    /*margin: 0;*/
   }
+  /*
   .signature{
     height: 3rem;
-  }
+  } */
 
   .navbar {
     top:0;
