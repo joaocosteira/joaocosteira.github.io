@@ -336,5 +336,8 @@ a.mainmenu-selected, .mainmenu-a:hover{
   .nav-links{
     display: flex;
   }
+  .open{
+    display: none;
+  }
 
 }
