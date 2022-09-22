@@ -845,3 +845,6 @@ Uma coisa engraçada é o **grid-template-columns: repeat(auto-fit, 100px);**, b
 Mas a piada é com o **grid-template-columns: repeat(auto-fit, 1fr);** , o fraction unit vai tentar ocupar o maior espaço possivel, logo isto vai tornar cada elemento full width. **logo isto pode ser bom pra fazer website dinamico**, onde temos a grid num dado tamanho, e depois com isto meter elems full width, obviamente que tb temos a cena de meter a cena como 1 col, mas isso fica pra outro dia.
 
 - Em **/cenas_de_estudo/grid_squares** já tenho uma versão rota do windows 8 pra mobile.
+ * Links associados:
+    - https://css-tricks.com/a-grid-of-logos-in-squares/
+    - https://css-tricks.com/using-svg/
