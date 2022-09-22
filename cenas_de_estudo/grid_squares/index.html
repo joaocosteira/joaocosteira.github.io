@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body{
+            margin: 2rem;
+        }
+        .grid{
+            display: grid;
+            grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+            gap: 1rem;
+        }
+
+        .grid > div {
+            background: black;
+            padding: 1rem;
+            /*isto é para um troque de meter a imagem dentro da parte do conteudo,
+            pois agora temos o before a criar um quadrado perfeito acima da imagem,
+            depois vem a imagem, tornando cada elem da grid principal um retangulo na vertical*/
+            display: grid;
+            place-items: center;
+        }
+
+        /*  Fucking Magic!!!*/
+        .grid > div::before{
+            content:"";
+            /*Em grid, este 100% é baseado na width da celula, assim conseguimos fazer quadrados!!!*/
+            padding-top: 100%;
+            display: block;
+            grid-area: 1 / 1 / -1 / -1;
+        }
+
+        .grid > div > img {
+            /* display: none; */
+            width: 50%;
+            /* height: 100%;
+            object-fit: contain; */
+            grid-area: 1 / 1 / -1 / -1;
+        } 
+
+        /* .icons{
+            width: 50px;
+        } */
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div><img class="icons" src="icons/phone.svg" alt="phone"></div>
+        <div><img class="icons" src="icons/mail.svg" alt="mail"></div>
+        <div><img class="icons" src="icons/git.svg" alt="git"></div>
+        <div><img class="icons" src="icons/linkedin.svg" alt="linkedin"></div>
+        <div><img class="icons" src="icons/instagram.svg" alt=""></div>
+        <div><img class="icons" src="icons/phone.svg" alt="phone"></div>
+        <div><img class="icons" src="icons/mail.svg" alt="mail"></div>
+        <div><img class="icons" src="icons/git.svg" alt="git"></div>
+        <div><img class="icons" src="icons/linkedin.svg" alt="linkedin"></div>
+        <div><img class="icons" src="icons/instagram.svg" alt=""></div>
+    </div>
+</body>
+</html>
