@@ -848,3 +848,12 @@ Mas a piada é com o **grid-template-columns: repeat(auto-fit, 1fr);** , o fract
  * Links associados:
     - https://css-tricks.com/a-grid-of-logos-in-squares/
     - https://css-tricks.com/using-svg/
+
+
+## Meter uma length maxima no texto, em vez do conteudo em si:
+- [Link](https://www.youtube.com/watch?v=dgbFtMBOMlA)
+```css
+.main-cotent p{
+    max-width: 50ch; /*ele recomenda começar com 60*/
+}
+```
