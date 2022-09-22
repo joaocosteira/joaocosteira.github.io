@@ -836,3 +836,4 @@ Na dir **/Users/joaocosteira/Documents/dwebs2022/css_yt/tailwind-animation-backg
 
 # Important Next Stages:
 - As animaçoes de cards com hovers e tal em em **/cenas_de_estudo/ccs_card_mobile**
+- O figma, permite fazer o upload de svg files e alterar a cor do ficheiro. Assim consigo fazer icons custom e tal. Se continuar con a idea de fazer uma especie de windows 8 na mobile version, os quadrados vao ser pretos com uma shadow/gradient bg para conseguir ver melhor a separação, also on click e hover um flip effect, e em cima disso icons brancos.
