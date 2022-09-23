@@ -430,7 +430,7 @@ footer > ul{
   align-items: center;
   border: 10px solid black;
   width: 300px; */
-  width: 80vw;
+  width: calc(100vw - 2rem);
   margin: 0 auto;
   height: 100vh;
   overflow-y: scroll;
