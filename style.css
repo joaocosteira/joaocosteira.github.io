@@ -450,12 +450,23 @@ footer > ul{
 
 .phone-notification{
   position: absolute;
-  top: -.5rem;
+  display: flex;
+  align-items: center;
+  top: .15rem;
+  gap: .25rem;
   right: 1rem;
 }
 
 .phone-notification > img{
   height: .5rem;
+}
+
+.phone-notification > img.wifi{
+  height: .6rem;
+}
+
+.phone-notification > img.battery{
+  height: .4rem;
 }
 
 #touch{
