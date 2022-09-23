@@ -79,6 +79,6 @@ document.querySelectorAll('.phone-square').forEach( square => {
 
     square.addEventListener( 'click', () => { 
         square.classList.add("flip");
-        setTimeout(()=>{ square.classList.remove("flip")}, 400)
+        setTimeout(()=>{ square.classList.remove("flip")}, 200)
     })
 })

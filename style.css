@@ -340,6 +340,9 @@ a.mainmenu-selected, .mainmenu-a:hover{
     display: none;
   }
 
+
+  /*  Definir Aqui a Página do windows8 phone pra desktop*/
+
 }
 
 
@@ -358,14 +361,14 @@ a.mainmenu-selected, .mainmenu-a:hover{
 
 
 .rotate-horizontal-center{
-  animation:rotate-horizontal-center 0.4s
+  animation:rotate-horizontal-center 0.2s
 } @keyframes rotate-horizontal-center{
   0%{transform:rotateX(0)}
   100%{transform:rotateX(-360deg)}
 }
 
 .flip{
-  animation:rotate-horizontal-center 0.4s
+  animation:rotate-horizontal-center 0.2s
   } @keyframes rotate-horizontal-center{
       0%{transform:rotateX(0)}
       100%{transform:rotateX(-360deg)} 
@@ -431,7 +434,7 @@ footer > ul{
   border: 10px solid black;
   width: 300px; */
   width: calc(100vw - 2rem);
-  margin: 0 auto;
+  margin: 1rem auto;
   height: 100vh;
   overflow-y: scroll;
 }
