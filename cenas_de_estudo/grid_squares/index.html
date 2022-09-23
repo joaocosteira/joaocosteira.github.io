@@ -13,7 +13,8 @@
         }
         .grid{
             display: grid;
-            grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+            /* grid-template-columns: repeat(auto-fill,minmax(200px,1fr)); */
+            grid-template-columns: 1fr 1fr;
             gap: 1rem;
         }
 
@@ -36,31 +37,77 @@
             grid-area: 1 / 1 / -1 / -1;
         }
 
+        .grid > div.long{
+            grid-column: 1 / -1;
+        }
+
+        .grid > div.long::before{
+            padding-top: 50%;
+        }
         .grid > div > img {
-            /* display: none; */
             width: 50%;
-            /* height: 100%;
-            object-fit: contain; */
             grid-area: 1 / 1 / -1 / -1;
         } 
 
-        /* .icons{
-            width: 50px;
-        } */
+        .grid-right{
+            grid-column: 2 / -1;
+        }
+
+
+        .rotate-horizontal-center{
+            animation:rotate-horizontal-center 0.4s
+        } @keyframes rotate-horizontal-center{
+            0%{transform:rotateX(0)}
+            100%{transform:rotateX(-360deg)}
+        }
+
+        .flip{
+            animation:rotate-horizontal-center 0.4s
+            } @keyframes rotate-horizontal-center{
+                0%{transform:rotateX(0)}
+                100%{transform:rotateX(-360deg)} 
+        }
+
+        .phone-square{
+            transition: transform 500ms ease;
+        }
+
+
+        @media( hover : hover){
+
+            .phone-square:hover{
+                transform: scale(1.05);
+                cursor: pointer;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="grid">
-        <div><img class="icons" src="icons/phone.svg" alt="phone"></div>
-        <div><img class="icons" src="icons/mail.svg" alt="mail"></div>
-        <div><img class="icons" src="icons/git.svg" alt="git"></div>
-        <div><img class="icons" src="icons/linkedin.svg" alt="linkedin"></div>
-        <div><img class="icons" src="icons/instagram.svg" alt=""></div>
-        <div><img class="icons" src="icons/phone.svg" alt="phone"></div>
-        <div><img class="icons" src="icons/mail.svg" alt="mail"></div>
-        <div><img class="icons" src="icons/git.svg" alt="git"></div>
-        <div><img class="icons" src="icons/linkedin.svg" alt="linkedin"></div>
-        <div><img class="icons" src="icons/instagram.svg" alt=""></div>
+        <div class="phone-square"><img class="icons" src="icons/phone.svg" alt="phone"></div>
+        <div class="phone-square"><img class="icons" src="icons/mail.svg" alt="mail"></div>
+        <div class="phone-square"><img class="icons" src="icons/git.svg" alt="git"></div>
+        <div class="long phone-square"><img class="icons" src="icons/linkedin.svg" alt="linkedin"></div>
+        <div class="grid-right phone-square"><img class="icons" src="icons/instagram.svg" alt=""></div>
     </div>
+
+    <script>
+        document.querySelectorAll('.phone-square').forEach( square => {
+
+            square.addEventListener( 'click', () => { 
+                square.classList.add("flip");
+                setTimeout(()=>{ square.classList.remove("flip")}, 400)
+            })
+        })
+
+        var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        if (isMobile) {
+        /* your code here */
+        console.log("Mobile")
+        }else{
+            console.log("Desktop")
+        }
+    </script>
 </body>
 </html>
+
