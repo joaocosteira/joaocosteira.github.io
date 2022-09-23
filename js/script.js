@@ -72,3 +72,13 @@ function addClickEvent(mainClass,selectedClass, updateFunctions){
 addClickEvent("carrousel-circle","carrousel-selected",[updateSidemenuByIndex,updateMainNavByIndex]);
 addClickEvent("sidemenu-a","sidemenu-selected",[toggleSideMenu,setCarouselBallByIndex,updateMainNavByIndex]);
 addClickEvent("mainmenu-a","mainmenu-selected",[setCarouselBallByIndex,updateSidemenuByIndex]);
+
+
+/**Windows 8 tiles flip */
+document.querySelectorAll('.phone-square').forEach( square => {
+
+    square.addEventListener( 'click', () => { 
+        square.classList.add("flip");
+        setTimeout(()=>{ square.classList.remove("flip")}, 400)
+    })
+})

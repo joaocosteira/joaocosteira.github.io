@@ -11,45 +11,45 @@
         body{
             margin: 2rem;
         }
-        .grid{
+        .phone-grid{
             display: grid;
             /* grid-template-columns: repeat(auto-fill,minmax(200px,1fr)); */
             grid-template-columns: 1fr 1fr;
             gap: 1rem;
         }
 
-        .grid > div {
+        /* .phone-grid > div {
             background: black;
             padding: 1rem;
             /*isto é para um troque de meter a imagem dentro da parte do conteudo,
             pois agora temos o before a criar um quadrado perfeito acima da imagem,
             depois vem a imagem, tornando cada elem da grid principal um retangulo na vertical*/
-            display: grid;
+           /* display: grid;
             place-items: center;
         }
 
         /*  Fucking Magic!!!*/
-        .grid > div::before{
+      /*  .phone-grid > div::before{
             content:"";
             /*Em grid, este 100% é baseado na width da celula, assim conseguimos fazer quadrados!!!*/
-            padding-top: 100%;
+        /*    padding-top: 100%;
             display: block;
             grid-area: 1 / 1 / -1 / -1;
         }
 
-        .grid > div.long{
+        .phone-grid > div.long{
             grid-column: 1 / -1;
         }
 
-        .grid > div.long::before{
+        .phone-grid > div.long::before{
             padding-top: 50%;
         }
-        .grid > div > img {
+        .phone-grid > div > img {
             width: 50%;
             grid-area: 1 / 1 / -1 / -1;
-        } 
+        }  */
 
-        .grid-right{
+        .phone-grid-right{
             grid-column: 2 / -1;
         }
 
@@ -80,16 +80,66 @@
                 cursor: pointer;
             }
         }
+
+        footer > ul{
+            margin-block-start: 0;
+            margin-block-end: 0;
+            padding-inline-start:0;
+            list-style: none;
+        }
+
+
+        .phone-grid > a {
+            background: black;
+            padding: 1rem;
+            /*isto é para um troque de meter a imagem dentro da parte do conteudo,
+            pois agora temos o before a criar um quadrado perfeito acima da imagem,
+            depois vem a imagem, tornando cada elem da grid principal um retangulo na vertical*/
+            display: grid;
+            place-items: center;
+        }
+
+        /*  Fucking Magic!!!*/
+        .phone-grid > a::before{
+            content:"";
+            /*Em grid, este 100% é baseado na width da celula, assim conseguimos fazer quadrados!!!*/
+            padding-top: 100%;
+            display: block;
+            grid-area: 1 / 1 / -1 / -1;
+        }
+
+        .phone-grid > a.long{
+            grid-column: 1 / -1;
+        }
+
+        .phone-grid > a.long::before{
+            padding-top: 50%;
+        }
+        .phone-grid > a > img {
+            width: 50%;
+            grid-area: 1 / 1 / -1 / -1;
+        } 
+        
     </style>
 </head>
 <body>
-    <div class="grid">
-        <div class="phone-square"><img class="icons" src="icons/phone.svg" alt="phone"></div>
-        <div class="phone-square"><img class="icons" src="icons/mail.svg" alt="mail"></div>
-        <div class="phone-square"><img class="icons" src="icons/git.svg" alt="git"></div>
-        <div class="long phone-square"><img class="icons" src="icons/linkedin.svg" alt="linkedin"></div>
-        <div class="grid-right phone-square"><img class="icons" src="icons/instagram.svg" alt=""></div>
-    </div>
+    <footer class="phone-grid">
+            <a id="phone" href="tel:+351910199153" class="phone-square">
+                <img class="icons" src="icons/phone.svg" alt="phone">
+            </a>
+            <a href="mailto:someone@example.com" class="phone-square">
+                <img class="icons" src="icons/mail.svg" alt="mail">
+            </a>
+            <a href="https://github.com/joaocosteira" class="phone-square">
+                <img class="icons" src="icons/git.svg" alt="git">
+            </a>
+            <a href="https://www.linkedin.com/in/jo%C3%A3o-costeira-7513751b7/" class="long phone-square">
+                <img class="icons" src="icons/linkedin.svg" alt="linkedin">
+            </a>
+            <a href="https://www.instagram.com/costeirao/" class="grid-right phone-square">
+                <img class="icons" src="icons/instagram.svg" alt="">
+            </a>
+    </footer>
 
     <script>
         document.querySelectorAll('.phone-square').forEach( square => {
@@ -101,11 +151,9 @@
         })
 
         var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-        if (isMobile) {
-        /* your code here */
-        console.log("Mobile")
-        }else{
-            console.log("Desktop")
+        if (!isMobile) {
+            /*callto*/
+
         }
     </script>
 </body>

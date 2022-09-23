@@ -341,3 +341,97 @@ a.mainmenu-selected, .mainmenu-a:hover{
   }
 
 }
+
+
+
+/** Footer Windows Phone: */
+.phone-grid{
+  display: grid;
+  /* grid-template-columns: repeat(auto-fill,minmax(200px,1fr)); */
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.phone-grid-right{
+  grid-column: 2 / -1;
+}
+
+
+.rotate-horizontal-center{
+  animation:rotate-horizontal-center 0.4s
+} @keyframes rotate-horizontal-center{
+  0%{transform:rotateX(0)}
+  100%{transform:rotateX(-360deg)}
+}
+
+.flip{
+  animation:rotate-horizontal-center 0.4s
+  } @keyframes rotate-horizontal-center{
+      0%{transform:rotateX(0)}
+      100%{transform:rotateX(-360deg)} 
+}
+
+.phone-square{
+  transition: transform 500ms ease;
+}
+
+
+@media( hover : hover){
+
+  .phone-square:hover{
+      transform: scale(1.05);
+      cursor: pointer;
+  }
+}
+
+footer > ul{
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start:0;
+  list-style: none;
+}
+
+
+.phone-grid > a {
+  background: black;
+  padding: 1rem;
+  /*isto é para um troque de meter a imagem dentro da parte do conteudo,
+  pois agora temos o before a criar um quadrado perfeito acima da imagem,
+  depois vem a imagem, tornando cada elem da grid principal um retangulo na vertical*/
+  display: grid;
+  place-items: center;
+}
+
+/*  Fucking Magic!!!*/
+.phone-grid > a::before{
+  content:"";
+  /*Em grid, este 100% é baseado na width da celula, assim conseguimos fazer quadrados!!!*/
+  padding-top: 100%;
+  display: block;
+  grid-area: 1 / 1 / -1 / -1;
+}
+
+.phone-grid > a.long{
+  grid-column: 1 / -1;
+}
+
+.phone-grid > a.long::before{
+  padding-top: 50%;
+}
+.phone-grid > a > img {
+  width: 50%;
+  grid-area: 1 / 1 / -1 / -1;
+} 
+
+
+.handle-phone{
+  /* display: flex;
+  margin: auto;
+  align-items: center;
+  border: 10px solid black;
+  width: 300px; */
+  width: 80vw;
+  margin: 0 auto;
+  height: 100vh;
+  overflow-y: scroll;
+}
