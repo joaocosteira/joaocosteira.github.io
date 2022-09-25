@@ -475,3 +475,10 @@ footer > ul{
   justify-content: center;
   align-items: center;
 }
+
+#about{
+  display: flex;
+  background-color: #905055;
+  justify-content: center;
+  align-items: center;
+}

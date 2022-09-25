@@ -1,0 +1,12 @@
+.thumb {
+	position: relative;
+	margin: 0;
+	width: 200px;
+	height: 220px;
+	overflow: hidden;
+}
+
+.distort {
+	pointer-events: none;
+	margin: -115px 0 0 -75px;
+}
