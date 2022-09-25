@@ -1,6 +1,32 @@
-import { gsap } from 'gsap';
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Costeira Profile</title>
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js" integrity="sha512-Mf/xUqfWvDIr+1B6zfnIDIiG7XHzyP/guXUWgV6PgaQoIFeXkJQR5XWh9fqAiCiRCpemabt3naV4jhDWVnuYDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	</head>
+	<body>
+		<main>
+			<div class="tobe_distorted">
+				<figure class="thumb">
+					<svg class="distort" width="350" height="450" viewBox="0 0 350 450" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						<filter id="distortionFilter" data-type="turbulence">
+							<feTurbulence type="fractalNoise" baseFrequency="0" numOctaves="1" result="warp" />
+							<feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="250" in="SourceGraphic" />
+						</filter>
+						<image filter="url(#distortionFilter)" class="distort__img" x="50" y="50" xlink:href="img/profile.jpg" height="350" width="250"/>
+					</svg>
+				</figure>
+			</div>
+		</main>
+		<script>
 
-export class Item {
+
+// import { gsap } from 'gsap';
+
+class Item {
 
     constructor(el) {
 
@@ -84,3 +110,8 @@ export class Item {
         this.tl.reverse();
     }
 }
+
+[...document.querySelectorAll('.tobe_distorted')].forEach(item => new Item(item));
+        </script>
+	</body>
+</html>

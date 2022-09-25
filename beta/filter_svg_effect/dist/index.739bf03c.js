@@ -532,95 +532,96 @@ function hmrAcceptRun(bundle, id) {
 }
 
 },{}],"ebWYT":[function(require,module,exports) {
-var _cursor = require("./cursor");
 var _item = require("./item");
-// initialize custom cursor
-const cursor = new (0, _cursor.Cursor)(document.querySelector(".cursor"));
-// items/images elems
 [
-    ...document.querySelectorAll(".item")
+    ...document.querySelectorAll(".tobe_distorted")
 ].forEach((item)=>new (0, _item.Item)(item));
-// mouse effects on all links
-[
-    ...document.querySelectorAll("a, .distort__img")
-].forEach((link)=>{
-    link.addEventListener("mouseenter", ()=>cursor.enter());
-    link.addEventListener("mouseleave", ()=>cursor.leave());
-});
 
-},{"./cursor":"3v1v0","./item":"8aqVM"}],"3v1v0":[function(require,module,exports) {
+},{"./item":"8aqVM"}],"8aqVM":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Cursor", ()=>Cursor);
+parcelHelpers.export(exports, "Item", ()=>Item);
 var _gsap = require("gsap");
-var _utils = require("./utils");
-// Track the mouse position
-let mouse = {
-    x: 0,
-    y: 0
-};
-window.addEventListener("mousemove", (ev)=>mouse = (0, _utils.getMousePos)(ev));
-class Cursor {
+class Item {
     constructor(el){
         this.DOM = {
             el: el
         };
-        this.DOM.el.style.opacity = 0;
-        this.bounds = this.DOM.el.getBoundingClientRect();
-        this.renderedStyles = {
-            tx: {
-                previous: 0,
-                current: 0,
-                amt: 0.15
+        this.DOM.thumb = this.DOM.el.querySelector(".thumb");
+        this.DOM.thumbSVG = this.DOM.thumb.querySelector(".distort");
+        this.DOM.SVGFilter = this.DOM.thumbSVG.querySelector("filter");
+        this.DOM.SVGImage = this.DOM.thumbSVG.querySelector("image.distort__img");
+        (0, _gsap.gsap).set(this.DOM.SVGImage, {
+            transformOrigin: "50% 50%"
+        });
+        this.filterType = this.DOM.SVGFilter.dataset.type;
+        this.DOM.feTurbulence = this.DOM.SVGFilter.querySelector("feTurbulence");
+        this.DOM.feDisplacementMap = this.DOM.SVGFilter.querySelector("feDisplacementMap");
+        this.primitiveValues = this.filterType === "turbulence" ? {
+            baseFrequency: 0
+        } : {
+            scale: 0
+        };
+        this.createHoverTimeline();
+        this.initEvents();
+    }
+    initEvents() {
+        this.onMouseEnterFn = ()=>this.mouseEnter();
+        this.DOM.thumb.addEventListener("mouseenter", this.onMouseEnterFn);
+        this.onMouseLeaveFn = ()=>this.mouseLeave();
+        this.DOM.thumb.addEventListener("mouseleave", this.onMouseLeaveFn);
+    }
+    updateFilterValues() {
+        this[this.filterType === "turbulence" ? "updateTurbulenceBaseFrequency" : "updateDisplacementMapScale"]();
+    }
+    updateTurbulenceBaseFrequency(val = this.primitiveValues.baseFrequency) {
+        this.DOM.feTurbulence.setAttribute("baseFrequency", val);
+    }
+    updateDisplacementMapScale(val = this.primitiveValues.scale) {
+        this.DOM.feDisplacementMap.setAttribute("scale", val);
+    }
+    createHoverTimeline() {
+        this.tl = (0, _gsap.gsap).timeline({
+            paused: true,
+            defaults: {
+                duration: 0.7,
+                ease: "power2"
             },
-            ty: {
-                previous: 0,
-                current: 0,
-                amt: 0.15
-            },
-            scale: {
-                previous: 1,
-                current: 1,
-                amt: 0.15
-            },
-            opacity: {
-                previous: 1,
-                current: 1,
-                amt: 0.1
+            onUpdate: ()=>this.updateFilterValues(),
+            onReverseComplete: ()=>{
+                if (this.filterType === "turbulence") {
+                    this.primitiveValues.baseFrequency = 0;
+                    this.updateFilterValues();
+                }
             }
-        };
-        this.onMouseMoveEv = ()=>{
-            this.renderedStyles.tx.previous = this.renderedStyles.tx.current = mouse.x - this.bounds.width / 2;
-            this.renderedStyles.ty.previous = this.renderedStyles.ty.previous = mouse.y - this.bounds.height / 2;
-            (0, _gsap.gsap).to(this.DOM.el, {
-                duration: 0.9,
-                ease: "Power3.easeOut",
-                opacity: 1
-            });
-            requestAnimationFrame(()=>this.render());
-            window.removeEventListener("mousemove", this.onMouseMoveEv);
-        };
-        window.addEventListener("mousemove", this.onMouseMoveEv);
+        });
+        if (this.filterType === "turbulence") this.tl.to(this.primitiveValues, {
+            startAt: {
+                baseFrequency: 0.09
+            },
+            baseFrequency: 0
+        }, 0);
+        else this.tl.to(this.primitiveValues, {
+            startAt: {
+                scale: 0
+            },
+            scale: 150
+        }, 0);
+        if (navigator.userAgent.indexOf("Firefox") == -1) this.tl.to(this.DOM.SVGImage, {
+            scale: 1.2
+        }, 0);
     }
-    enter() {
-        this.renderedStyles["scale"].current = 1.8;
-        this.renderedStyles["opacity"].current = 0.8;
+    // Start Animation
+    mouseEnter() {
+        this.tl.restart();
     }
-    leave() {
-        this.renderedStyles["scale"].current = 1;
-        this.renderedStyles["opacity"].current = 1;
-    }
-    render() {
-        this.renderedStyles["tx"].current = mouse.x - this.bounds.width / 2;
-        this.renderedStyles["ty"].current = mouse.y - this.bounds.height / 2;
-        for(const key in this.renderedStyles)this.renderedStyles[key].previous = (0, _utils.lerp)(this.renderedStyles[key].previous, this.renderedStyles[key].current, this.renderedStyles[key].amt);
-        this.DOM.el.style.transform = `translateX(${this.renderedStyles["tx"].previous}px) translateY(${this.renderedStyles["ty"].previous}px) scale(${this.renderedStyles["scale"].previous})`;
-        this.DOM.el.style.opacity = this.renderedStyles["opacity"].previous;
-        requestAnimationFrame(()=>this.render());
+    // End Animation
+    mouseLeave() {
+        this.tl.reverse();
     }
 }
 
-},{"gsap":"fPSuC","./utils":"72Dku","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fPSuC":[function(require,module,exports) {
+},{"gsap":"fPSuC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fPSuC":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "gsap", ()=>gsapWithCSS);
@@ -4597,154 +4598,6 @@ var CSSPlugin = {
 });
 (0, _gsapCoreJs.gsap).registerPlugin(CSSPlugin);
 
-},{"./gsap-core.js":"05eeC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"72Dku":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "lerp", ()=>lerp);
-parcelHelpers.export(exports, "getMousePos", ()=>getMousePos);
-// Linear interpolation
-const lerp = (a, b, n)=>(1 - n) * a + n * b;
-// Gets the mouse position
-const getMousePos = (e)=>{
-    return {
-        x: e.clientX,
-        y: e.clientY
-    };
-};
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8aqVM":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Item", ()=>Item);
-var _gsap = require("gsap");
-class Item {
-    constructor(el){
-        this.DOM = {
-            el: el
-        };
-        this.DOM.thumb = this.DOM.el.querySelector(".thumb");
-        this.DOM.thumbSVG = this.DOM.thumb.querySelector(".distort");
-        this.DOM.SVGFilter = this.DOM.thumbSVG.querySelector("filter");
-        this.DOM.SVGImage = this.DOM.thumbSVG.querySelector("image.distort__img");
-        (0, _gsap.gsap).set(this.DOM.SVGImage, {
-            transformOrigin: "50% 50%"
-        });
-        // we will either animate the feTurbulence's baseFrequency value or the feDisplacementMap's scale value
-        this.filterType = this.DOM.SVGFilter.dataset.type;
-        // the feTurbulence elements per filter
-        this.DOM.feTurbulence = this.DOM.SVGFilter.querySelector("feTurbulence");
-        this.DOM.feDisplacementMap = this.DOM.SVGFilter.querySelector("feDisplacementMap");
-        // (turbulence) baseFrequency or (displacementMap) scale current value
-        this.primitiveValues = this.filterType === "turbulence" ? {
-            baseFrequency: 0
-        } : {
-            scale: 0
-        };
-        this.DOM.caption = this.DOM.thumb.querySelector(".thumb__caption");
-        this.DOM.captionTitle = this.DOM.caption.querySelector(".thumb__caption-title");
-        this.DOM.captionLink = this.DOM.caption.querySelector(".thumb__caption-link");
-        this.DOM.meta = this.DOM.el.querySelector(".item__meta");
-        this.DOM.metaCounter = this.DOM.meta.querySelector(".item__meta-counter");
-        this.DOM.metaTitle = this.DOM.meta.querySelector(".item__meta-title");
-        this.DOM.metaDetail = [
-            ...this.DOM.meta.querySelectorAll(".item__meta-detail")
-        ];
-        this.createHoverTimeline();
-        this.initEvents();
-    }
-    initEvents() {
-        this.onMouseEnterFn = ()=>this.mouseEnter();
-        this.DOM.thumb.addEventListener("mouseenter", this.onMouseEnterFn);
-        this.onMouseLeaveFn = ()=>this.mouseLeave();
-        this.DOM.thumb.addEventListener("mouseleave", this.onMouseLeaveFn);
-    }
-    updateFilterValues() {
-        this[this.filterType === "turbulence" ? "updateTurbulenceBaseFrequency" : "updateDisplacementMapScale"]();
-    }
-    updateTurbulenceBaseFrequency(val = this.primitiveValues.baseFrequency) {
-        this.DOM.feTurbulence.setAttribute("baseFrequency", val);
-    }
-    updateDisplacementMapScale(val = this.primitiveValues.scale) {
-        this.DOM.feDisplacementMap.setAttribute("scale", val);
-    }
-    createHoverTimeline() {
-        this.tl = (0, _gsap.gsap).timeline({
-            paused: true,
-            defaults: {
-                duration: 0.7,
-                ease: "power2"
-            },
-            onUpdate: ()=>this.updateFilterValues(),
-            onReverseComplete: ()=>{
-                if (this.filterType === "turbulence") {
-                    this.primitiveValues.baseFrequency = 0;
-                    this.updateFilterValues();
-                }
-            }
-        });
-        if (this.filterType === "turbulence") this.tl.to(this.primitiveValues, {
-            // (turbulence) baseFrequency
-            startAt: {
-                baseFrequency: 0.09
-            },
-            // animate to 0
-            baseFrequency: 0
-        }, 0);
-        else this.tl.to(this.primitiveValues, {
-            // (displacementMap) scale start value
-            startAt: {
-                scale: 0
-            },
-            scale: 150
-        }, 0);
-        this.tl.to(this.DOM.caption, {
-            y: "0%"
-        }, 0).to([
-            this.DOM.captionTitle,
-            this.DOM.captionLink
-        ], {
-            y: 0,
-            startAt: {
-                y: 100,
-                opacity: 0
-            },
-            opacity: 1,
-            stagger: 0.1
-        }, 0).to([
-            this.DOM.metaCounter,
-            this.DOM.metaTitle,
-            this.DOM.metaDetail
-        ], {
-            duration: 0.1,
-            x: (i)=>i % 2 == 0 ? "-5%" : "5%",
-            opacity: 0,
-            stagger: 0.05
-        }, 0).to([
-            this.DOM.metaCounter,
-            this.DOM.metaTitle,
-            this.DOM.metaDetail
-        ], {
-            duration: 0.5,
-            ease: "power3",
-            startAt: {
-                x: (i)=>i % 2 == 0 ? "15%" : "-15%"
-            },
-            x: "0%",
-            opacity: 1,
-            stagger: 0.08
-        }, 0.1);
-        if (navigator.userAgent.indexOf("Firefox") == -1) this.tl.to(this.DOM.SVGImage, {
-            scale: 1.2
-        }, 0);
-    }
-    mouseEnter() {
-        this.tl.restart();
-    }
-    mouseLeave() {
-        this.tl.reverse();
-    }
-}
-
-},{"gsap":"fPSuC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["cVgJb","ebWYT"], "ebWYT", "parcelRequirec1d1")
+},{"./gsap-core.js":"05eeC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["cVgJb","ebWYT"], "ebWYT", "parcelRequirec1d1")
 
 //# sourceMappingURL=index.739bf03c.js.map
