@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
+    <meta name="description" content="Portfolio of João Costeira" />
+    <meta name="keywords" content="frontend, developer, Software Engineer, Braga, Portugal, react, css, javascript, nlp, functional programming, design, art, music" />
+    <meta name="author" content="João Costeira" />
 
     <link rel="stylesheet" href="fonts/source-serif-caption.css">
     <link rel="stylesheet" href="fonts/source-serif-smtext.css">
@@ -18,34 +21,19 @@
     <title>Costeira</title>
 </head>
 
-
 <body>
-    
-    <!--    NavBar  -->
-    <!--
-        Todo:
-            - Signature Logo
-            - Links to Sections
-            - Responsive:
-                * small: hamburguer left/ signature center
-                * large: signature left/ links right
-    -->
-
     <header>
         <nav class="navbar">
-            <!--    Hamburguer-->
             <button id="menu-btn" class="hamburger">
                 <span class="hamburger-top"></span>
                 <span class="hamburger-middle"></span>
                 <span class="hamburger-bottom"></span>
             </button>
     
-    
-            <!--    Costeira Logo-->
             <a id="signature" href="#home">
                 <img class="signature" src="imgs/signature.png" alt="Costeira Signature">
             </a>
-            <!--    Costeira Links -->
+
             <ul class="nav-links">
                 <li><a class="mainmenu-a mainmenu-selected" href='#home'>Home</a></li>
                 <li><a class="mainmenu-a" href='#about'>About</a></li>
@@ -56,11 +44,6 @@
         </nav>
     </header>
 
-
-    <!--
-        Idem Aqui, os valores que estão aqui têm de dar match com os valores da navbar global,
-        e Ficava bonito ao selecionar automaticamente qual deles estão selecionados.
-    -->
     <div id="sidemenu" class="sidemenu">
 
         <div class="sidemenu-inner">
@@ -73,7 +56,6 @@
         
     </div>
 
-    <!--    Carrousel => Bolas laterais que indica onde estamos na página, full page carousel -->
     <div class="carrousel">
         <a class="carrousel-circle carrousel-selected" href="#home"></a>
         <a class="carrousel-circle" href="#about"></a>
@@ -82,29 +64,22 @@
         <a class="carrousel-circle" href="#touch"></a>
     </div>
 
-    <!-- flex wrap-->
     <main class="page">
-        
 
-        <!--    Hero    -->
         <section id="home" class="hero full-page">
                 <h1>João Costeira</h1>
                 <p>Software Engineer From Braga Portugal</p>
         </section>
         
-        <!--    About   -->
+
         <section id="about" class="full-page">
             <p>About</p>
         </section>
 
-        <!--    Interests    -->
         <section id="interests" class="full-page">
             <p>Interests</p>
         </section>
 
-
-
-        <!--    Double Screen xadrez -->
         <section id="work" class="xadrez">
             <div class="right" style="background-color: black; color: white;">
                 <p>Right</p>
@@ -119,19 +94,6 @@
                 <p>Left</p>
             </div>
         </section>
-
-
-
-        <!--    Some Kind of Footer and Stuff -->
-        <!-- <section id="touch" class="xadrez">
-            <div class="left">
-                <p>Left</p>
-                <div class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique enim corrupti porro rem. Voluptate consequuntur in nam totam magni omnis voluptates ipsum, corrupti laudantium architecto, fuga nisi. Explicabo, architecto dolorem!</div>
-            </div>
-            <div class="right">
-                <p>Right</p>
-            </div>
-        </section> -->
 
         <section id="touch" class="full-page">
             <div class="handle-phone">
@@ -158,12 +120,8 @@
                     </a>
             </footer>
             </div>
-
         </section>
-
-
       </main>
-
       <script src="js/script.js"></script>
 </body>
 </html>

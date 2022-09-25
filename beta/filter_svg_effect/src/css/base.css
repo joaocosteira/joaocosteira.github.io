@@ -110,6 +110,8 @@ a:focus-visible {
 main {
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
+	align-items: center;
     min-height: 100vh;
 }
 
@@ -209,7 +211,7 @@ main {
 	top: 0;
 	left: 0;
 	padding: 1rem;
-	background: #000;
+	background: transparent;
 	transform: translate3d(0,100%,0);
 }
 
