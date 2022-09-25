@@ -13,24 +13,6 @@ main {
     min-height: 100vh;
 }
 
-.content {
-	padding: 1rem;
-	display: flex;
-	flex-wrap: wrap;
-	width: 100%;
-	height: auto;
-	min-height: 500px;
-	max-width: 760px;
-	margin: auto;
-	align-content: center;
-	justify-content: center;
-}
-
-
-/*
-	Pretty much the image frame. Without it, we'll see the 
-	effect going crazy
-*/
 .thumb {
 	position: relative;
 	margin: 0;
@@ -39,9 +21,6 @@ main {
 	overflow: hidden;
 }
 
-/*
-	centers the distortion effect
-*/
 .distort {
 	pointer-events: none;
 	margin: -115px 0 0 -75px;
