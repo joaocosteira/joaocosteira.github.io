@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        body{
+            margin: 0;
+            font-family: 'EB Garamond', serif;
+            color: white;
+            background-color: #202731;
+            overflow-x: hidden;
+        }
+
+        section{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 400px;
+            padding: 100px 20vw;
+        }
+
+
+        .blue{
+            background-color: #3c31dd;
+        }
+        .red{
+            background-color: #dd3f31;
+        }
+        .pink{
+            background-color: #ff0066;
+        }
+        .dark{
+            background-color: #0f0f10;
+        }
+
+        .curve{
+            position: absolute;
+            height: 255px;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .curve::before{
+            content: "";
+            display: block;
+            position: absolute;
+            border-radius: 100% 50%;
+            width: 55%;
+            height: 100%;
+            background-color: #202731;
+            transform: translate(85%, 60%);
+            
+        }
+
+        .curve::after{
+            content: "";
+            display: block;
+            position: absolute;
+            border-radius: 100% 50%;
+            width: 55%;
+            height: 100%;
+            background-color: #3c31dd;
+            transform: translate(-4%, 40%);
+            z-index: -2;
+        }
+
+        .bubble::after{
+            content: '';
+            border-top-left-radius: 50% 100%;
+            border-top-right-radius: 50% 100%;
+            position: absolute;
+            bottom: 0;
+            height: 85%;
+            width: 100%;
+            background-color: #0f0f10;
+            z-index: -1;
+        }
+
+        .wave {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+        }
+
+        .wave svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 236px;
+            transform: rotateY(180deg);
+        }
+
+        .wave .shape-fill {
+            fill: #0f0f10;
+        }
+
+
+        .spacer{
+            aspect-ratio: 900 / 600;            
+            width: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+
+        .layer1{
+            background-image: url("layered-waves-haikei.svg");
+        }
+    </style>
+</head>
+<body>
+    <section class="blue">
+        <h1>nice curves</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione quia unde illum aspernatur magni perspiciatis atque saepe impedit et asperiores facilis, laborum, a doloremque debitis accusamus ut amet, tenetur perferendis.</p>
+        <div class="curve"></div>
+    </section>
+    <section>
+        <h1>nice curves</h1>
+        <p>Sunt pariatur placeat omnis dolores adipisci facilis cupiditate error beatae deleniti sit tenetur similique ea inventore, necessitatibus iste labore aspernatur in perferendis sint ullam illo laudantium! Itaque dignissimos quisquam veritatis.</p>
+    </section>
+    <section class="bubble">
+        <h1>nice curves</h1>
+        <p>Aperiam totam eligendi autem rem corporis maxime delectus, nesciunt provident, debitis distinctio quisquam! Doloremque, error eaque voluptate in numquam rem pariatur veniam, ullam sed debitis est expedita esse. Iure, ex!</p>
+    </section>
+    <section class="dark">
+        <h1>nice curves</h1>
+        <p>Autem quae deserunt, quam ipsum, dignissimos qui reiciendis cupiditate accusantium eum asperiores optio debitis voluptatem? At maxime aliquam provident similique quidem repudiandae asperiores, quam eligendi laborum quas quod eveniet doloremque.</p>
+    </section>
+    <section class="red">
+        <h1>nice curves</h1>
+        <p>Natus blanditiis alias dignissimos omnis. Iste officia quidem distinctio totam excepturi nulla incidunt, deserunt explicabo soluta, quasi laboriosam, numquam aspernatur dolore ducimus blanditiis sint tenetur laborum itaque expedita quisquam. Ab.</p>
+
+        <div class="wave">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+    <section>
+        <h1>nice curves</h1>
+        <p>Vitae deleniti maiores corrupti cumque expedita quisquam harum, error sapiente sed rerum blanditiis illum autem voluptates. Earum enim aspernatur quisquam nemo? Architecto sequi, nihil accusamus voluptates asperiores debitis tempora ex?</p>
+        <div class="spacer layer1"></div>
+    </section>
+
+    <section>
+        <h1>nice curves</h1>
+        <p>Deserunt illum similique ipsum dolor accusamus ut est odio doloremque ratione sint id veniam, dignissimos quae. Esse, odio. Non quisquam iusto earum et necessitatibus ipsam officia doloremque, quis blanditiis inventore?</p>
+    </section>
+    <section class="pink">
+        <h1>nice curves</h1>
+        <p>Nulla consequatur, exercitationem ad incidunt nemo, provident voluptatem amet recusandae autem at velit. Quo, dolor vel? Natus quae, itaque tempore, aliquam laboriosam dolores repellendus fugiat sunt inventore cum, eveniet qui!</p>
+    </section>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /*  bottega green 009539*/
+        .page-grid{
+            display: grid;
+            place-items: center;
+            min-height: 100vh;
+        }
+
+        .main-grid{
+            padding: 1rem;
+            max-width: 64rem;
+            display: grid;
+            gap: 1rem;
+        }
+
+
+        .main-header{
+            font-size: 2.25rem;
+            line-height: 2.5rem;
+            font-weight: 800;
+        }
+
+        .square{
+            height: 4rem;
+        }
+
+        /*xs*/
+        @media (min-width: 540px) {
+            .main-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                padding: 2rem;
+            }
+
+            .main-header{
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                grid-column: span 2 / span 2;
+                gap: 1rem;
+            }
+
+            .first-paragraph{
+                grid-row-start: 2;
+                grid-column-start: 2;
+                align-self: center;
+            }
+
+            .square{
+                height: auto;
+                aspect-ratio: 1 / 1;
+            }
+
+            .final-paragraph{
+                align-self: center;
+            }
+
+        }
+        /*md*/
+        @media (min-width: 768px) {
+
+            .main-grid {
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+            }
+
+            .main-header{
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                grid-column: span 3 / span 3;
+                font-size: 3rem;
+                line-height: 1;
+            }
+
+            .main-header > span {
+                grid-column: span 2 / span 2;
+            }
+
+            .first-paragraph{
+                grid-column-start: 1;
+                grid-column: span 2 / span 2;
+                padding-right: 3rem;
+                font-size: 1.125rem;
+                line-height: 1.75rem;
+            }
+
+            .special-square{
+                grid-column-start: 2;
+            }
+
+            .final-paragraph{
+                grid-column: span 2 / span 2;
+                font-size: 1.125rem;
+                line-height: 1.75rem;
+                text-align: center;
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+        }
+
+        /*xl*/
+        @media (min-width: 1024px) {
+            .main-grid {
+                gap: 1.5rem;
+            }
+
+            .main-header{
+                font-size: 3.75rem;
+                line-height: 1;
+            }
+        }
+
+
+    </style>
+</head>
+<body class="page-grid">
+    <div class="main-grid">
+        <h1 class="main-header"><span>Grid layout with Tailwind CSS.</span></h1>
+        <p class="first-paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio hic itaque alias officiis.</p>
+        <div class="square" style="background-color:#009539"></div>
+        <div class="square" style="background-color:#009539"></div>
+        <div class="square" style="background-color: #EC4999;"></div>
+        <div class="square special-square" style="background-color:#009539"></div>
+        <div class="square" style="background-color: #EC4999;"></div>
+        <div class="square" style="background-color:#009539"></div>
+        <div class="square" style="background-color:#009539"></div>
+        <div class="square" style="background-color: #EC4999;"></div>
+        <p class="final-paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit, and some more.</p>
+      </div>
+    </div>
+</body>
+</html>
