@@ -18,13 +18,32 @@ class Item {
 
         this.createHoverTimeline();
         this.initEvents();
+
     }
     
     initEvents() {
-        this.onMouseEnterFn = () => this.mouseEnter();
-        this.DOM.thumb.addEventListener('mouseenter', this.onMouseEnterFn);
-        this.onMouseLeaveFn = () => this.mouseLeave();
-        this.DOM.thumb.addEventListener('mouseleave', this.onMouseLeaveFn);
+        // this.onMouseEnterFn = () => this.mouseEnter();
+        // this.DOM.thumb.addEventListener('mouseenter', this.onMouseEnterFn);
+        // this.onMouseLeaveFn = () => this.mouseLeave();
+        // this.DOM.thumb.addEventListener('mouseleave', this.onMouseLeaveFn);
+        var observer = new IntersectionObserver(() => {
+            // itemObj.mouseEnter();
+            // itemObj.mouseLeave();
+
+            console.log("Is in View");
+            console.log(this.tl);
+            this.tl.restart();
+            setTimeout(()=>{
+                this.tl.reverse();
+            },2000);
+            //this.tl.reverse();
+        }, {
+            root: null,   // default is the viewport
+            threshold: .5 // percentage of taregt's visible area. Triggers "onIntersection"
+        })
+        
+        observer.observe( this.DOM.el )
+
     }
     updateFilterValues() {
         this[this.filterType === 'turbulence' ? 'updateTurbulenceBaseFrequency' : 'updateDisplacementMapScale']();
@@ -83,5 +102,10 @@ class Item {
     }
 }
 
-[...document.querySelectorAll('.tobe_distorted')].forEach(item => new Item(item));
-console.log("Hello World")
+const item = document.getElementById('tobe_distorted');
+const itemObj  =  new Item(item);
+
+
+//const item = [...document.querySelectorAll('.tobe_distorted')].forEach(item => new Item(item))[0];
+//console.log(item)
+

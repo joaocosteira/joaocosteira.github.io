@@ -28,10 +28,27 @@
             font-weight: 800;
         }
 
+        /* Height minima de cada elem, no minimo passam a ser rows de 4rem */
         .square{
             height: 4rem;
         }
 
+        /*
+            Abaixo de 540 px temos:
+            - h1
+            - p
+            - rows coloridas de 4rem de altura
+            - p final
+        */
+
+
+        /*
+            Ao chegar aos 540px:
+            - Passamos a ter 2 colunas
+            - Header ocupa 2 colunas para ficar acima de todos os quadrados
+            - Definimos a posicao do primeiro paragrafo no seu sitio
+            - Temos o square aspect-ratio pra termos quadrados
+        */
         /*xs*/
         @media (min-width: 540px) {
             .main-grid {
@@ -62,6 +79,12 @@
             }
 
         }
+        /*
+            - Ao Chegar ao medium, passamos a ter 4 colunas.
+            - O header em si ocupa 3 colunas, mas o conteudo mesmo em si apenas 2, assim dá o efeito
+              de um quadrado vazio
+            
+        */
         /*md*/
         @media (min-width: 768px) {
 
@@ -81,8 +104,8 @@
             }
 
             .first-paragraph{
-                grid-column-start: 1;
-                grid-column: span 2 / span 2;
+                /* grid-column-start: 1; */
+                grid-column: 1 / span 2;
                 padding-right: 3rem;
                 font-size: 1.125rem;
                 line-height: 1.75rem;
@@ -117,8 +140,17 @@
 
     </style>
 </head>
+<!--
+    Min height do ecra e a grid criada é apenas usada pra centrar os elems
+    semelhante a fazer display flex, justify center
+-->
 <body class="page-grid">
+
+    <!-- A grid Real dos elementos-->
     <div class="main-grid">
+        <!-- 
+            Inicialmente é usado como header normal, mas depois é convertido em grid
+        -->
         <h1 class="main-header"><span>Grid layout with Tailwind CSS.</span></h1>
         <p class="first-paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio hic itaque alias officiis.</p>
         <div class="square" style="background-color:#009539"></div>
@@ -132,5 +164,6 @@
         <p class="final-paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit, and some more.</p>
       </div>
     </div>
+
 </body>
 </html>
