@@ -17,35 +17,33 @@ class Item {
         this.primitiveValues = this.filterType === 'turbulence' ? {baseFrequency: 0} : {scale: 0};
 
         this.createHoverTimeline();
-        this.initEvents();
+
+        this.initScrollEvent(); //Initialize Effect On Hover
+        this.initHoverEvents(); //Initialize Effect on Hover
 
     }
     
-    initEvents() {
-        // this.onMouseEnterFn = () => this.mouseEnter();
-        // this.DOM.thumb.addEventListener('mouseenter', this.onMouseEnterFn);
-        // this.onMouseLeaveFn = () => this.mouseLeave();
-        // this.DOM.thumb.addEventListener('mouseleave', this.onMouseLeaveFn);
-        var observer = new IntersectionObserver(() => {
-            // itemObj.mouseEnter();
-            // itemObj.mouseLeave();
-
-            console.log("Is in View");
-            console.log(this.tl);
-            this.tl.restart();
+    initScrollEvent(){
+        const scrollCallback = () => {
             setTimeout(()=>{
                 this.tl.restart();
-                //this.tl.reverse();
-            },1000);
-            //this.tl.reverse();
-        }, {
-            root: null,   // default is the viewport
-            threshold: .5 // percentage of taregt's visible area. Triggers "onIntersection"
-        })
-        
+            },500);
+        }
+        const options = {
+            root: null,
+            threshold: .5 
+        }
+        var observer = new IntersectionObserver(scrollCallback, options);
         observer.observe( this.DOM.el )
-
     }
+
+    initHoverEvents() {
+        this.onMouseEnterFn = () => this.mouseEnter();
+        this.DOM.thumb.addEventListener('mouseenter', this.onMouseEnterFn);
+        this.onMouseLeaveFn = () => this.mouseLeave();
+        this.DOM.thumb.addEventListener('mouseleave', this.onMouseLeaveFn);
+    }
+
     updateFilterValues() {
         this[this.filterType === 'turbulence' ? 'updateTurbulenceBaseFrequency' : 'updateDisplacementMapScale']();
     }
@@ -56,6 +54,7 @@ class Item {
         this.DOM.feDisplacementMap.setAttribute('scale', val);
     }
 
+    //Timeline Effect
     createHoverTimeline() {
         this.tl = gsap.timeline({
             paused: true,
@@ -92,21 +91,19 @@ class Item {
         }
     }
 
-    // Start Animation
+    // Hover Effects:
     mouseEnter() {
         this.tl.restart();
     }
 
-    // End Animation
     mouseLeave() {
         this.tl.reverse();
     }
 }
 
+//Create a single Item.
 const item = document.getElementById('tobe_distorted');
 const itemObj  =  new Item(item);
 
-
-//const item = [...document.querySelectorAll('.tobe_distorted')].forEach(item => new Item(item))[0];
-//console.log(item)
-
+//If I want to create a bunch of images with the distortion effect
+//[...document.querySelectorAll('.tobe_distorted')].forEach(item => new Item(item));
