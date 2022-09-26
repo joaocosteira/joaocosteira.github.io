@@ -34,8 +34,9 @@ class Item {
             console.log(this.tl);
             this.tl.restart();
             setTimeout(()=>{
-                this.tl.reverse();
-            },2000);
+                this.tl.restart();
+                //this.tl.reverse();
+            },1000);
             //this.tl.reverse();
         }, {
             root: null,   // default is the viewport
