@@ -154,21 +154,24 @@ section {
 /*  Separating Elements in Columns */
 .left{
   position: relative;
-  width: 60%;
+  width: 50%;
   height: 100vh;
   background-color: #905055 ;
   color: white;
-  z-index: -3;
+  display: flex;
+  align-items: center;
+  padding: 0 8rem;
 }
 
 
 .right{
-  width:  40%;
+  width:  50%;
   height: 100vh;
   background-color: #55575f8e;
   color: white;
-  z-index: -3;
-
+  display: flex;
+  align-items: center;
+  padding: 0 8rem;
 }
 
 .center{
@@ -396,7 +399,7 @@ footer > ul{
 
 
 .phone-grid > a {
-  background: black;
+  background: #39C0C0;
   padding: 1rem;
   /*isto é para um troque de meter a imagem dentro da parte do conteudo,
   pois agora temos o before a criar um quadrado perfeito acima da imagem,
@@ -440,8 +443,8 @@ footer > ul{
   height: 80vh;
   max-width: 90vw;
   overflow-y: scroll;
-  background-color: darkorange;
-  border: 10px solid black;
+  background-color: black;
+  border: 1px solid black;
   border-top: 20px solid black;
   border-bottom: 20px solid black;
   border-radius: 1rem;
@@ -477,8 +480,13 @@ footer > ul{
 }
 
 #about{
-  display: flex;
+  display: grid;
+  place-items: center;
+  height: 100vh;
   background-color: #905055;
-  justify-content: center;
-  align-items: center;
+}
+
+#about-grid{
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
 }

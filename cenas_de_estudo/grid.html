@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .page{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            background-color: aliceblue;
+        }
+
+        .main-grid{
+            width: 80%;
+            background-color: antiquewhite;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+        }
+
+
+        .profile{
+            background-color: chartreuse;
+            display: flex;
+            justify-content: center;
+            align-items: end;
+        }
+
+        .profile-img{
+            height: 200px;
+            width: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            
+        }
+
+        .first{
+            grid-column: 1 / span 1;
+            grid-row: 1 / span 1;
+            background-color: aqua;
+        }
+
+        .second{
+            background-color: azure;
+        }
+
+        .third{
+            background-color: burlywood;
+            grid-column: 2 / span 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="main-grid">
+
+            <div class="profile">
+                <img class="profile-img" src="../imgs/profile.jpg" alt="profile pic">
+            </div>
+            <p class="first">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel, quae.</p>
+            <p class="second">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel, quae.</p>
+            <p class="third">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel, quae.</p>
+        </div>
+    </div>
+</body>
+</html>
