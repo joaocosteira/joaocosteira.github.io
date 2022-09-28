@@ -149,6 +149,7 @@ section {
 
 .full-page{
   height: 100vh;
+  overflow: hidden;
 }
 
 /*  Separating Elements in Columns */
@@ -474,7 +475,7 @@ footer > ul{
 
 #touch{
   display: flex;
-  background-color: beige;
+  /* background-color: beige; */
   justify-content: center;
   align-items: center;
 }
@@ -483,10 +484,109 @@ footer > ul{
   display: grid;
   place-items: center;
   height: 100vh;
-  background-color: #905055;
+  /* background-color: #905055; */
 }
 
 #about-grid{
   display: grid !important;
   grid-template-columns: repeat(2, 1fr) !important;
 }
+
+
+.main-grid ul{
+  display: inline;
+  list-style: none;
+}
+
+.main-grid li{
+  display: inline;
+}
+
+.main-grid{
+  padding: 1rem;
+  max-width: 60%;
+  display: grid;
+  gap: 1rem;
+}
+
+.main-grid > * {
+  justify-self: center;
+  text-align: center;
+}
+
+.tobe_distorted{
+  display: none;
+  grid-column: 1 / -1;
+  justify-self: center;
+}
+
+
+.main-grid p:nth-of-type(2) {
+  display: none;
+}
+
+
+
+@media (min-width: 400px) {
+  .tobe_distorted{
+    display: block;
+  }
+}
+
+@media (min-width: 700px) {
+
+    .main-grid > * {
+      text-align: left;
+    }
+    /* Temos 2 colunas */
+    .main-grid {
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+
+  .tobe_distorted{
+    grid-row: 1;
+    grid-column: 3 / span 2;
+    justify-self: center;
+    align-self: center;
+  }
+
+  .main-grid p:nth-of-type(1) {
+    grid-row: 1;
+    grid-column: 1 / span 2;
+    /* background-color: orange; */
+    align-self: end;
+  }
+
+  .main-grid div:nth-of-type(2) {
+    /* background-color: aliceblue; */
+    grid-row: 2;
+    grid-column: 2 / span 4;
+    align-self: center;
+  }
+
+  .main-grid p:nth-of-type(2) {
+    display: block;
+    /* background-color: aliceblue; */
+    grid-row: 3;
+    grid-column: 3 / span 4;
+    align-self: center;
+  }
+
+}
+
+.inline{
+  display: inline;
+}
+/* .main-grid .tobe_distorted{
+  justify-self: center;
+} */
+
+.element-invisible {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); }

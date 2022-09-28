@@ -71,45 +71,50 @@
         <section id="home" class="hero full-page">
                 <h1>João Costeira</h1>
                 <p>Software Engineer From Braga Portugal</p>
+                <p>(This website still is under construction...)</p>
         </section>
         
 
         <section id="about" class="full-page">
-
-            <div id="tobe_distorted" class="tobe_distorted">
-                <figure class="thumb">
-                    <svg class="distort" width="350" height="450" viewBox="0 0 350 450" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <filter id="distortionFilter" data-type="turbulence">
-                            <feTurbulence type="fractalNoise" baseFrequency="0" numOctaves="1" result="warp" />
-                            <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="250" in="SourceGraphic" />
-                        </filter>
-                        <image filter="url(#distortionFilter)" class="distort__img" x="50" y="50" xlink:href="imgs/profile.jpg" height="350" width="250"/>
-                    </svg>
-                </figure>
+            <h1 class="element-invisible">About Me</h1>
+            <div class="main-grid">
+                <div id="tobe_distorted" class="tobe_distorted">
+                    <figure class="thumb">
+                        <svg class="distort" width="350" height="450" viewBox="0 0 350 450" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <filter id="distortionFilter" data-type="turbulence">
+                                <feTurbulence type="fractalNoise" baseFrequency="0" numOctaves="1" result="warp" />
+                                <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="250" in="SourceGraphic" />
+                            </filter>
+                            <image filter="url(#distortionFilter)" class="distort__img" x="50" y="50" xlink:href="imgs/profile.jpg" height="350" width="250"/>
+                        </svg>
+                    </figure>
+                </div>
+                <p>Hi, my name is João Costeira. I'm a Software Engineer born and raised in Braga, Portugal.</p>
+                <div>
+                    <p class="inline">I completed both my degree and Master's at Universidade do Minho. During this period, my studies focused on four main areas:</p>
+                        <ul>
+                            <li>Formal Methods/Functional Programming,</li>
+                            <li>Security/Criptography,</li>
+                            <li>Natural Laguage Processing</li>
+                            <li>and Web Development.</li>
+                        </ul>
+                </div>
+               
+                <p>In the last few years, I've been working on the development of semantic driven applications, usually within a historical domain. More rencently, I switched gears and most of my work is in the area of web development, specially frontend.</p>
             </div>
         </section>
 
 
-        <section id="work" class="xadrez">
-            <div class="right" style="background-color: black; color: white;">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto perspiciatis in vel soluta deleniti corrupti at magni consectetur quia, eius, neque praesentium inventore quae obcaecati eum aperiam deserunt iste consequuntur!</p>
-            </div>        
-            <div class="left" style="background-color: white; color:black;">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni hic impedit ex! Minus accusamus omnis, molestiae incidunt nostrum adipisci facilis iure repudiandae debitis natus aspernatur quibusdam maxime. Odit, cupiditate quod!</p>
-            </div>
-            <div class="right" style="background-color: white; color:black;">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto perspiciatis in vel soluta deleniti corrupti at magni consectetur quia, eius, neque praesentium inventore quae obcaecati eum aperiam deserunt iste consequuntur!</p>
-            </div>
-            <div class="left" style="background-color: black; color: white;">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni hic impedit ex! Minus accusamus omnis, molestiae incidunt nostrum adipisci facilis iure repudiandae debitis natus aspernatur quibusdam maxime. Odit, cupiditate quod!</p>
-            </div>
+        <section id="work" class="full-page">
+            <h1 class="element-invisible">Previous work</h1>
         </section>
 
         <section id="interests" class="full-page">
-            <p>Interests</p>
+            <h1 class="element-invisible">My Interests</h1>
         </section>
 
         <section id="touch" class="full-page">
+            <h1 class="element-invisible">Get in touch with me:</h1>
             <div class="handle-phone">
                 <div class="phone-notification">
                     <img class="icons battery" src="icons/white_battery.svg" alt="battery icon">

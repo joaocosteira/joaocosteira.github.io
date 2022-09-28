@@ -8,12 +8,18 @@
 
     <style>
         /*  bottega green 009539*/
+        /*
+            Esta é a grid principal da página, mas só tem 1 child, 
+            ou seja, é usada semelhante a ter 1 elem em flex e fazer
+            align items center ou algo desse genero.
+        */
         .page-grid{
             display: grid;
             place-items: center;
-            min-height: 100vh;
+            min-height: 100vh; /* A Grid Ocupa no minimo a altura do ecrã*/
         }
 
+        /*  Por padrão a Grid é uma stack de elementos com 1 coluna */
         .main-grid{
             padding: 1rem;
             max-width: 64rem;
@@ -21,79 +27,135 @@
             gap: 1rem;
         }
 
-
+        /* Definir o h1 */
         .main-header{
             font-size: 2.25rem;
             line-height: 2.5rem;
             font-weight: 800;
         }
 
+        /*
+            No inicio, isto define a altura de cada div colorida,
+            a altura de cada um dos retangulos
+        */
         .square{
             height: 4rem;
         }
 
-        /*xs*/
+        /*
+            Ecrãs xs: Vamos passar a ter uma grid com 2 colunas
+            */
         @media (min-width: 540px) {
+
+            /* Temos 2 colunas */
             .main-grid {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
                 padding: 2rem;
             }
-
+            /* O header é Transformado numa grid*/
             .main-header{
+                /*
+                    Este primeiro é em referencia à grid principal:  
+                    estamos a dizer que o header vai ocupar uma row
+                    de uma ponta à outra
+                */
+                grid-column: 1 / -1;
+                /*
+                    Agora Sim vamos transformar o header numa grid
+                    E o Header em si tem 1 filho: a span com o texto do header
+                    */
                 display: grid;
+                /*
+                    Agora vamos definir que o header tem 2 colunas, e como temos
+                    apenas 1 filho, este filho ocupa apenas 1 das celulas,
+                    Por outras palavras, isto é um troque usado para dizer
+                    que queremos que o header em si ocupe a row toda, mas depois
+                    o seu unico filho(a span) ocupe 50% da row (a 1º celula)
+                */
                 grid-template-columns: repeat(2, minmax(0, 1fr));
-                grid-column: span 2 / span 2;
+                /* Dar match ao gap da matrix mãe*/
                 gap: 1rem;
             }
 
+            /* 
+                Posicionar o 1º paragrafo e centrar o texto verticalmente no centro da celula
+            */
             .first-paragraph{
                 grid-row-start: 2;
                 grid-column-start: 2;
                 align-self: center;
             }
-
+            /*
+                Usando o aspect-ratio, indicamos que a altura tem de ser igual
+                à a largura aka fazer celulas quadradas
+            */
             .square{
                 height: auto;
                 aspect-ratio: 1 / 1;
             }
 
+            /* 
+                Simplesmente centrar verticalmente o texto dentro da celula, a posição
+                é onde ele cai naturalmente
+            */
             .final-paragraph{
                 align-self: center;
             }
 
         }
-        /*md*/
+        /*
+            Ecrãs md: 
+
+        */
         @media (min-width: 768px) {
 
+            /* A main grid é convertida em matrix com 4 colunas */
             .main-grid {
                 grid-template-columns: repeat(4, minmax(0, 1fr));
             }
 
             .main-header{
+                /* 
+                    Aqui indicamos que o header vai ocupar 3/4 da primeira row:
+                    header header header quadrado
+                */
+                grid-column: 1 / span 3;
+                /*
+                    Para dar match perfeito com a row mae, essas 3 celulas do header
+                    vao ser partidas em 3 partes iguais
+                */
                 grid-template-columns: repeat(3, minmax(0, 1fr));
-                grid-column: span 3 / span 3;
                 font-size: 3rem;
                 line-height: 1;
             }
-
+            /*
+                Agora vamos dizer que a span do header ocupa as duas primeiras celulas
+                do header, ou seja de forma global:
+                Header Header Header  Square
+                Span   Span   (Empty) Square
+            */
             .main-header > span {
-                grid-column: span 2 / span 2;
+                grid-column: 1 / span 2;
             }
 
             .first-paragraph{
-                grid-column-start: 1;
-                grid-column: span 2 / span 2;
+                /* grid-column-start: 1; */
+                /* Paragrafo vai ocupar meia row*/
+                grid-column: 1 / span 2;
+                /*Ajustar tamanho de letra*/
                 padding-right: 3rem;
                 font-size: 1.125rem;
                 line-height: 1.75rem;
             }
 
+            /* Puxa um quadrado para a direita, assim conesguimos ter o efeito escada */
             .special-square{
                 grid-column-start: 2;
             }
 
+            /* Indicar que este tb ocupa 2 celulas */
             .final-paragraph{
-                grid-column: span 2 / span 2;
+                grid-column: 3 / span 2;
                 font-size: 1.125rem;
                 line-height: 1.75rem;
                 text-align: center;
@@ -102,7 +164,7 @@
             }
         }
 
-        /*xl*/
+        /*xl simplesmente ajustar spacing e tal.*/
         @media (min-width: 1024px) {
             .main-grid {
                 gap: 1.5rem;
@@ -117,7 +179,16 @@
 
     </style>
 </head>
+<!--    
+    A page grid como podemos ver é uma grid Apenas com 1 filho.
+    Apenas usada para centrar os elementos na página
+-->
 <body class="page-grid">
+    <!--
+        Aqui temos definida a Grid principal da aplicação.
+        Como podemos ver a grid tem 11 elementos para colocar na matrix (h1, 2x p , 8x div)
+
+    -->
     <div class="main-grid">
         <h1 class="main-header"><span>Grid layout with Tailwind CSS.</span></h1>
         <p class="first-paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio hic itaque alias officiis.</p>

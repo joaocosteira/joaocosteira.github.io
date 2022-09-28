@@ -5,7 +5,7 @@ html {
   font-family: Helvetica;
   font-size: 100%; }
 
-.fixed ul {
+/* .fixed ul {
   display: grid;
   grid-template-columns: repeat(4, 100px);
   grid-gap: 4px;
@@ -35,7 +35,7 @@ html {
 .responsive ul {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  grid-gap: 0.25rem; }
+  grid-gap: 0.25rem; } */
 
 .explicitly-placed ul {
   display: grid;
@@ -62,7 +62,7 @@ html {
   grid-column: 4 / 5;
   grid-row: 5 / 6; }
 
-.overlapping h1 {
+/* .overlapping h1 {
   margin-bottom: 1.2rem; }
 
 .overlapping ul {
@@ -82,7 +82,7 @@ html {
 .overlapping li:nth-child(3) {
   grid-row: 4 / span 3;
   grid-column: 4 / span 2;
-  z-index: 2; }
+  z-index: 2; } */
 
 html {
   font-size: 100%; }
@@ -103,8 +103,10 @@ ul {
   margin: 0 0 0 2rem;
   padding: 2.2rem;
   background: #f6f3ea;
-  box-shadow: 3px 2px 12px rgba(0, 0, 0, 0.4); }
+  box-shadow: 3px 2px 12px rgba(0, 0, 0, 0.4); 
+}
 
+  /* Header com o Fundo amarelo*/
 h1 {
   font-size: 3rem;
   font-weight: normal;
@@ -121,6 +123,8 @@ main > h1 {
 @media (min-width: 660px) {
   section {
     margin-left: 6rem; }
+
+  /*O header com o fundo amarelo é colocado na vertical*/
   main > h1 {
     -webkit-writing-mode: vertical-rl;
     -ms-writing-mode: tb-rl;
@@ -128,18 +132,24 @@ main > h1 {
     -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
     position: fixed;
+    /*No canto superior esquerdo do ecrã*/
     left: 0;
     top: 3rem;
-    padding: 1em 0; } }
+    padding: 1em 0; 
+  } 
+}
 
-footer {
+/* footer {
   font-size: 2.4em;
   padding: 2rem 5rem;
   text-align: right; }
+
   footer a {
     color: #456a71;
-    text-decoration: none; }
+    text-decoration: none; } */
 
+
+/* Usado para Mostrar uma mensagem de erro caso nao tenha grid suportado */
 .warning {
   border: 1px solid pink;
   background: rgba(255, 0, 0, 0.1);
