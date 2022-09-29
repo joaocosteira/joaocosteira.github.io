@@ -521,9 +521,10 @@ footer > ul{
 }
 
 
-.main-grid p:nth-of-type(2) {
+.main-grid p:nth-of-type(2), .main-grid ul {
   display: none;
 }
+
 
 
 
@@ -535,10 +536,45 @@ footer > ul{
 
 @media (min-width: 700px) {
 
+  .main-grid > * {
+    text-align: left;
+  }
+
+  .main-grid p:nth-of-type(2) {
+    display: block;
+  }
+  .main-grid ul {
+    display: inline;
+  }
+  .main-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 64rem;
+  }
+
+  .tobe_distorted{
+    grid-row: 1;
+    grid-column: 1;
+    justify-self: center;
+    align-self: center;
+  }
+
+  .main-grid p {
+    text-indent: 1rem;
+  }
+
+  .main-grid p:nth-of-type(1) {
+    text-indent: 0;
+  }
+}  
+
+/* @media (min-width: 700px) {
+
     .main-grid > * {
       text-align: left;
     }
-    /* Temos 2 colunas */
+    // Temos 2 colunas 
     .main-grid {
       grid-template-columns: repeat(6, minmax(0, 1fr));
       gap: 2rem;
@@ -556,12 +592,12 @@ footer > ul{
   .main-grid p:nth-of-type(1) {
     grid-row: 1;
     grid-column: 1 / span 2;
-    /* background-color: orange; */
+    // background-color: orange; 
     align-self: end;
   }
 
   .main-grid div:nth-of-type(2) {
-    /* background-color: aliceblue; */
+    // background-color: aliceblue; 
     grid-row: 2;
     grid-column: 2 / span 4;
     align-self: center;
@@ -569,13 +605,13 @@ footer > ul{
 
   .main-grid p:nth-of-type(2) {
     display: block;
-    /* background-color: aliceblue; */
+    // background-color: aliceblue;
     grid-row: 3;
     grid-column: 3 / span 4;
     align-self: center;
   }
 
-}
+} */
 
 .inline{
   display: inline;
@@ -591,7 +627,9 @@ footer > ul{
   overflow: hidden;
   clip: rect(1px 1px 1px 1px); }
 
-/* Intrests*/
+/* 
+Intrests
+*/
 
 #interests {
   display: flex;
@@ -654,7 +692,11 @@ footer > ul{
 }
 
 
-/* Work*/
+/* 
+
+Work
+
+*/
 #work {
   display: flex;
 }
