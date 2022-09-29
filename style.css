@@ -5,6 +5,9 @@
   box-sizing: border-box;
 }
 
+a{
+  color: black;
+}
 
 html {
   scroll-behavior: smooth;
@@ -442,7 +445,7 @@ footer > ul{
   margin: 1rem auto;
   padding: 1rem;
   height: 80vh;
-  max-width: 90vw;
+  max-width: 20rem;
   overflow-y: scroll;
   background-color: black;
   border: 1px solid black;
@@ -543,6 +546,8 @@ footer > ul{
   .main-grid p:nth-of-type(2) {
     display: block;
   }
+
+
   .main-grid ul {
     display: inline;
   }
@@ -697,21 +702,87 @@ Intrests
 Work
 
 */
-#work {
+
+
+#foundling_wheel{
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 54rem;
+  margin: auto;
+  padding: 1rem;
 }
-#work > div{
-  background-color: azure;
+
+
+#work p{
+  text-indent: 1rem;
+}
+
+#work p.tecnologies{
+  text-indent: 0;
+  display: inline;
+}
+.work-grid{
+  padding: 1rem;
   display: grid;
   gap: 1rem;
-  max-width: 70%;
-  align-items: center;
+  max-width: 54rem;
   margin: auto;
   grid-template-columns: repeat(2,1fr);
 }
 
-#work > div > div:nth-of-type(3){
-  /* grid-row: 1 / span 2; */
-  grid-column: 1 / -1;
-  background-color: #39C0C0;
+#work ul{
+  text-indent: 1rem;
+  list-style: none;
+  display: inline;
+  opacity: 50%;
+}
+
+#work li{
+  display: inline;
+}
+
+.work_header{
+  margin-bottom: 1rem;
+  
+}
+.work_header > h2{
+  display: inline;
+}
+
+.new_tab{
+  height: 1rem;
+  display: inline;
+}
+
+
+.more-work{
+  display: flex;
+  justify-content: center;
+
+}
+#work-grid{
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  /* background-color: #905055; */
+}
+
+#spickles{
+  grid-column: 1 / span 2;
+  grid-row: 1;
+}
+
+#more_projects > p{
+  display: none;
+}
+#more_projects{
+  grid-column: 2;
+  grid-row: 2;
+}
+
+@media (min-width: 700px) {
+  #more_projects > p {
+    display: block;
+  }
 }
