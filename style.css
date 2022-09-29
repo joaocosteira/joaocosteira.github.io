@@ -714,13 +714,13 @@ Work
 }
 
 
+
 #work p, #work_pt2 p{
   text-indent: 1rem;
 }
 
 #work p.technologies, #work_pt2 p.technologies{
-  text-indent: 0;
-  display: inline;
+  text-indent: 0rem;
 }
 .work-grid{
   padding: 1rem;
@@ -732,7 +732,7 @@ Work
 }
 
 #work ul, #work_pt2 ul{
-  text-indent: 1rem;
+  text-indent: 0rem;
   list-style: none;
   display: inline;
   opacity: 50%;
@@ -785,4 +785,8 @@ Work
   #more_projects > p {
     display: block;
   }
+}
+
+#foundling_tech {
+  display: inline;
 }
