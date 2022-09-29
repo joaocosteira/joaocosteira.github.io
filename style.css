@@ -714,11 +714,11 @@ Work
 }
 
 
-#work p{
+#work p, #work_pt2 p{
   text-indent: 1rem;
 }
 
-#work p.technologies{
+#work p.technologies, #work_pt2 p.technologies{
   text-indent: 0;
   display: inline;
 }
@@ -731,14 +731,14 @@ Work
   grid-template-columns: repeat(2,1fr);
 }
 
-#work ul{
+#work ul, #work_pt2 ul{
   text-indent: 1rem;
   list-style: none;
   display: inline;
   opacity: 50%;
 }
 
-#work li{
+#work li, #work_pt2 li{
   display: inline;
 }
 

@@ -34,14 +34,21 @@ document.getElementById('signature').addEventListener('click',()=>{
  * Page Scroll Event Listner
  */
 function changeSelectedCarousel() {
+
     const sections = [...document.querySelectorAll('section')].sort((a, b) => {
         return Math.abs(a.getBoundingClientRect().top) - Math.abs(b.getBoundingClientRect().top);
     });
     const selectedIndex = [...document.querySelectorAll('section')].indexOf(sections[0]);
 
-    setCarouselBallByIndex(selectedIndex);  // Update Carousel
-    updateSidemenuByIndex(selectedIndex);   // Update Sidemenu
-    updateMainNavByIndex(selectedIndex);    // Update Navbar
+    /*
+        Work Section has 2 pages, but we want the snap to work, so de index has to
+        be -1 after we reach the second work page (index 3)
+    */
+    const jumpIndex = selectedIndex >= 3 ? selectedIndex - 1 :  selectedIndex;
+
+    setCarouselBallByIndex(jumpIndex);  // Update Carousel
+    updateSidemenuByIndex(jumpIndex);   // Update Sidemenu
+    updateMainNavByIndex(jumpIndex);    // Update Navbar
 
 }
 
