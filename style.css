@@ -117,13 +117,41 @@ h1{
   height: .55rem;
   width: .55rem;
   background-color: rgba(84, 86, 95, 0.509);
-  border-radius: 50%;
+  border-radius: 0%;
+  transition: all 0.5s ease;
+
 }
 
-.carrousel a.carrousel-selected{
+.carrousel-circle > span{
+  display: none;
+}
+
+.carrousel-selected  > span{
+  display: inline;
+}
+
+a.carrousel-selected{
+  padding: .5rem;
+  height: 1.4rem;
+  width: 1.4rem;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.carrousel a:hover{
+  background-color: black;
+  color: white;
+}
+
+/* .carrousel a.carrousel-selected{
   background-color: rgba(15, 14, 14, 0.866);
   box-shadow: 0 0 30px rgba(39, 40, 46, 0.866);
-}
+} */
 
 
 /*  For Now Flex Versio  */
