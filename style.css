@@ -148,6 +148,11 @@ a.carrousel-selected{
   color: white;
 }
 
+.carrousel-circle:not(.carrousel-selected):hover{
+  height: .8rem;
+  width: .8rem;
+}
+
 /* .carrousel a.carrousel-selected{
   background-color: rgba(15, 14, 14, 0.866);
   box-shadow: 0 0 30px rgba(39, 40, 46, 0.866);
