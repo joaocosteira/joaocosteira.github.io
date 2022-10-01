@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+:root{
+  --bottega-green : #009539;
+  --windows-phone-turqouise: #39C0C0;
+}
 a{
   color: black;
 }
@@ -123,11 +127,11 @@ h1{
 }
 
 .carrousel-circle > span{
-  display: none;
+  opacity: 0;
 }
 
 .carrousel-selected  > span{
-  display: inline;
+  opacity: 100%;
 }
 
 a.carrousel-selected{
@@ -379,7 +383,8 @@ footer > ul{
 
 
 .phone-grid > a {
-  background: #39C0C0;
+  /* background: #39C0C0; */
+  background: var(--bottega-green);
   padding: 1rem;
   /*isto é para um troque de meter a imagem dentro da parte do conteudo,
   pois agora temos o before a criar um quadrado perfeito acima da imagem,
@@ -387,6 +392,7 @@ footer > ul{
   display: grid;
   place-items: center;
 }
+
 
 /*  Fucking Magic!!!*/
 .phone-grid > a::before{
