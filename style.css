@@ -694,13 +694,25 @@ Work
 
 #work ul, #work_pt2 ul{
   text-indent: 0rem;
-  list-style: none;
+  /* list-style: none; */
   display: inline;
   opacity: 50%;
 }
 
 #work li, #work_pt2 li{
+  
   display: inline;
+}
+
+#work li::before, #work_pt2 li::before{
+  content: "";
+  display: inline-block;
+  width: .5rem;
+  height: .5rem;
+  opacity: 30%;
+  background-color: black;
+  margin: 0 .5rem;
+  vertical-align: middle;
 }
 
 .work_header{
