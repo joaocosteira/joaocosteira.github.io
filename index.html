@@ -6,7 +6,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
     <meta name="description" content="Portfolio of João Costeira" />
-    <meta name="keywords" content="frontend, developer, Software Engineer, Braga, Portugal, react, css, javascript, nlp, functional programming, design, art, music" />
+    <meta name="keywords" content="João Costeira, frontend, developer, Software Engineer, Braga, Portugal, react, css, javascript, nlp, functional programming, design, art, music" />
     <meta name="author" content="João Costeira" />
 
     <link rel="stylesheet" href="fonts/source-serif-caption.css">
@@ -16,8 +16,9 @@
     <link rel="stylesheet" href="fonts/source-serif-display.css">
     <link rel="stylesheet" href="fonts/source-serif-variable.css">
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="distorted.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/distorted.css">
+    <link rel="stylesheet" href="css/audio_player.css">
     <link rel="icon" type="image/png" href="imgs/dog.png">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js" integrity="sha512-Mf/xUqfWvDIr+1B6zfnIDIiG7XHzyP/guXUWgV6PgaQoIFeXkJQR5XWh9fqAiCiRCpemabt3naV4jhDWVnuYDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Costeira</title>
@@ -176,6 +177,14 @@
                     <li><img src="imgs/enzo.png" alt="Enzo Mari sedia chair"></li>
                     <li><img src="imgs/weird_face.png" alt="Weird Face Drawing"></li>
                     <li><img src="imgs/20210321_154950.png" alt="Weird Face Drawing"></li>
+                    <li>
+                        <div class="audio-player">
+                            <audio src="music/costeira.mp3"></audio>
+                            <button class="music-button"></button>
+                            <span class="timer"></span>
+                            <div class="timeline"></div>
+                        </div>
+                    </li>
                 </ul>
         </section>
 
@@ -212,5 +221,6 @@
       </main>
       <script src="js/script.js"></script>
       <script src="js/distorted.js"></script>
+      <script src="js/music_player.js"></script>
 </body>
 </html>

@@ -635,6 +635,12 @@ Intrests
 }
 
 
+.interests-grid li:nth-child(10) {
+  grid-row: 1; 
+  grid-column: 1;
+}
+
+
 .interests-grid li:nth-child(odd):hover {
   rotate: 5deg;
 }
