@@ -24,10 +24,15 @@ class Item {
     }
     
     initScrollEvent(){
-        const scrollCallback = () => {
-            setTimeout(()=>{
-                this.tl.restart();
-            },500);
+        const scrollCallback = (entries) => {
+            entries.map( e => {
+                if(e.isIntersecting){
+                    setTimeout(()=>{
+                        this.tl.restart();
+                    },500);
+                }
+            })
+
         }
         const options = {
             root: null,
