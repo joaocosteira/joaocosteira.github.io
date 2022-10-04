@@ -638,6 +638,7 @@ Intrests
 .interests-grid li:nth-child(10) {
   grid-row: 1; 
   grid-column: 1;
+  rotate: -5deg;
 }
 
 
@@ -645,7 +646,7 @@ Intrests
   rotate: 5deg;
 }
 
-.interests-grid li:nth-child(even):hover {
+.interests-grid li:nth-child(even):not(:last-child):hover {
   rotate: -5deg;
 }
 
