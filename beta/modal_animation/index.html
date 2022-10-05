@@ -6,12 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
-
-    <!--
-        Inspo link:
-        https://alvarotrigo.com/blog/10-cool-css-animations-to-add-to-your-website/
-
-    -->
+    <!-- Inspo link: https://alvarotrigo.com/blog/10-cool-css-animations-to-add-to-your-website/ -->
 </head>
 <body>
     <div id="modal-container">
@@ -37,18 +32,25 @@
           <div id="seven" class="button">Bond</div>
         </div>
       </div>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
       <script>
-        $('.button').click(function(){
-            var buttonId = $(this).attr('id');
-            $('#modal-container').removeAttr('class').addClass(buttonId);
-            $('body').addClass('modal-active');
+
+        const buttons = document.querySelectorAll('.button');
+        const modal = document.getElementById('modal-container');
+        const body = document.querySelector('body');
+
+        buttons.forEach( b => {
+          b.addEventListener('click', () => {
+            modal.classList = [b.id];
+            body.classList.add('modal-active');
+          });
+        })
+        
+        modal.addEventListener('click', ()=>{
+          modal.classList.add('out');
+          modal.classList.remove(b.id);
+          body.classList.remove('modal-active');
         })
 
-        $('#modal-container').click(function(){
-            $(this).addClass('out');
-            $('body').removeClass('modal-active');
-        });
       </script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 .audio-player {
     position: relative;
-    background: #009539;   /*97f9a9*/
+    background: black;   /*97f9a9*/
     border: none;
     outline:none;
     width: 10rem;
@@ -8,10 +8,6 @@
     font-size: 3em;
     cursor:pointer;
     color: transparent;
-}
-
-.audio-player:focus{
-    outline:none;
 }
 
 .music-button {
@@ -59,5 +55,5 @@
     left: 0;
     height: 100%;
     width: 0;
-    background-color: #06ff04;
+    background-color: #560319;
 }
