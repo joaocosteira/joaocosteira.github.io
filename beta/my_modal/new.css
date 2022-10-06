@@ -5,11 +5,36 @@
 }
 
 .full-page{
+    position: relative;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+.foundling-desc{
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 40%;
+    background-color: black;
+    z-index: 2;
+}
+
+.spickles-desc{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 40%;
+    background-color: black;
+    z-index: 2;
+}
+
+
 
 .work-grid{
     
@@ -28,6 +53,7 @@
 
 .work-grid h2 {
     margin-top: 1rem;
+    text-align: center;
 
 }
 .work-grid > div{
@@ -41,6 +67,14 @@
 
 .work-cell:hover{
     cursor: pointer;
+    scale: 130%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border: 1px solid black;
+}
+
+.work-cell:hover .foundling-desc{
+    display: block;
 }
 
 .work-cell:hover .dark{

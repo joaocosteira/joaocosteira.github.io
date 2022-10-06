@@ -9,19 +9,46 @@
 </head>
 <body>
     <div class="full-page">
-
+        <div class="foundling-desc"></div>
+        <div class="spickles-desc"></div>
         <div class="work-grid">
-            <div class="work-cell">
+            <div id="foundling" class="work-cell">
                 <img class="light" src="imgs/foundling_light.svg" alt="foundling wheel">
                 <img class="dark" src="imgs/foundling_dark.svg" alt="foundling wheel">
-                <h2>Foundling Wheel</h2>
+                <h2><a href="https://www.instagram.com" target="_blank">Foundling Wheel</a></h2>
             </div>
-            <div class="work-cell">
+            <div id="spickles" class="work-cell">
                 <img class="light" src="imgs/spickles_light.svg" alt="spickles_light">
                 <img class="dark" src="imgs/spickles_dar_2.svg" alt="spickles_light">
                 <h2>Spickles</h2>
             </div>
         </div>
     </div>
+
+    <script>
+
+        const foundling = document.getElementById('foundling');
+        const spickles = document.getElementById('spickles');
+        const foundling_desc = document.querySelector('.foundling-desc');
+        const spickles_desc = document.querySelector('.spickles-desc');
+        console.log(foundling_desc);
+
+
+        foundling.addEventListener('mouseover', () =>{
+            foundling_desc.style.display = "block";
+  
+        })
+        foundling.addEventListener('mouseleave', () =>{
+            foundling_desc.style.display = "none";  
+        })
+
+        spickles.addEventListener('mouseover', () =>{
+            spickles_desc.style.display = "block";
+  
+        })
+        spickles.addEventListener('mouseleave', () =>{
+            spickles_desc.style.display = "none";  
+        })
+    </script>
 </body>
 </html>
