@@ -55,5 +55,6 @@
     left: 0;
     height: .5rem;
     width: 0;
-    background-color: rgba(175, 176, 180, 0.783);
+    background-color: #009539;
+    /* background-color: rgba(175, 176, 180, 0.783); */
 }

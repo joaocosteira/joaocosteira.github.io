@@ -333,6 +333,18 @@ a.mainmenu-selected, .mainmenu-a:hover{
 }
 
 
+.get_in_touch_img{
+  height: 50%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+/*
+.handle-phone:hover .get_in_touch_img{
+  display: block;
+  height: 500px;
+} */
 
 /** Footer Windows Phone: */
 .phone-grid{
@@ -453,6 +465,7 @@ footer > ul{
 }
 
 #touch{
+  position: relative;
   display: flex;
   /* background-color: beige; */
   justify-content: center;
