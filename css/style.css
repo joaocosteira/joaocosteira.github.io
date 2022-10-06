@@ -676,55 +676,122 @@ Intrests
 }
 
 
-/* 
+/* Work */
 
-Work
-
-*/
-
-
-#foundling_wheel{
+#work{
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  max-width: 54rem;
-  margin: auto;
-  padding: 1rem;
-}
-
-
-
-#work p, #work_pt2 p{
+  align-items: center;
   text-indent: 1rem;
 }
 
-
-
-#work p.technologies, #work_pt2 p.technologies{
-  text-indent: 0rem;
+.work-desc{
+    color: black;
+    display: none;
+    flex-direction: column;
+    padding: 3rem;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    background-color: transparent;
+    z-index: 2;
+    justify-content: center;
+    align-items: center;
 }
+
+.foundling-desc, .spickles-desc{
+  right: 0;
+}
+
+
 .work-grid{
-  padding: 1rem;
+    
   display: grid;
-  gap: 1rem;
-  max-width: 54rem;
-  margin: auto;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 1000px; 
+  row-gap: 3rem;
 }
 
-#work ul, #work_pt2 ul{
+
+#foundling{
+  grid-column: 1 / 2;
+}
+#spickles{
+  grid-row: 2;
+  grid-column: 2 / 3;
+}
+
+#more_projects{
+  grid-row: 3;
+  grid-column: 1 / 3;
+}
+
+
+.work-grid img {
+  display: block;
+  width: 100%; 
+}
+
+.work-grid .dark{
+  display: none;
+}
+.work_header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.work_header > h2{
+  display: inline;
+}
+
+.work-grid .work_header img{
+  height: 1rem;
+  /*display: inline-block;*/
+  width: 1rem;
+}
+
+
+.work-cell:hover{
+  cursor: pointer;
+  scale: 130%;
+  padding-top: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border: 1px solid black;
+}
+
+.work-cell:hover .foundling-desc{
+  display: block;
+}
+
+.work-cell:hover .dark{
+  display: block;
+}
+
+.work-cell:hover .light{
+  display: none;
+
+}
+
+
+
+#work ul{
   text-indent: 0rem;
-  /* list-style: none; */
+  list-style: none;
   display: inline;
   opacity: 50%;
 }
 
-#work li, #work_pt2 li{
-  
+#work li{
   display: inline;
 }
 
-#work li::before, #work_pt2 li::before{
+.technologies {
+  align-self: start;
+}
+
+#work li::before{
   content: "";
   display: inline-block;
   width: .5rem;
@@ -733,52 +800,4 @@ Work
   background-color: black;
   margin: 0 .5rem;
   vertical-align: middle;
-}
-
-.work_header{
-  margin-bottom: 1rem;
-  
-}
-.work_header > h2{
-  display: inline;
-}
-
-.new_tab{
-  height: 1rem;
-  display: inline;
-}
-
-
-.more-work{
-  display: flex;
-  justify-content: center;
-
-}
-#work-grid{
-  display: grid;
-  place-items: center;
-  height: 100vh;
-}
-
-#spickles{
-  grid-column: 1 / span 2;
-  grid-row: 1;
-}
-
-#more_projects > p{
-  display: none;
-}
-#more_projects{
-  grid-column: 2;
-  grid-row: 2;
-}
-
-@media (min-width: 700px) {
-  #more_projects > p {
-    display: block;
   }
-}
-
-#foundling_tech {
-  display: inline;
-}

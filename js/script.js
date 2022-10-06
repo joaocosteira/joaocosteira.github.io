@@ -40,15 +40,11 @@ function changeSelectedCarousel() {
     });
     const selectedIndex = [...document.querySelectorAll('section')].indexOf(sections[0]);
 
-    /*
-        Work Section has 2 pages, but we want the snap to work, so de index has to
-        be -1 after we reach the second work page (index 3)
-    */
-    const jumpIndex = selectedIndex >= 3 ? selectedIndex - 1 :  selectedIndex;
+    //const jumpIndex = selectedIndex >= 3 ? selectedIndex - 1 :  selectedIndex;
 
-    setCarouselBallByIndex(jumpIndex);  // Update Carousel
-    updateSidemenuByIndex(jumpIndex);   // Update Sidemenu
-    updateMainNavByIndex(jumpIndex);    // Update Navbar
+    setCarouselBallByIndex(selectedIndex);  // Update Carousel
+    updateSidemenuByIndex(selectedIndex);   // Update Sidemenu
+    updateMainNavByIndex(selectedIndex);    // Update Navbar
 
 }
 
