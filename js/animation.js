@@ -37,9 +37,10 @@ const observerTop = new IntersectionObserver( entries => {
 
         if(entry.isIntersecting){
             entry.target.classList.add('animateTop')
-        }else{
-            entry.target.classList.remove('animateTop')
         }
+        //else{
+        //    entry.target.classList.remove('animateTop')
+        //}
     })
 })
 
@@ -49,9 +50,10 @@ const observerBottom = new IntersectionObserver( entries => {
     entries.forEach((entry)=>{
         if(entry.isIntersecting){
             entry.target.classList.add('animateBottom')
-        }else{
-            entry.target.classList.remove('animateBottom')
         }
+        //else{
+        //    entry.target.classList.remove('animateBottom')
+        //}
     })
 })
 
