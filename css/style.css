@@ -699,10 +699,18 @@ Intrests
 /* Work */
 
 #work{
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   text-indent: 1rem;
+}
+
+#work .watermark{
+  height: 20vh;
+  bottom: 5vh;
+  right: 5vh;
+  rotate: -5deg;
 }
 
 .work-desc{
@@ -826,3 +834,38 @@ Intrests
   margin: 0 .5rem;
   vertical-align: middle;
   }
+
+
+
+.animateLeft{
+    animation: revealLeft 1s forwards;
+}
+
+.animateRight{
+  animation: revealRight 1s forwards;
+}
+
+@keyframes revealLeft{
+    from{
+        opacity: 0;
+        transform: translateX(-180px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes revealRight{
+    from{
+        opacity: 0;
+        transform: translateX(180px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

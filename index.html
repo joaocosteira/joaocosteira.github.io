@@ -47,7 +47,7 @@
         </nav>
     </header>
 
-    <div id="sidemenu" class="sidemenu">
+    <div id="sidemenu" class="sidemenu animLeft">
 
         <div class="sidemenu-inner">
             <a href="#home" class="sidemenu-a sidemenu-selected">Home</a>
@@ -82,7 +82,7 @@
             <!-- <h1 class="element-invisible">About Me</h1> -->
             <img class="watermark" src="imgs/abouts2.svg" alt="about watermark">
             <div class="main-grid">
-                <div id="tobe_distorted" class="tobe_distorted">
+                <div id="tobe_distorted" class="tobe_distorted animLeft">
                     <figure class="thumb">
                         <svg class="distort" width="350" height="450" viewBox="0 0 350 450" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <filter id="distortionFilter" data-type="turbulence">
@@ -93,7 +93,7 @@
                         </svg>
                     </figure>
                 </div>
-                <div>
+                <div class="animRight">
                     <p>Hi, my name is João Costeira. I'm a Software Engineer born and raised in Braga, Portugal.</p>
                     <p>I completed both my degree and Master's at Universidade do Minho. During this period, my studies focused on four main areas:</p>
                     <ul>
@@ -109,7 +109,8 @@
 
 
         <section id="work" class="full-page">
-            <div class="work-desc foundling-desc">
+            <img class="watermark" src="imgs/workbag.svg" alt="work bag watermark">
+            <div class="work-desc foundling-desc animRight">
                 <h2>The Foundling Wheel Archive</h2>
                 <p>The Foundling Wheel is a digital platform supported by a knowledge repository which fully automates the processing of information.</p>
                 <p>The Archivist from the Municipal Archive of Fafe provided transcripts in a digital format. Each document is spellchecked and an autocomplete system restores unreadable sections. Then a named entity recognition, relation extraction and entity linking components extract all the important pieces of information.</p>
@@ -126,7 +127,7 @@
                     <li>Bootstrap</li>
                 </ul>
             </div>
-            <div class="work-desc spickles-desc">
+            <div class="work-desc spickles-desc animRight">
                 <h2>Spickles</h2>
                 <p>Spickles is a mobile phone application that assists their users choosing a movie to watch. The key difference between Spickles and generic movie recommendation systems is this application provides recommendations not only for a specific user but also assists the decision process for an arbitrary sized group.</p>
                 <p>By creating a group, the application takes in consideration potential filters added and the preferences of each member. Then the recommendation engine creates a targeted and small pool of movies.</p>
@@ -144,7 +145,7 @@
                 </ul>
             </div>
 
-            <div class="work-grid">
+            <div class="work-grid animLeft">
                 <div id="foundling" class="work-cell">
                     <img class="light" src="imgs/foundling_light.svg" alt="foundling wheel">
                     <img class="dark" src="imgs/foundling_dark.svg" alt="foundling wheel">
@@ -173,7 +174,7 @@
 
 
         <section id="interests" class="full-page">
-            <img class="watermark" src="imgs/interests.svg" alt="">
+            <img class="watermark" src="imgs/interests2.svg" alt="">
             <!-- <h1 class="element-invisible">My Interests</h1> -->
                 <ul class="interests-grid">
                     <!-- 
@@ -182,12 +183,12 @@
                     <li><img src="imgs/20210321_155610.jpg" alt="Drawing of a face in blue and purple"></li>
                     <li><img src="imgs/20210321_160539.jpg" alt="Drawing of a face in white with a red and pink background"></li>
                     -->
-                    <li>Besides programming, I have lots of interests, including painting, design, music production and more. </li>
-                    <li>Here's a showcase of some stuff that I have made.</li>
-                    <li><img src="imgs/enzo.png" alt="Enzo Mari sedia chair"></li>
-                    <!-- <li><img src="imgs/weird_face.png" alt="Weird Face Drawing"></li> -->
-                    <li><img src="imgs/20210321_154950.png" alt="Weird Face Drawing"></li>
-                    <li>
+                    <li class="animRight">Besides programming, I have lots of interests, including painting, design, music production and more. </li>
+                    <li class="animLeft">Here's a showcase of some stuff that I have made.</li>
+                    <li class="animLeft"><img src="imgs/enzo.png" alt="Enzo Mari sedia chair"></li>
+                    <!-- <li class="animLeft"><img src="imgs/weird_face.png" alt="Weird Face Drawing"></li> -->
+                    <li class="animLeft"><img src="imgs/20210321_154950.png" alt="Weird Face Drawing"></li>
+                    <li class="animRight">
                         <div class="audio-player">
                             <audio src="music/costeira.mp3"preload="none"></audio>
                             <button class="music-button"></button>
@@ -201,7 +202,7 @@
         <section id="touch" class="full-page">
             <!-- <h1 class="element-invisible">Get in touch with me:</h1> -->
             <img class="get_in_touch_img" src="imgs/get_in_touch.svg" alt="get in touch face">
-            <div class="handle-phone">
+            <div class="handle-phone animLeft">
                 <div class="phone-notification">
                     <img class="icons battery" src="icons/white_battery.svg" alt="battery icon">
                     <img class="icons wifi" src="icons/white_wifi.svg" alt="wifi icon">
@@ -234,5 +235,6 @@
       <script src="js/distorted.js"></script>
       <script src="js/work.js"></script>
       <script src="js/music_player.js"></script>
+      <script src="js/animation.js"></script>
 </body>
 </html>
