@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <h1 class="anim">Yo, you see this</h1>
+    </section>
+    <section>
+        <img src="men.jpg" alt="" class="anim">
+        <h1 class="anim">Pretty good</h1>
+    </section>
+    <section>
+        <h1 class="anim">I know rigth</h1>
+    </section>
+
+
+    <svg viewBox="0 0 500 500" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+        <style type="text/css">
+            .text{
+                text-transform: uppercase;
+                font-weight: bold;
+                fill: #e6e6e6;
+            }
+        </style>
+        <path id="our-text" d="M2.5 1H425V423H1V1"/>
+        <text y="40" font-size="30" font-family="Montserrat, Arial">
+            <textPath id="text-path" class="text" href="#our-text">Yeah, this text is animated</textPath>
+        </text>
+    </svg>
+    
+    <script>
+        var textPath = document.querySelector('#text-path');
+
+        function updateTextPathOffset(offset){
+            textPath.setAttribute('startOffset', offset);
+        }
+
+        function onScroll(){
+            requestAnimationFrame(()=>{
+                updateTextPathOffset(window.scrollY * 1.5);
+            })
+        }
+
+        window.addEventListener('scroll',onScroll);
+
+
+        const titles = document.querySelectorAll('.anim');
+        const observer = new IntersectionObserver((entries) =>{
+            entries.forEach( entry => {
+                if(entry.isIntersecting === true){
+                    entry.target.classList.add('animate')
+                }else{
+                    entry.target.classList.remove('animate')
+                }
+            })
+        })
+
+        titles.forEach(title => observer.observe(title))
+
+    </script>
+</body>
+</html>
