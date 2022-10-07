@@ -845,6 +845,13 @@ Intrests
   animation: revealRight 1s forwards;
 }
 
+.animateTop{
+  animation: revealTop 1s forwards;
+}
+.animateBottom{
+  animation: revealBottom 1.5s forwards;
+}
+
 @keyframes revealLeft{
     from{
         opacity: 0;
@@ -868,4 +875,35 @@ Intrests
         opacity: 1;
         transform: translateX(0);
     }
+}
+
+@keyframes revealTop{
+    from{
+        opacity: 0;
+        transform: translateY(-180px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes revealBottom{
+    from{
+        opacity: 0;
+        transform: translateY(200px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+#home > #joao{
+  width: 60vw;
+}
+#home > #costeira{
+  width: 90vw;
 }
