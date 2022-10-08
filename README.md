@@ -857,3 +857,15 @@ Mas a piada é com o **grid-template-columns: repeat(auto-fit, 1fr);** , o fract
     max-width: 50ch; /*ele recomenda começar com 60*/
 }
 ```
+
+
+# Some insane shit:
+- Main website:
+ * http://srufaculty.sru.edu/david.dailey/
+- Crazzy face changes:
+ *  http://srufaculty.sru.edu/david.dailey/javascript/face/face.html
+
+- Svg filters:
+ * http://srufaculty.sru.edu/david.dailey/svg/SVGOpen2010/filters2.htm#S4
+ * https://www.smashingmagazine.com/2015/05/why-the-svg-filter-is-awesome/
+ * https://www.creativebloq.com/netmag/how-go-beyond-basics-svg-filters-71412280
