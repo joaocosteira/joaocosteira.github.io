@@ -782,7 +782,6 @@ Intrests
 
 .work-cell:hover{
   cursor: pointer;
-  scale: 105%;
   padding-top: 2rem;
   padding-left: 2rem;
   padding-right: 2rem;
@@ -790,8 +789,7 @@ Intrests
 }
 
 #more_projects.work-cell:hover{
-  padding-top: 0rem;
-  scale: 100%;
+  padding: .5rem;
 }
 
 .work-cell:hover .foundling-desc{
