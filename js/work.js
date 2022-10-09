@@ -4,9 +4,13 @@ const foundling_desc = document.querySelector('.foundling-desc');
 const spickles_desc = document.querySelector('.spickles-desc');
 console.log(foundling_desc);
 
+const width = ()  => window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+console.log("width", width);
 
 foundling.addEventListener('mouseover', () =>{
-    foundling_desc.style.display = "flex";
+    if(width() > 961)
+        foundling_desc.style.display = "flex";
 
 })
 foundling.addEventListener('mouseleave', () =>{
@@ -14,7 +18,8 @@ foundling.addEventListener('mouseleave', () =>{
 })
 
 spickles.addEventListener('mouseover', () =>{
-    spickles_desc.style.display = "flex";
+    if(width() > 961)
+        spickles_desc.style.display = "flex";
 
 })
 spickles.addEventListener('mouseleave', () =>{
