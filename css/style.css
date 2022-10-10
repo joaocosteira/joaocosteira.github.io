@@ -677,10 +677,10 @@ Intrests
     top: 0;
     height: 100%;
     /* width: 50%; */
-    max-width: 50%;
+    width: 50%;
     background-color: transparent;
     z-index: 2;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
 }
 
