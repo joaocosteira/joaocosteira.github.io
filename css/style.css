@@ -676,11 +676,16 @@ Intrests
     position: absolute;
     top: 0;
     height: 100%;
-    width: 50%;
+    /* width: 50%; */
+    max-width: 50%;
     background-color: transparent;
     z-index: 2;
     justify-content: center;
     align-items: center;
+}
+
+.work-desc > *{
+   max-width: 60ch;
 }
 
 .foundling-desc, .spickles-desc{
