@@ -2,11 +2,10 @@ const foundling = document.getElementById('foundling');
 const spickles = document.getElementById('spickles');
 const foundling_desc = document.querySelector('.foundling-desc');
 const spickles_desc = document.querySelector('.spickles-desc');
-console.log(foundling_desc);
+
 
 const width = ()  => window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
-console.log("width", width);
 
 foundling.addEventListener('mouseover', () =>{
     if(width() > 961)
