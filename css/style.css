@@ -680,8 +680,8 @@ Intrests
     width: 50%;
     background-color: transparent;
     z-index: 2;
-    justify-content: start;
-    align-items: center;
+    justify-content: center;
+    align-items: start;
 }
 
 .work-desc > *{
