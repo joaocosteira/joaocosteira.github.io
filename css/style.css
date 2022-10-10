@@ -286,6 +286,7 @@ section {
 }
 
 a.mainmenu-selected, .mainmenu-a:hover{
+  text-underline-offset: .3rem;
   text-decoration: underline;
 }
 
@@ -863,10 +864,10 @@ Intrests
 
 
 #home > #joao{
-  width: 40vw;
+  width: 30vw;
 }
 #home > #costeira{
-  width: 60vw;
+  width: 50vw;
 }
 
 
