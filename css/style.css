@@ -694,6 +694,7 @@ Intrests
   grid-template-columns: 1fr;
   max-width: 1000px; 
   row-gap: 1rem;
+  margin: 1rem;
 }
 
 
@@ -779,6 +780,10 @@ Intrests
     animation: revealLeft 1s forwards;
 }
 
+.animateLeftLong{
+    animation: revealLeftLong 1s forwards;
+}
+
 .animateRight{
   animation: revealRight 1s forwards;
 }
@@ -788,6 +793,19 @@ Intrests
 }
 .animateBottom{
   animation: revealBottom 1.5s forwards;
+}
+
+
+@keyframes revealLeftLong{
+  from{
+      opacity: 0;
+      transform: translateX(-180px);
+  }
+
+  to{
+      opacity: 1;
+      transform: translateX(0);
+  }
 }
 
 @keyframes revealLeft{
@@ -840,10 +858,10 @@ Intrests
 
 
 #home > #joao{
-  width: 60vw;
+  width: 40vw;
 }
 #home > #costeira{
-  width: 90vw;
+  width: 60vw;
 }
 
 
@@ -904,6 +922,7 @@ Intrests
     grid-template-columns: repeat(4, 1fr);
     max-width: 1000px; 
     row-gap: 3rem;
+    margin: 0rem;
   }
   
   .work-grid img {

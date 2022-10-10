@@ -3,6 +3,7 @@ const itemsToAnimateRight = document.querySelectorAll('.animRight');
 
 const joao = document.getElementById('joao');
 const costeira = document.getElementById('costeira');
+const sidemenuAnim = document.getElementById('sidemenu');
 
 const observerLeft = new IntersectionObserver( entries => {
     entries.forEach((entry)=>{
@@ -58,4 +59,17 @@ const observerBottom = new IntersectionObserver( entries => {
 })
 
 observerBottom.observe(costeira);
+
+const observerSidemenu = new IntersectionObserver( entries => {
+    entries.forEach((entry)=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add('animateLeftLong')
+        }
+        else{
+            entry.target.classList.remove('animateLeftLong')
+        }
+    })
+})
+
+observerSidemenu.observe(sidemenuAnim);
 
