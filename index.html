@@ -59,6 +59,7 @@
         
     </div>
 
+    <div id="loading">100%</div>
     <div class="carrousel">
         <a class="carrousel-circle carrousel-selected" href="#home"><span>1</span></a>
         <a class="carrousel-circle" href="#about"><span>2</span></a>
@@ -234,11 +235,42 @@
             </footer>
             </div>
         </section>
-      </main>
-      <script src="js/script.js"></script>
-      <script src="js/distorted.js"></script>
-      <script src="js/work.js"></script>
-      <script src="js/music_player.js"></script>
-      <script src="js/animation.js"></script>
+    </main>
+
+    <script>
+        const loading = document.getElementById('loading');
+        const imgs = document.images;
+        const totalOfImgs = imgs.length;
+
+        var imgCounter = 0;
+        const imgLoaded = () => {
+            imgCounter += 1;
+            loading.innerHTML = `${(100/totalOfImgs*imgCounter) << 0}%`;
+            if(imgCounter===totalOfImgs) 
+                return doneLoading();
+        }
+
+        function doneLoading(){
+            loading.style.opacity = 0;
+            loading.style.fontSize = '0rem';
+            setTimeout(function(){ 
+                loading.style.display = "none";
+            }, 1200);
+            console.log("Done");
+        }
+
+        for(var i=0; i<totalOfImgs; i++) {
+            var tImg     = new Image();
+            tImg.onload  = imgLoaded;
+            tImg.onerror = imgLoaded;
+            tImg.src     = imgs[i].src;
+        }
+
+    </script>
+    <script src="js/script.js"></script>
+    <script src="js/distorted.js"></script>
+    <script src="js/work.js"></script>
+    <script src="js/music_player.js"></script>
+    <script src="js/animation.js"></script>
 </body>
 </html>
