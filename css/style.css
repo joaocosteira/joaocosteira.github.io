@@ -103,16 +103,17 @@ h1{
 #loading{
   position: absolute;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: end;
+  align-items: end;
   background-color: white;
+  margin: 1rem;
   width: 100vw;
   height: 100vh;
   z-index: 1001;
   bottom: 0;
   right: 0;
   font-size: 5rem;
-  transition: all 1s ease;
+  transition: all .5s ease;
 }
 
 .carrousel{
