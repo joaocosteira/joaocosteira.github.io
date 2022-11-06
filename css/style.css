@@ -378,7 +378,8 @@ footer > ul{
 
 .phone-grid > a {
   /* background: #39C0C0; */
-  background: var(--bottega-green);
+  /* background: var(--bottega-green); */
+  background: linear-gradient(45deg,#BBD2C5,#536976,#292E49);
   padding: 1rem;
   /*isto é para um troque de meter a imagem dentro da parte do conteudo,
   pois agora temos o before a criar um quadrado perfeito acima da imagem,
