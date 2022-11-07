@@ -365,8 +365,22 @@ a.mainmenu-selected, .mainmenu-a:hover{
   .phone-square:hover{
       transform: scale(1.05);
       cursor: pointer;
+      animation: gradient .5s ease-in-out forwards;
   }
+  @keyframes gradient {
+    0% {
+        background-position: 0% 10%;
+        background-size: 300% 300%;
+    }
+    100% {
+        background-position: 0% 50%;
+        background-size: 500% 500%;
+    }
+
 }
+
+}
+
 
 footer > ul{
   margin-block-start: 0;
@@ -379,7 +393,10 @@ footer > ul{
 .phone-grid > a {
   /* background: #39C0C0; */
   /* background: var(--bottega-green); */
-  background: linear-gradient(45deg,#BBD2C5,#536976,#292E49);
+  background: linear-gradient(-45deg,#BBD2C5,#536976,#292E49,#BBD2C5,#536976,#292E49);
+  /* background: linear-gradient(-45deg, #686FFD, #F1A73F, #686FFD, #F1A73F); */
+  background-size: 300% 300%;
+  background-position: 0% 10%;
   padding: 1rem;
   /*isto é para um troque de meter a imagem dentro da parte do conteudo,
   pois agora temos o before a criar um quadrado perfeito acima da imagem,
@@ -387,6 +404,9 @@ footer > ul{
   display: grid;
   place-items: center;
 }
+
+
+
 
 
 /*  Fucking Magic!!!*/
