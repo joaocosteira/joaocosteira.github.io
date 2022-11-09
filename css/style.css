@@ -299,7 +299,77 @@ section {
  
 }
 
-a.mainmenu-selected, .mainmenu-a:hover{
+.mainmenu-a{
+  position: relative;
+}
+
+
+.mainmenu-home:hover::before{
+  content: " Home home Home home";
+  position: absolute;
+  margin-top: -.5rem;
+}
+.mainmenu-home:hover::after{
+  content: " Home home Home home";
+  display: block;
+  position: absolute;
+  margin-top: -1rem;
+}
+
+.mainmenu-about:hover::before{
+  content: " About about About about";
+  position: absolute;
+  margin-top: -.5rem;
+}
+.mainmenu-about:hover::after{
+  content: " About about About about";
+  display: block;
+  position: absolute;
+  margin-top: -1rem;
+}
+.mainmenu-work:hover::before{
+  content: " Work work Work work";
+  position: absolute;
+  margin-top: -.5rem;
+}
+.mainmenu-work:hover::after{
+  content: " Work work Work work";
+  display: block;
+  position: absolute;
+  margin-top: -1rem;
+}
+.mainmenu-interests:hover::before{
+  content: " Interests interests Interests interests";
+  position: absolute;
+  margin-top: -.5rem;
+}
+.mainmenu-interests:hover::after{
+  content: " Interests interests Interests interests";
+  display: block;
+  position: absolute;
+  margin-top: -1rem;
+}
+.mainmenu-touch:hover::before{
+  content: " Get in Touch get in touch";
+  position: absolute;
+  margin-top: -.5rem;
+}
+.mainmenu-touch:hover::after{
+  content: " Get in Touch get in touch";
+  display: block;
+  position: absolute;
+  margin-top: -1rem;
+}
+
+.mainmenu-selected.mainmenu-home:hover,
+.mainmenu-selected.mainmenu-about:hover,
+.mainmenu-selected.mainmenu-work:hover,
+.mainmenu-selected.mainmenu-interests:hover,
+.mainmenu-selected.mainmenu-touch:hover{
+  text-decoration: none;
+}
+
+a.mainmenu-selected{
   text-underline-offset: .3rem;
   text-decoration: underline;
 }
