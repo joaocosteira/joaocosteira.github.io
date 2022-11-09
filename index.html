@@ -251,6 +251,37 @@
         const imgs = document.images;
         const totalOfImgs = imgs.length;
 
+
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+
+        const tl = gsap.timeline({ 
+            defaults : { duration: .1 }, 
+            paused: true
+        })
+
+        tl
+            .from('.c, .o, .s, .t, .e, .i, .r, .a',{ display: "none", x : "100vh", y : "100vw"})
+            .from('.c',{ display: "block", delay: .4})
+            .from('.o',{ display: "block"})
+            .from('.s',{ display: "block"})
+            .from('.t',{ display: "block"})
+            .from('.e',{ display: "block"})
+            .from('.i',{ display: "block"})
+            .from('.r',{ display: "block"})
+            .from('.a',{ display: "block", duration: .2})
+            .addLabel("fullname")
+            .fromTo('#costeira',{ opacity: 0,y : '20vh' },{  opacity: 1,y: 0, duration: .2})
+            .fromTo('#joao',{  opacity: 0,y : '-5vh' },{  opacity: 1,y: 0, duration: .7, ease: 'elastic'})
+
         var imgCounter = 0;
         const imgLoaded = () => {
             imgCounter += 1;
@@ -262,9 +293,17 @@
         function doneLoading(){
             loading.style.opacity = 0;
             loading.style.fontSize = '4.5rem';
+            
+            if(isInViewport(document.querySelector('.hero'))){
+                tl.play();
+            }else{
+                tl.seek("fullname").play()
+            }
             setTimeout(function(){ 
                 loading.style.display = "none";
             }, 1200);
+
+
         }
 
         for(var i=0; i<totalOfImgs; i++) {

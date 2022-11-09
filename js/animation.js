@@ -73,19 +73,3 @@ const observerSidemenu = new IntersectionObserver( entries => {
 
 observerSidemenu.observe(sidemenuAnim);
 
-
-const tl = gsap.timeline({ defaults : { duration: .1 }})
-
-
-
-tl
-    .from('.c',{ display: "block", delay: .4})
-    .from('.o',{ display: "block"})
-    .from('.s',{ display: "block"})
-    .from('.t',{ display: "block"})
-    .from('.e',{ display: "block"})
-    .from('.i',{ display: "block"})
-    .from('.r',{ display: "block"})
-    .from('.a',{ display: "block", duration: .2})
-    .fromTo('#costeira',{ opacity: 0,y : '20vh' },{  opacity: 1,y: 0, duration: .2})
-    .fromTo('#joao',{  opacity: 0,y : '-5vh' },{  opacity: 1,y: 0, duration: .7, ease: 'elastic'})

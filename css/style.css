@@ -101,6 +101,7 @@ h1{
 
 
 #loading{
+  z-index: 10000;
   position: absolute;
   display: flex;
   justify-content: center;
