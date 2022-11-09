@@ -480,6 +480,13 @@ footer > ul{
   width: 90%;
 }
 
+
+.c, .o, .s, .t, .e, .i, .r, .a{
+  position: absolute;
+  height: 120vh;
+  display: none;
+}
+
 #touch{
   position: relative;
   display: flex;
