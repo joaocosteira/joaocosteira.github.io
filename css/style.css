@@ -740,6 +740,7 @@ Intrests
 } */
 
 .interests-grid li:nth-child(4) { /*9*/
+  display: flex;
   grid-row: 4; 
   grid-column: 1;
 }
