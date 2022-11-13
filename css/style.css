@@ -278,8 +278,18 @@ section {
   /* Na versão small, o sidemenu vai até 100% */
   width: 100vw;
   height: 100vh;
-  display: none;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+  transition: transform 500ms ease;
+  z-index: 100;
  
+}
+
+.sidemenu.open{
+  transform: translateX(0%);
 }
 
 .open{
@@ -560,8 +570,8 @@ footer > ul{
 
 
 #interests .watermark{
-  right: -7%;
-  height: 150vh;
+  right: -6%;
+  height: 100vh;
 }
 
 #home > img{
