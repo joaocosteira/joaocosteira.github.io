@@ -247,7 +247,7 @@ section {
 
 .open .hamburger-top {
   transform: rotate(45deg) translateY(6px) translate(6px);
-  background: #fff;
+  /* background: #fff; */
 }
 
 .open .hamburger-middle {
@@ -256,7 +256,7 @@ section {
 
 .open .hamburger-bottom {
   transform: rotate(-45deg) translateY(6px) translate(-6px);
-  background: #fff;
+  /* background: #fff; */
 }
 
 
@@ -304,9 +304,9 @@ section {
 }  
 
 .sidemenu a{
-  color: white;
+  /* color: white; */
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 4rem;
   font-weight: 300;
  
 }
@@ -388,9 +388,14 @@ a.mainmenu-selected{
 
 .sidemenu a.sidemenu-selected , .sidemenu a:hover{
   cursor: pointer;
-  font-weight: bolder;
-  text-decoration: underline;
+  /* font-weight: bolder; */
+  /* text-decoration: underline; */
 }
+
+/* .sidemenu a:hover{
+  text-decoration: none;
+  color: #000;
+} */
 
 
 .get_in_touch_img{
@@ -570,7 +575,7 @@ footer > ul{
 
 
 #interests .watermark{
-  right: -6%;
+  right: -11%;
   height: 100vh;
 }
 
