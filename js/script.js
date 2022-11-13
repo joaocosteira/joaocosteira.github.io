@@ -78,10 +78,10 @@ addClickEvent("mainmenu-a","mainmenu-selected",[setCarouselBallByIndex,updateSid
 
 
 /**Windows 8 tiles flip */
-document.querySelectorAll('.phone-square').forEach( square => {
+// document.querySelectorAll('.phone-square').forEach( square => {
 
-    square.addEventListener( 'click', () => { 
-        square.classList.add("flip");
-        setTimeout(()=>{ square.classList.remove("flip")}, 200)
-    })
-})
+//     square.addEventListener( 'click', () => { 
+//         square.classList.add("click");
+//         //setTimeout(()=>{ square.classList.remove("flip")}, 200)
+//     })
+// })

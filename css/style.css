@@ -272,7 +272,8 @@ section {
 }
 
 .sidemenu{
-  background-color: hsla(0, 0%, 0%, 0.726);
+  /* background-color: hsla(0, 0%, 0%, 0.726); */
+  background-color: var(--bottega-green);
 
   /* Na versão small, o sidemenu vai até 100% */
   width: 100vw;
@@ -421,7 +422,9 @@ a.mainmenu-selected{
 
 .flip{
   animation:rotate-horizontal-center 0.2s
-  } @keyframes rotate-horizontal-center{
+  } 
+  
+  @keyframes rotate-horizontal-center{
       0%{transform:rotateX(0)}
       100%{transform:rotateX(-360deg)} 
 }
@@ -547,6 +550,20 @@ footer > ul{
   z-index: -1;
 }
 
+#about .watermark{
+  right: -3%;
+}
+
+#work .watermark{
+  right: -1vh;
+}
+
+
+#interests .watermark{
+  right: -7%;
+  height: 150vh;
+}
+
 #home > img{
   width: 90%;
 }
@@ -557,7 +574,7 @@ footer > ul{
   top: 50vh;
   left: 50vw;
   transform: translate(-50%,-50%);
-  height: 35vh;
+  height: 45vh;
   width: 35vw !important;
   display: none;
 }
@@ -780,12 +797,7 @@ Intrests
   text-indent: 1rem;
 }
 
-#work .watermark{
-  /* height: 20vh;
-  bottom: 5vh; */
-  right: 5vh;
-  /* rotate: -5deg; */
-}
+
 
 .work-desc{
     color: black;
