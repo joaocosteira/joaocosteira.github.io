@@ -543,7 +543,7 @@ footer > ul{
   position: absolute;
   bottom:0vh;
   right: -3%;
-  height: 90vh;
+  height: 100vh;
   z-index: -1;
 }
 
@@ -557,8 +557,8 @@ footer > ul{
   top: 50vh;
   left: 50vw;
   transform: translate(-50%,-50%);
-  height: 55vh;
-  width: 50vw !important;
+  height: 35vh;
+  width: 35vw !important;
   display: none;
 }
 
@@ -845,7 +845,7 @@ Intrests
 }
 
 
-.work-cell:hover{
+.work-cell:not(:last-child):hover{
   cursor: pointer;
   padding-top: 2rem;
   padding-left: 2rem;
@@ -853,9 +853,6 @@ Intrests
   border: 1px solid black;
 }
 
-#more_projects.work-cell:hover{
-  padding: .5rem;
-}
 
 .work-cell:hover .foundling-desc{
   display: block;
