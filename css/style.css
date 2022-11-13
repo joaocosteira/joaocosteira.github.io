@@ -575,8 +575,8 @@ footer > ul{
 
 
 #interests .watermark{
-  right: -11%;
-  height: 100vh;
+  right: -15%;
+  height: 133vh;
 }
 
 #home > img{
@@ -777,8 +777,9 @@ Intrests
 
 .interests-grid li:nth-child(4) { /*9*/
   display: flex;
-  grid-row: 4; 
-  grid-column: 1;
+  grid-row: 3; 
+  grid-column: 4;
+  rotate: -5deg;
 }
 
 
@@ -1063,6 +1064,12 @@ Intrests
   
   .interests-grid li:nth-child(even):hover {
     rotate: -5deg;
+  }
+
+  .interests-grid li:nth-child(4) {
+    grid-row: 4; 
+    grid-column: 1;
+
   }
   
   .interests-grid li:nth-child(5) { 
