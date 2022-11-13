@@ -554,7 +554,11 @@ footer > ul{
 
 .c, .o, .s, .t, .e, .i, .r, .a{
   position: absolute;
-  height: 90vh;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%,-50%);
+  height: 55vh;
+  width: 50vw !important;
   display: none;
 }
 
