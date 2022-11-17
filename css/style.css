@@ -7,6 +7,8 @@
 :root{
   --bottega-green : #009539;
   --windows-phone-turqouise: #39C0C0;
+  --sidemenu-background: #BEA1A5;
+  --sidemenu-color: #2D1FE8;
 }
 a{
   color: black;
@@ -247,6 +249,7 @@ section {
 
 .open .hamburger-top {
   transform: rotate(45deg) translateY(6px) translate(6px);
+  background: var(--sidemenu-color);
   /* background: #fff; */
 }
 
@@ -256,6 +259,7 @@ section {
 
 .open .hamburger-bottom {
   transform: rotate(-45deg) translateY(6px) translate(-6px);
+  background: var(--sidemenu-color);
   /* background: #fff; */
 }
 
@@ -273,7 +277,7 @@ section {
 
 .sidemenu{
   /* background-color: hsla(0, 0%, 0%, 0.726); */
-  background-color: var(--bottega-green);
+  background-color: var(--sidemenu-background);
 
   /* Na versão small, o sidemenu vai até 100% */
   width: 100vw;
@@ -305,6 +309,7 @@ section {
 
 .sidemenu a{
   /* color: white; */
+  color: var(--sidemenu-color);
   text-decoration: none;
   font-size: 4rem;
   font-weight: 300;
