@@ -7,8 +7,8 @@
 :root{
   --bottega-green : #009539;
   --windows-phone-turqouise: #39C0C0;
-  --sidemenu-background: #BEA1A5;
-  --sidemenu-color: #2D1FE8;
+  --sidemenu-background: #009539;
+  --sidemenu-color: #000;
 }
 a{
   color: black;
