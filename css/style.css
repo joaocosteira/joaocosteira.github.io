@@ -316,6 +316,28 @@ section {
  
 }
 
+.open.sidemenu a{
+  animation: letters .35s cubic-bezier(0,1.47,.36,.99) .15s forwards;
+}
+
+
+.sidemenu a{
+  opacity: 0;
+}
+
+@keyframes letters {
+  from{
+      opacity: 0;
+      letter-spacing: 300vw;
+  }
+  to{
+      opacity: 1;
+      letter-spacing: normal;
+  }
+}
+
+
+
 .mainmenu-a{
   position: relative;
 }
