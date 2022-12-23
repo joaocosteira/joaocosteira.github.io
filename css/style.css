@@ -317,7 +317,7 @@ section {
 }
 
 .open.sidemenu a{
-  animation: letters .35s cubic-bezier(0,1.47,.36,.99) .15s forwards;
+  animation: letters .3s cubic-bezier(0,.99,.2,1.01) .3s forwards;
 }
 
 
@@ -328,10 +328,12 @@ section {
 @keyframes letters {
   from{
       opacity: 0;
+      font-size: 100vh;
       letter-spacing: 300vw;
   }
   to{
       opacity: 1;
+      font-size: normal;
       letter-spacing: normal;
   }
 }
