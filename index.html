@@ -28,17 +28,17 @@
 <body>
     <header>
         <nav class="navbar">
-            <button id="menu-btn" class="hamburger">
+            <button id="menu-btn" class="hamburger nav-elem">
                 <span class="hamburger-top"></span>
                 <span class="hamburger-middle"></span>
                 <span class="hamburger-bottom"></span>
             </button>
     
-            <a id="signature" href="#home">
+            <a id="signature" class="nav-elem" href="#home">
                 <img class="signature" src="imgs/signature.png" srcset="imgs/signature.svg" alt="Costeira Signature">
             </a>
 
-            <ul class="nav-links">
+            <ul class="nav-links nav-elem">
                 <li><a class="mainmenu-a mainmenu-home mainmenu-selected" href='#home'>Home</a></li>
                 <li><a class="mainmenu-a mainmenu-about" href='#about'>About</a></li>
                 <li><a class="mainmenu-a mainmenu-work" href='#work'>Work</a></li>
@@ -278,7 +278,9 @@
             .from('.a',{ display: "block", duration: .2})
             .addLabel("fullname")
             .fromTo('#costeira',{ opacity: 0,y : '20vh' },{  opacity: 1,y: 0, duration: .2})
-            .fromTo('#joao',{  opacity: 0,y : '-5vh' },{  opacity: 1,y: 0, duration: .7, ease: 'elastic'})
+            .fromTo('#joao',{  opacity: 0,y : '-5vh' },{  opacity: 1,y: 0, duration: .7, ease: 'elastic'},'now')
+            .fromTo('.nav-elem',{opacity:0,y: '-10vh',stagger: 0.2},{opacity:1,y:0,stagger: 0.2},'now+=0')
+            .fromTo('.carrousel-circle',{x: "-50px", opacity:0, stagger: 0.1},{x: 0,opacity:1, stagger: 0.1},'now+=0.2')
 
         var imgCounter = 0;
         const imgLoaded = () => {
