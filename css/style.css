@@ -302,6 +302,19 @@ section {
  
 }
 
+.dog{
+  position: fixed;
+  top: 1rem;
+  right: 2rem;
+  filter: invert(100%);
+  height: 5px;
+
+}
+
+.dog img{
+  transform: rotate(10deg);
+  width: 4rem;
+}
 
 
 

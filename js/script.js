@@ -15,6 +15,9 @@ sidemenu_tl.from('.sidemenu a',{
     },
     y: 100
 },"side+=.5")
+sidemenu_tl.fromTo(".dog img",{
+     y: "-100vh"
+},{y:0,duration:0.2})
 
 //Open and close Sidemenu
 function toggleSideMenu(){
