@@ -115,7 +115,6 @@ addClickEvent("mainmenu-a","mainmenu-selected",[setCarouselBallByIndex,updateSid
 //blur effect
 const work_cells = document.querySelectorAll('.work-cell');
 
-
 work_cells.forEach(cell => {
     cell.addEventListener("mouseenter", () => {
         work_cells.forEach(w => { 
@@ -128,4 +127,3 @@ work_cells.forEach(cell => {
         work_cells.forEach(w => w.classList.remove("blur"))
     });
 })
-console.log(work_cells)
