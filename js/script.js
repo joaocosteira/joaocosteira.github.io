@@ -1,11 +1,32 @@
 const btn = document.getElementById('menu-btn');     //hamburguer Menu
 const sidemenu = document.getElementById('sidemenu');//sidemenu panel
 
+const sidemenu_tl = gsap.timeline({ paused : "true"});
+sidemenu_tl.fromTo('.sidemenu',{x: "-100%",duration:0.01},{
+    duration: .3,
+    x: 0,
+    ease: Power2.easeInOut
+},"side");
+sidemenu_tl.from('.sidemenu a',{
+    duration: .2,
+    opacity:0,
+    stagger: {
+        amount: 0.5
+    },
+    y: 100
+},"side+=1")
 
 //Open and close Sidemenu
 function toggleSideMenu(){
     btn.classList.toggle('open')  
     sidemenu.classList.toggle('open');
+
+    if(sidemenu.classList.contains('open')){
+        sidemenu_tl.play().timeScale(1);
+    }else{
+        sidemenu_tl.timeScale(2.5);
+        sidemenu_tl.reverse();  
+    }
 }
 btn.addEventListener('click',toggleSideMenu);
 

@@ -7,8 +7,8 @@
 :root{
   --bottega-green : #009539;
   --windows-phone-turqouise: #39C0C0;
-  --sidemenu-background: #009539;
-  --sidemenu-color: #000;
+  --sidemenu-background: #000;
+  --sidemenu-color: #fff;
 }
 a{
   color: black;
@@ -230,7 +230,7 @@ section {
   height: 2px;
   background: #000;
   transform: rotate(0);
-  transition: all 0.5s;
+  transition: all 1s;
 }
 
 
@@ -275,6 +275,13 @@ section {
  
 }
 
+
+
+/* .sidemenu.open{
+  transform: translateX(0%);
+} */
+
+
 .sidemenu{
   /* background-color: hsla(0, 0%, 0%, 0.726); */
   background-color: var(--sidemenu-background);
@@ -282,30 +289,21 @@ section {
   /* Na versão small, o sidemenu vai até 100% */
   width: 100vw;
   height: 100vh;
-  display: block;
+  display: flex;
   position: absolute;
   top: 0;
   left: 0;
-  transform: translateX(-100%);
-  transition: transform 500ms ease;
-  z-index: 100;
- 
-}
-
-.sidemenu.open{
-  transform: translateX(0%);
-}
-
-.open{
-  display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  position: absolute;
-  top: auto;
-  left: 0;
+  transform: translateX(-100%);
+  transition: transform 500ms ease;
   z-index: 998;
-}  
+ 
+}
+
+
+
 
 .sidemenu a{
   /* color: white; */
@@ -316,16 +314,16 @@ section {
  
 }
 
-.open.sidemenu a{
+/* .open.sidemenu a{
   animation: letters .3s cubic-bezier(0,.99,.2,1.01) .3s forwards;
-}
+} */
 
 
 .sidemenu a{
-  opacity: 0;
+  opacity: 1;
 }
 
-@keyframes letters {
+/* @keyframes letters {
   from{
       opacity: 0;
       font-size: 100vh;
@@ -336,7 +334,7 @@ section {
       font-size: normal;
       letter-spacing: normal;
   }
-}
+} */
 
 
 
@@ -511,7 +509,7 @@ footer > ul{
 .phone-grid > a {
   /* background: #39C0C0; */
   /* background: var(--bottega-green); */
-  background: linear-gradient(-45deg,#BBD2C5,#536976,#292E49,#BBD2C5,#536976,#292E49);
+  background: linear-gradient(-45deg,#bdc3c7,#2c3e50, rgba(6, 5, 5, 0.801),#bdc3c7,#2c3e50, rgba(6, 5, 5, 0.801));
   /* background: linear-gradient(-45deg, #686FFD, #F1A73F, #686FFD, #F1A73F); */
   background-size: 300% 300%;
   background-position: 0% 10%;
