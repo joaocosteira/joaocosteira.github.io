@@ -279,8 +279,14 @@
             .addLabel("fullname")
             .fromTo('#costeira',{ opacity: 0,y : '20vh' },{  opacity: 1,y: 0, duration: .2})
             .fromTo('#joao',{  opacity: 0,y : '-5vh' },{  opacity: 1,y: 0, duration: .7, ease: 'elastic'},'now')
-            .fromTo('#signature, #menu-btn',{opacity:0,y: '-10vh',stagger: 0.2},{opacity:1,y:0,stagger: 0.2},'now+=0')
-            .fromTo('.nav-links',{x: "100%", opacity:0},{x: 0, opacity:1,ease: "power2.easeInOut"},'now+=.4')
+            .fromTo('#signature, #menu-btn',{opacity:0,y: '-10vh',stagger: 0.2},{opacity:1,y:0,duration: 0.1,stagger: 0.2},'now+=0')
+            // .fromTo('.nav-links',{x: "100%", opacity:0},{x: 0, opacity:1,ease: "power2.easeInOut"},'now+=.4')
+            .from(".nav-links li",{
+                y:-20,
+                duration: 1,
+                opacity:0,
+                stagger: .07
+            },'now+=.2')
             .fromTo('.carrousel-circle',{x: "-15px",y: "-5px", opacity:0, stagger: 0.1},{x: 0,y: 0,opacity:1, stagger: 0.1,ease: "power2.easeIn"},'now+=.2')
 
         var imgCounter = 0;
