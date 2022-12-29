@@ -3,7 +3,7 @@ const sidemenu = document.getElementById('sidemenu');//sidemenu panel
 
 const sidemenu_tl = gsap.timeline({ paused : "true"});
 sidemenu_tl.fromTo('.sidemenu',{x: "-100%",duration:0.01},{
-    duration: .3,
+    duration: .1,
     x: 0,
     ease: Power2.easeInOut
 },"side");
@@ -14,7 +14,7 @@ sidemenu_tl.from('.sidemenu a',{
         amount: 0.5
     },
     y: 100
-},"side+=1")
+},"side+=.5")
 
 //Open and close Sidemenu
 function toggleSideMenu(){
@@ -22,9 +22,9 @@ function toggleSideMenu(){
     sidemenu.classList.toggle('open');
 
     if(sidemenu.classList.contains('open')){
-        sidemenu_tl.play().timeScale(1);
+        sidemenu_tl.play().timeScale(1.3);
     }else{
-        sidemenu_tl.timeScale(2.5);
+        sidemenu_tl.timeScale(3);
         sidemenu_tl.reverse();  
     }
 }
