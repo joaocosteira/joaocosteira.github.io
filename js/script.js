@@ -16,8 +16,9 @@ sidemenu_tl.from('.sidemenu a',{
     y: 100
 },"side+=.5")
 sidemenu_tl.fromTo(".dog img",{
-     y: "-100vh"
-},{y:0,duration:0.2})
+     y: "-5rem",
+     opacity:0,
+},{y:0,duration:0.2,opacity:1},"side+=.8")
 
 //Open and close Sidemenu
 function toggleSideMenu(){
@@ -109,3 +110,22 @@ addClickEvent("mainmenu-a","mainmenu-selected",[setCarouselBallByIndex,updateSid
 //         //setTimeout(()=>{ square.classList.remove("flip")}, 200)
 //     })
 // })
+
+
+//blur effect
+const work_cells = document.querySelectorAll('.work-cell');
+
+
+work_cells.forEach(cell => {
+    cell.addEventListener("mouseenter", () => {
+        work_cells.forEach(w => { 
+            if(w  !== cell){
+                w.classList.toggle("blur");
+            }
+        })
+    });
+    cell.addEventListener("mouseleave", () => {
+        work_cells.forEach(w => w.classList.remove("blur"))
+    });
+})
+console.log(work_cells)

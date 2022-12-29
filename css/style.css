@@ -890,6 +890,7 @@ Intrests
 }
 
 
+
 .work-grid img {
   display: block;
   width: 50%; 
@@ -1130,7 +1131,7 @@ Intrests
     justify-content: center;
   }
 
-
+/* 
   .work-cell:not(:last-child):hover{
     cursor: pointer;
     padding-top: 2rem;
@@ -1138,7 +1139,28 @@ Intrests
     padding-right: 2rem;
     border: 1px solid black;
   }
+   */
+   .work-cell{
+    transition: all .9s cubic-bezier(0,1.06,0,1.28);
+   }
+
   
+  /* .work-cell:nth-child(1):hover ~ .work-cell:not(:hover){
+    filter: blur(3px);
+    opacity: .5;
+   } */
+
+  .work-cell.blur{
+    filter: blur(3px);
+    opacity: .5;
+   }
+  
+
+  .work-cell:not(:last-child):hover{
+    transform: scale(1.1);
+    filter: blur(0);
+    opacity: 1;
+   }
   
   .work-cell:hover .foundling-desc{
     display: block;
