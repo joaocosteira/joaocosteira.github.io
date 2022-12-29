@@ -267,11 +267,11 @@ section {
 .sidemenu-inner{
 
   height: 70vh;
-  margin: auto;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
  
 }
 
@@ -295,11 +295,19 @@ section {
   left: 0;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center;
+  /* align-items: center; */
   transform: translateX(-100%);
   transition: transform 500ms ease;
   z-index: 998;
  
+}
+
+.sidemenu .line{
+  width: 100vw;
+  height: 1px;
+  transform-origin: left;
+  overflow: hidden;
+  background-color: white;
 }
 
 .dog{
@@ -322,8 +330,10 @@ section {
   /* color: white; */
   color: var(--sidemenu-color);
   text-decoration: none;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 300;
+  align-self: flex-start;
+  margin-left: .5rem;
  
 }
 

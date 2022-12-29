@@ -7,6 +7,7 @@ sidemenu_tl.fromTo('.sidemenu',{x: "-100%",duration:0.01},{
     x: 0,
     ease: Power2.easeInOut
 },"side");
+
 sidemenu_tl.from('.sidemenu a',{
     duration: .2,
     opacity:0,
@@ -18,7 +19,11 @@ sidemenu_tl.from('.sidemenu a',{
 sidemenu_tl.fromTo(".dog img",{
      y: "-5rem",
      opacity:0,
-},{y:0,duration:0.2,opacity:1},"side+=.8")
+},{y:0,duration:0.2,opacity:1},"side+=.8");
+
+sidemenu_tl.fromTo(".sidemenu .line",{
+    width:0,
+},{duration:1,stagger:.1,width:"100vw"},"side+=0.2")
 
 //Open and close Sidemenu
 function toggleSideMenu(){
