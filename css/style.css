@@ -60,15 +60,64 @@ h1{
 } 
 
 /*Mesmo A Imagem*/
-.signature{
+/* .signature{
   height: 3rem;
   margin-top: .5rem;
-  /*margin: .5rem 0 0 2rem;*/
+  old margin: .5rem 0 0 2rem;
   margin-left: 2rem;
-  /* margin: .5rem 0 0 50px; */
-  /*margin: .5rem auto 0 auto;*/
+  old  margin: .5rem 0 0 50px; 
+  old margin: .5rem auto 0 auto;
+
+} */
+
+
+/*sig*/
+
+.signature {
+  --s: 100px; /* the size */
+  display: grid;
+  transform-style: preserve-3d;
+  --_p: perspective(calc(2.5*var(--s)));
+  animation: r 40s infinite cubic-bezier(.5,-0.5,.5,1.5);
+}
+
+.signature .sig_face{
+  grid-area: 1/1;
+  width: var(--s);
+  aspect-ratio: 1;
+  transform: var(--_t,) translateZ(calc(var(--s)/2));
+}
+
+.sig_face{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
 
 }
+
+.sig_face img{
+  width: 100%;
+}
+
+
+.signature .sig_face:nth-child(2) {--_t: rotateX(-90deg)}
+.signature .sig_face:nth-child(3) {--_t: rotateY( 90deg)}
+.signature .sig_face:nth-child(4) {--_t: rotateX(180deg) rotate( 90deg)}
+.signature .sig_face:nth-child(5) {--_t: rotateX( 90deg)}
+.signature .sig_face:nth-child(6) {--_t: rotateY(-90deg)}
+
+@keyframes r {
+0%,3%   {transform: var(--_p) rotate3d(0, 0, 0, 0deg)}
+4%,19% {transform: var(--_p) rotate3d(-1, 1, 0, 180deg)}
+20%,36% {transform: var(--_p) rotate3d(0, -1, 0, 90deg)}
+37%,52% {transform: var(--_p) rotate3d(1, 0, 0, 90deg)}
+53%,69% {transform: var(--_p) rotate3d(1, 0, 0, -90deg)}
+70%,86% {transform: var(--_p) rotate3d(0, 1, 0, 90deg)}
+87%,100%{transform: var(--_p) rotate3d(0, 0, 0, 0deg)}
+}
+
+/*sig*/
 
 .navbar {
   width: 100%;
@@ -86,6 +135,7 @@ h1{
   display: none;
   /* display: flex; */
    margin-left: auto;
+   margin-top: 2rem;
 }
 .nav-links li{
   list-style: none;
@@ -881,6 +931,7 @@ Intrests
     z-index: 2;
     justify-content: center;
     align-items: start;
+    /*background-color: aliceblue;*/
 }
 
 .work-desc > *{
@@ -1065,6 +1116,10 @@ Intrests
 
   #signature{
     display: block;
+    position: absolute;
+    top:  -.5rem;
+    left: 2rem;
+    z-index: -1;
     /*margin: 0;*/
   }
   /*
@@ -1176,7 +1231,7 @@ Intrests
   
   .work-cell:hover .foundling-desc{
     display: block;
-  }
+  } 
   
   .work-cell:hover .dark{
     display: block;
