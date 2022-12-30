@@ -926,12 +926,15 @@ Intrests
     top: 0;
     height: 100%;
     /* width: 50%; */
-    width: 50%;
+    width: 45%;
     background-color: transparent;
     z-index: 2;
     justify-content: center;
     align-items: start;
     /*background-color: aliceblue;*/
+    background-color: #fff;
+    background-size: 40px 40px;
+    background-image: radial-gradient(circle, #0000003a 1px, rgba(0, 0, 0, 0) 1px);
 }
 
 .work-desc > *{
