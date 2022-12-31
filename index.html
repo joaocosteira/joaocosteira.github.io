@@ -132,12 +132,12 @@
         <section id="work" class="full-page">
             <!-- <img class="watermark" src="imgs/workbag.svg" alt="work bag watermark"> -->
             <img class="watermark" src="imgs/works2.svg" alt="work bag watermark">
-            <div class="work-desc foundling-desc animRight">
+            <div class="work-desc foundling-desc">
                 <h2>The Foundling Wheel Archive</h2>
                 <p>The Foundling Wheel is a digital platform supported by a knowledge repository.</p>
                 <p>Initially the application spellchecks documents written in old Portuguese (Nineteenth Century) and restores unreadable sections.</p>
                 <p>Then a processing pipeline composed of a named entity recognizer, relation extractor, entity linker and ontology fully automate the information processing / management of the underlying knowledge graph.</p>
-                <p>Role: Developed the entire project.</p>
+                <p class="role">Role: Developed the entire project.</p>
                 <p class="technologies">Main technologies used:</p>
                 <ul>
                     <li>Python</li>
@@ -150,11 +150,11 @@
                     <li>Bootstrap</li>
                 </ul>
             </div>
-            <div class="work-desc spickles-desc animRight">
+            <div class="work-desc spickles-desc">
                 <h2>Spickles</h2>
                 <p>Spickles is a movie recommendation app that provides recommendations not only for a specific user but also assists the decision process for an arbitrary sized group.</p>
                 <p>By creating a group, the application takes in consideration the personal preferences of each member and potentially added filters. Over the generated pool of movies, each member is able to play via a Tinder style interface until an unanimous movie is chosen.</p>
-                <p>Role: Python Developer and member of the Machine Learning engine development. In total the team was composed of 9 members.</p>
+                <p class="role">Role: Python Developer and member of the Machine Learning engine development. In total the team was composed of 9 members.</p>
                 <p class="technologies">Main technologies used:</p>
                 <ul>
                     <li>JavaScript</li>
@@ -295,6 +295,7 @@
             .fromTo('#costeira',{ opacity: 0,y : '20vh' },{  opacity: 1,y: 0, duration: .2})
             .fromTo('#joao',{  opacity: 0,y : '-5vh' },{  opacity: 1,y: 0, duration: .7, ease: 'elastic'},'now')
             // .fromTo('.nav-links',{x: "100%", opacity:0},{x: 0, opacity:1,ease: "power2.easeInOut"},'now+=.4')
+            .fromTo('#signature, #menu-btn',{opacity:0,y: '-10vh'},{opacity:1,y:0,duration: 0.3},'now+=0')
             .from(".nav-links li",{
                 y:-15,
                 duration: 1,
@@ -302,7 +303,6 @@
                 stagger: .07
             },'now+=.2')
             .fromTo('.carrousel-circle',{x: "-15px",y: "-5px", opacity:0, stagger: 0.1},{x: 0,y: 0,opacity:1, stagger: 0.1,ease: "power2.easeIn"},'now+=.2')
-            .fromTo('#signature, #menu-btn',{opacity:0,y: '-10vh',stagger: 0.2},{opacity:1,y:0,duration: 0.1,stagger: 0.2},'now+=1')
 
         var imgCounter = 0;
         const imgLoaded = () => {

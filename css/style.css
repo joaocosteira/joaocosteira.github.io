@@ -919,7 +919,8 @@ Intrests
 
 .work-desc{
     color: black;
-    display: none;
+    display: flex;
+    transform: translateX(100%);
     flex-direction: column;
     padding: 3rem;
     position: absolute;
@@ -935,6 +936,18 @@ Intrests
     background-color: #fff;
     background-size: 40px 40px;
     background-image: radial-gradient(circle, #0000003a 1px, rgba(0, 0, 0, 0) 1px);
+}
+
+.role{
+  margin-top: 2rem;
+}
+
+.work-desc h2{
+  margin-bottom: 2rem;
+}
+
+.work-desc ul{
+  margin-top: 1rem;
 }
 
 .work-desc > *{
@@ -1227,7 +1240,7 @@ Intrests
   
 
   .work-cell:not(:last-child):hover{
-    transform: scale(1.1);
+    transform: scale(1.15);
     filter: blur(0);
     opacity: 1;
    }
