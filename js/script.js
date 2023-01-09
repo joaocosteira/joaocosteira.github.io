@@ -25,6 +25,11 @@ sidemenu_tl.fromTo(".sidemenu .line",{
     width:0,
 },{duration:1,stagger:.1,width:"100vw"},"side+=0.2")
 
+sidemenu_tl.fromTo(".sidemenu .vertical-line",{
+    height:0,
+},{duration:1,stagger:.1,height:"100vh"},"side+=0.4")
+
+
 //Open and close Sidemenu
 function toggleSideMenu(){
     btn.classList.toggle('open')  

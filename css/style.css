@@ -360,6 +360,15 @@ section {
   background-color: white;
 }
 
+.sidemenu .vertical-line{
+  position: absolute;
+  background-color: #fff;
+  top: 0;
+  right: 7rem;
+  width: 1px;
+  height: 100vh;
+}
+
 .dog{
   position: fixed;
   top: 1rem;
