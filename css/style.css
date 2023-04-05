@@ -894,8 +894,15 @@ Intrests
   rotate: -5deg;
 }
 
+.interests-grid li:nth-child(5) { /*9 faces*/
+  display: flex;
+  grid-row: 4; 
+  grid-column: 4;
+  rotate: -5deg;
+}
 
-.interests-grid li:nth-child(5) { /*10 music*/
+
+.interests-grid li:nth-child(6) { /*10 music*/
   display: none;
   grid-row: 3; 
   grid-column: 4;
@@ -1171,7 +1178,7 @@ Intrests
     display: none;
   }
 
-  .interests-grid li:nth-child(odd):not(:last-child):hover {
+  .interests-grid li:nth-child(odd):hover {
     rotate: 5deg;
   }
   
@@ -1179,6 +1186,9 @@ Intrests
     rotate: -5deg;
   }
 
+  #backup:hover{
+    rotate: -5deg !important;
+  }
 
   .interests-grid li:nth-child(1) { /*5 "besides..."*/
     grid-row: 2; 
@@ -1200,8 +1210,8 @@ Intrests
     grid-column: 1;
 
   }
-  
-  .interests-grid li:nth-child(5) { 
+
+  .interests-grid li:nth-child(6) { 
     display: block;
   }
 
